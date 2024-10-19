@@ -1,26 +1,13 @@
+import { Card } from "./components/Card";
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
+import { TimeLine } from "./components/TimeLine";
 
 const App = () => {
-  //const [theme, setTheme] = useState({ isLight: true });
-  // const handleToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   const { name, checked } = event.target;
-
-  //   setTheme((prev) => ({
-  //     ...prev,
-  //     [name]: checked,
-  //   }));
-  // };
-
   return (
     <>
-      {/* <Navbar toggle={handleToggle} value={theme.isLight} /> */}
       <Navbar />
 
-      {/*  <div className="flex-none">
-        <ThemeSwap />
-      </div>
- */}
       <div
         className="hero min-h-screen"
         style={{
@@ -31,7 +18,9 @@ const App = () => {
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-neutral-content text-center">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Hello there, I'm Manon!</h1>
+            <h1 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-bold">
+              Hello there, I'm Manon!
+            </h1>
             <p className="mb-5">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
@@ -42,22 +31,18 @@ const App = () => {
         </div>
       </div>
 
-      <section>
-        <div className="card lg:card-side bg-base-100 shadow-xl">
-          <figure>
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
-              alt="Album"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">New album is released!</h2>
-            <p>Click the button to listen on Spotiwhy app.</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Listen</button>
-            </div>
-          </div>
-        </div>
+      <section className=" bg-secondary px-3 py-5 md:px-5 md:py-10 lg:px-10 lg:py-18">
+        <h2 className="text-xl md:text-3xl lg:text-4xl font-bold font-sans text-neutral-content block mx-auto w-fit mb-10">
+          Who am I
+        </h2>
+        <Card />
+      </section>
+
+      <section className=" bg-accent px-3 py-5 md:px-5 md:py-10 lg:px-10 lg:py-18">
+        <h2 className="text-xl md:text-3xl lg:text-4xl font-bold font-sans text-neutral-content block mx-auto w-fit mb-10">
+          Experiences
+        </h2>
+        <TimeLine />
       </section>
 
       <Footer />
