@@ -6,7 +6,7 @@ export const ThemeContext = createContext<ThemeContextType>({});
 export const ThemeProvider = ({ children }: PropsWithChildren) => {
   const [theme, setTheme] = useState<Theme>({
     isLight: true,
-    label: "emerald",
+    label: "myLightTheme",
   });
 
   // useEffect(() => {
@@ -34,13 +34,13 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
     //     localStorage.setItem("theme", nextTheme);
     //   }
     // } else {
-    //setTheme((prev) => (prev.isLight ? {...prev, {label === 'black'}} : {...prev, label === "emerald" } ));
+    //setTheme((prev) => (prev.isLight ? {...prev, {label === 'dracula'}} : {...prev, label === "myLightTheme" } ));
 
     setTheme((prev) => {
       if (prev.isLight) {
-        return { isLight: event.target.checked, label: "black" };
+        return { isLight: event.target.checked, label: "dracula" };
       } else {
-        return { isLight: event.target.checked, label: "emerald" };
+        return { isLight: event.target.checked, label: "myLightTheme" };
       }
     });
 
