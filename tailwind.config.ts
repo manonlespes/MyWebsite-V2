@@ -4,11 +4,13 @@ const config: Config = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
+    // fontFamily: {
+    //   sans: ["Graphik", "sans-serif"],
+    //   serif: ["Merriweather", "serif"],
+    // },
   },
   plugins: [require("daisyui")],
   daisyui: {
-    //themes: ["retro", "dracula"],
-
     themes: [
       {
         myLightTheme: {
@@ -44,7 +46,7 @@ const config: Config = {
       },
 
       "retro",
-      "dracula",
+      "night",
     ],
   },
 };

@@ -34,11 +34,11 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
     //     localStorage.setItem("theme", nextTheme);
     //   }
     // } else {
-    //setTheme((prev) => (prev.isLight ? {...prev, {label === 'dracula'}} : {...prev, label === "myLightTheme" } ));
+    //setTheme((prev) => (prev.isLight ? {...prev, {label === 'night'}} : {...prev, label === "myLightTheme" } ));
 
     setTheme((prev) => {
       if (prev.isLight) {
-        return { isLight: event.target.checked, label: "dracula" };
+        return { isLight: event.target.checked, label: "night" };
       } else {
         return { isLight: event.target.checked, label: "myLightTheme" };
       }
