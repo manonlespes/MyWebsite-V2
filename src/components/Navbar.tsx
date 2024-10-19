@@ -45,9 +45,8 @@ export const Navbar = (props: any) => {
           </div>
         </div>
         <div className="navbar-center">
-          <a className="btn btn-ghost text-xl">
-            {/*  <Logo /> */}
-            Logo
+          <a className="btn btn-ghost text-xl block w-24 h-fit">
+            <img alt="myLogo" src="/images/Logo.png" />
           </a>
         </div>
         <div className="navbar-end">

@@ -25,7 +25,7 @@ const App = () => {
         className="hero min-h-screen"
         style={{
           backgroundImage:
-            "url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp)",
+            "url(/images/anas-alshanti-feXpdV001o4-unsplash.jpg)",
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
@@ -41,6 +41,24 @@ const App = () => {
           </div>
         </div>
       </div>
+
+      <section>
+        <div className="card lg:card-side bg-base-100 shadow-xl">
+          <figure>
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
+              alt="Album"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">New album is released!</h2>
+            <p>Click the button to listen on Spotiwhy app.</p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Listen</button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </>
