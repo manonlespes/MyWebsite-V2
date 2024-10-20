@@ -6,7 +6,7 @@ export const ToggleTheme = () => {
   return (
     <>
       <label
-        className="swap swap-rotate hover:text-secondary transition-colors duration-300 ease-in-out hover:animate-pulse"
+        className="swap swap-rotate hover:text-accent transition-colors duration-300 ease-in-out hover:animate-pulse"
         aria-hidden
       >
         {/* this hidden checkbox controls the state */}
