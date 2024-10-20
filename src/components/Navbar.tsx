@@ -45,7 +45,7 @@ export const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost block w-24 h-fit">
+          <a className="btn btn-ghost block w-20 md:w-24 h-fit">
             <img alt="myLogo" src="/images/Logo.png" />
           </a>
         </div>
@@ -75,7 +75,7 @@ export const Navbar = () => {
         <div className="navbar-end gap-4">
           <ToggleTheme />
           <button className="btn btn-sm md:btn-md btn-primary">
-            Get in contact
+            Contact me
           </button>
         </div>
       </div>
