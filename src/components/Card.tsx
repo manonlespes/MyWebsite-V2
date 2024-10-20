@@ -27,7 +27,7 @@ export const Card = () => {
           <figure>
             <img
               className="object-cover aspect-[4/3] bg-fixed"
-              src="/images/chatshimiendormie.jpg"
+              src="/images/chatshimi.webp"
               alt="Chatshimi, my lovely spleeping cat."
             />
           </figure>

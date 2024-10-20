@@ -1,4 +1,5 @@
 import { ToggleTheme } from "./ToggleTheme";
+import Logo from "../assets/my-logo.webp";
 
 export const Navbar = () => {
   return (
@@ -46,7 +47,7 @@ export const Navbar = () => {
             </ul>
           </div>
           <a className="btn btn-ghost block w-20 md:w-24 h-fit">
-            <img alt="myLogo" src="/images/Logo.png" />
+            <img alt="Home" src={Logo} />
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">

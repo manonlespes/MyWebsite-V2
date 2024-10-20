@@ -11,8 +11,7 @@ const App = () => {
       <div
         className="hero min-h-screen"
         style={{
-          backgroundImage:
-            "url(/images/anas-alshanti-feXpdV001o4-unsplash.jpg)",
+          backgroundImage: "url(/images/background_img.webp)",
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
