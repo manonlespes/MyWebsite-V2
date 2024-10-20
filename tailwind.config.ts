@@ -3,11 +3,30 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
-    // fontFamily: {
-    //   sans: ["Graphik", "sans-serif"],
-    //   serif: ["Merriweather", "serif"],
-    // },
+    extend: {
+      colors: {
+        primary: {
+          50: "#FCF2F8",
+          100: "#FAE6F0",
+          200: "#F2C2D8",
+          300: "#E89EBB",
+          400: "#D96281",
+          500: "#c62a40",
+          600: "#B32235",
+          700: "#941826",
+          800: "#78101A",
+          900: "#590810",
+          950: "#3B0408",
+          DEFAULT: "#c62a40",
+        },
+      },
+    },
+
+    fontFamily: {
+      sans: ["Montserrat", "sans-serif"],
+      serif: ["Merriweather", "serif"],
+      movement: ["movement", "sans-serif"],
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
@@ -38,14 +57,23 @@ const config: Config = {
       },
       {
         lightTheme: {
-          ...require("daisyui/src/theming/themes")["retro"],
+          ...require("daisyui/src/theming/themes")["bumblebee"],
           primary: "#c62a40",
+          "primary-content": "#f2f5f8",
           secondary: "#0e7a69",
           accent: "#f98091",
+          "neutral-content": "#cccccc",
+          info: "#22d3b8",
+          "info-content": "#141515",
+        },
+        darkTheme: {
+          ...require("daisyui/src/theming/themes")["night"],
+          "neutral-content": "#cccccc",
+          secondary: "#0e7a69",
         },
       },
 
-      "retro",
+      "bumblebee",
       "night",
     ],
   },

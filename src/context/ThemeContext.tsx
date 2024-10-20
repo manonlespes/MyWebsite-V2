@@ -6,7 +6,7 @@ export const ThemeContext = createContext<ThemeContextType>({});
 export const ThemeProvider = ({ children }: PropsWithChildren) => {
   const [theme, setTheme] = useState<Theme>({
     isLight: true,
-    label: "myLightTheme",
+    label: "lightTheme",
   });
 
   // useEffect(() => {
@@ -34,13 +34,13 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
     //     localStorage.setItem("theme", nextTheme);
     //   }
     // } else {
-    //setTheme((prev) => (prev.isLight ? {...prev, {label === 'night'}} : {...prev, label === "myLightTheme" } ));
+    //setTheme((prev) => (prev.isLight ? {...prev, {label === 'darkTheme'}} : {...prev, label === "lightTheme" } ));
 
     setTheme((prev) => {
       if (prev.isLight) {
-        return { isLight: event.target.checked, label: "night" };
+        return { isLight: event.target.checked, label: "darkTheme" };
       } else {
-        return { isLight: event.target.checked, label: "myLightTheme" };
+        return { isLight: event.target.checked, label: "lightTheme" };
       }
     });
 

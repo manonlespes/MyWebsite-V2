@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Movement";
+  src: url("../public/fonts/Movement-DirectBlack.woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/MontserratAlternates-Regular.ttf");
+}
+
+/* Links */
+
 .link-animation {
-  @apply no-underline relative w-fit block after:block after:content-[''] after:absolute after:w-full after:h-[3px] after:hover:bg-secondary after:rounded-sm after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center;
+  @apply no-underline relative w-fit block after:block after:content-[''] after:absolute after:w-full after:h-[3px] after:hover:bg-accent after:rounded-sm after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center;
 }
