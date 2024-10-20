@@ -1,4 +1,4 @@
-import { EnvelopeIncon, GitHubIcon, LinkedInIcon } from "./icons/Icons";
+import { EnvelopeIcon, GitHubIcon, LinkedInIcon } from "./icons/Icons";
 
 export const Footer = () => {
   return (
@@ -12,25 +12,30 @@ export const Footer = () => {
         <nav>
           <div className="flex gap-5">
             <a
-              className="w-8 group hover:text-secondary transition-all self-center ease-in-out focus:text-secondary"
+              className="w-8 group hover:text-accent transition-all self-center ease-in-out focus:text-accent"
               href="https://github.com/manonlespes"
               target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Visit my GitHub (opens in a new tab)"
             >
               <GitHubIcon class="group-hover:animate-bounce group-ease-in-out" />
             </a>
 
             <a
-              className="w-7 group hover:text-secondary transition-all ease-in-out focus:text-secondary"
+              className="w-7 group hover:text-accent transition-all ease-in-out focus:text-accent"
               href="https://be.linkedin.com/in/manon-lespes"
               target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Visit my LinkedIn profile (opens in a new tab)"
             >
               <LinkedInIcon class="group-hover:animate-bounce group-ease-in-out" />
             </a>
             <a
-              className="w-7 group hover:text-secondary transition-all ease-in-out self-center focus:text-secondary"
+              className="w-7 group hover:text-accent transition-all ease-in-out self-center focus:text-accent"
               href="mailto:manonlespes@hotmail.fr"
+              aria-label="Send me an email"
             >
-              <EnvelopeIncon class="group-hover:animate-bounce group-ease-in-out" />
+              <EnvelopeIcon class="group-hover:animate-bounce group-ease-in-out" />
             </a>
           </div>
         </nav>
