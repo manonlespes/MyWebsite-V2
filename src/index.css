@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.link-animation {
+  @apply no-underline relative w-fit block after:block after:content-[''] after:absolute after:w-full after:h-[3px] after:hover:bg-secondary after:rounded-sm after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center;
+}
