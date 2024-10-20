@@ -22,18 +22,15 @@ const App = () => {
               Hello there, I'm Manon!
             </h1>
             <p className="mb-5">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+              A front-end developer, eager to code with passion your project.
             </p>
-            <button className="btn btn-primary">Contact me</button>
           </div>
         </div>
       </div>
 
-      <section className=" bg-secondary px-3 py-5 md:px-5 md:py-10 lg:px-10 lg:py-18">
+      <section className=" bg-light px-3 py-5 md:px-5 md:py-10 lg:px-10 lg:py-18">
         <h2 className="text-xl md:text-3xl lg:text-4xl font-bold font-sans text-neutral-content block mx-auto w-fit mb-10">
-          Who am I
+          About me
         </h2>
         <Card />
       </section>
