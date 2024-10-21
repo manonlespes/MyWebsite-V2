@@ -9,45 +9,45 @@ export const ThemeProvider = ({ children }: PropsWithChildren) => {
     label: "lightTheme",
   });
 
-  // useEffect(() => {
-  //   // storing input theme
-  //   localStorage.setItem("theme", JSON.stringify(theme));
-  // }, [theme]);
-
-  /*     useEffect(() => {
+  useEffect(() => {
+    // storing input theme
     if (typeof window !== "undefined") {
       const storedTheme = localStorage.getItem("theme");
-      localStorage.setItem("name", JSON.stringify(name));
-      if (storedTheme) setTheme(storedTheme);
+      if (storedTheme) {
+        const initialValue = JSON.parse(storedTheme);
+        setTheme(initialValue);
+      }
     }
-  }, []); */
+  }, []);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const changeTheme = (event?: any) => {
-    //const nextTheme: string | null = event.target.value || null;
-    //const nextTheme = event.target.checked || null;
+    const nextTheme: string | null = event.target.checked
+      ? "lightTheme"
+      : "darkTheme";
 
-    // if (nextTheme) {
-    //   setTheme(nextTheme);
-    //   // Check if localStorage is available (client-side)
-    //   if (typeof window !== "undefined") {
-    //     localStorage.setItem("theme", nextTheme);
-    //   }
-    // } else {
-    //setTheme((prev) => (prev.isLight ? {...prev, {label === 'darkTheme'}} : {...prev, label === "lightTheme" } ));
-
-    setTheme((prev) => {
-      if (prev.isLight) {
-        return { isLight: event.target.checked, label: "darkTheme" };
-      } else {
-        return { isLight: event.target.checked, label: "lightTheme" };
+    if (nextTheme) {
+      setTheme({ isLight: event.target.checked, label: nextTheme });
+      // Check if localStorage is available (client-side)
+      if (typeof window !== "undefined") {
+        localStorage.setItem(
+          "theme",
+          JSON.stringify({ isLight: event.target.checked, label: nextTheme })
+        );
       }
-    });
+    } else {
+      setTheme((prev) => {
+        if (prev.isLight) {
+          return { isLight: event.target.checked, label: "darkTheme" };
+        } else {
+          return { isLight: event.target.checked, label: "lightTheme" };
+        }
+      });
 
-    //   if (typeof window !== "undefined") {
-    //     localStorage.setItem("theme", theme.label);
-    //   }
-    // }
+      if (typeof window !== "undefined") {
+        localStorage.setItem("theme", JSON.stringify(theme));
+      }
+    }
   };
 
   return (
