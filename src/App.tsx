@@ -19,9 +19,10 @@ const App = () => {
           <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-neutral-content text-center">
             <div className="max-w-md">
-              <h1 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-bold font-movement">
+              <h1 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-bold font-movement bg-clip-text text-transparent bg-gradient-to-r from-accent to-info">
                 Hello there, I'm Manon!
               </h1>
+
               <p className="mb-5">
                 A front-end developer, eager to code with passion your project.
               </p>
@@ -29,7 +30,7 @@ const App = () => {
           </div>
         </div>
 
-        <section className="bg-light px-3 py-5 md:px-5 md:py-10 lg:px-10 lg:py-18">
+        <section className="bg-base-200 px-3 py-5 md:px-5 md:py-10 lg:px-10 lg:py-18">
           <div className="block mx-auto w-fit mb-10 text-center">
             <h2 className="text-xl text-accent md:text-3xl lg:text-4xl font-movement mb-5">
               About me
