@@ -4,12 +4,12 @@
 
 @font-face {
   font-family: "Movement";
-  src: url("../public/fonts/Movement-DirectBlack.woff");
+  src: url("/fonts/Movement-DirectBlack.woff");
 }
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../public/fonts/MontserratAlternates-Regular.ttf");
+  src: url("/fonts/MontserratAlternates-Regular.ttf");
 }
 
 /* Links */
