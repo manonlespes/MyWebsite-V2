@@ -44,14 +44,9 @@ const App = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {aboutContentCards.map((card: CardContentType, index: number) => {
               return (
-                <>
-                  <Card
-                    key={index}
-                    title={card.title}
-                    text={card.text}
-                    img={card.img}
-                  />
-                </>
+                <div key={index}>
+                  <Card title={card.title} text={card.text} img={card.img} />
+                </div>
               );
             })}
           </div>
