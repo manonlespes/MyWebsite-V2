@@ -1,5 +1,6 @@
 import { ToggleTheme } from "./ToggleTheme";
 import Logo from "../assets/my-logo.webp";
+import { Button } from "./Button";
 
 export const Navbar = () => {
   return (
@@ -75,9 +76,7 @@ export const Navbar = () => {
         </div>
         <div className="navbar-end gap-4">
           <ToggleTheme />
-          <button className="btn btn-sm md:btn-md btn-primary">
-            Contact me
-          </button>
+          <Button label="Contact me" />
         </div>
       </div>
     </>
