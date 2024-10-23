@@ -17,13 +17,17 @@ const App = () => {
           }}
         >
           <div className="hero-overlay bg-opacity-60"></div>
-          <div className="hero-content text-neutral-content text-center">
-            <div className="max-w-md">
+          <div className="hero-content flex flex-col lg:flex-row w-full justify-evenly">
+            <img
+              className="mask mask-hexagon-2 w-[750px]"
+              src="/images/front_end_img.webp"
+            />
+            <div className="max-w-sm text-center lg:max-w-md lg:text-left">
               <h1 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-bold font-movement bg-clip-text text-transparent bg-gradient-to-r from-accent to-info">
                 Hello there, I'm Manon!
               </h1>
 
-              <p className="mb-5">
+              <p className="mb-5 text-neutral-content">
                 A front-end developer, eager to code with passion your project.
               </p>
             </div>
@@ -45,9 +49,12 @@ const App = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {aboutContentCards.map((card: CardContentType, index: number) => {
               return (
-                <div key={index}>
-                  <Card title={card.title} text={card.text} img={card.img} />
-                </div>
+                <Card
+                  key={index}
+                  title={card.title}
+                  text={card.text}
+                  img={card.img}
+                />
               );
             })}
           </div>
