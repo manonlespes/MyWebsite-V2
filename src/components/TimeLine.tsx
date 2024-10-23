@@ -1,3 +1,5 @@
+import { NewWindowIcon } from "./icons/Icons";
+
 export const TimeLine = () => {
   return (
     <>
@@ -9,6 +11,7 @@ export const TimeLine = () => {
               viewBox="0 0 20 20"
               fill="currentColor"
               className="h-5 w-5"
+              aria-hidden
             >
               <path
                 fillRule="evenodd"
@@ -50,6 +53,7 @@ export const TimeLine = () => {
               viewBox="0 0 20 20"
               fill="currentColor"
               className="h-5 w-5"
+              aria-hidden
             >
               <path
                 fillRule="evenodd"
@@ -83,6 +87,7 @@ export const TimeLine = () => {
               viewBox="0 0 20 20"
               fill="currentColor"
               className="h-5 w-5"
+              aria-hidden
             >
               <path
                 fillRule="evenodd"
@@ -113,6 +118,7 @@ export const TimeLine = () => {
               viewBox="0 0 20 20"
               fill="currentColor"
               className="h-5 w-5"
+              aria-hidden
             >
               <path
                 fillRule="evenodd"
@@ -150,6 +156,7 @@ export const TimeLine = () => {
               viewBox="0 0 20 20"
               fill="currentColor"
               className="h-5 w-5"
+              aria-hidden
             >
               <path
                 fillRule="evenodd"
@@ -189,6 +196,7 @@ export const TimeLine = () => {
               viewBox="0 0 20 20"
               fill="currentColor"
               className="h-5 w-5"
+              aria-hidden
             >
               <path
                 fillRule="evenodd"
@@ -204,7 +212,16 @@ export const TimeLine = () => {
             <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-sm mt-1 mb-2">
               Different work experiences
             </div>
-            View full résumé
+            <a
+              className="inline-flex items-baseline group text-base link link-animation text-neutral-content "
+              href="#"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="View Full Résumé (opens in a new tab)"
+            >
+              View full résumé
+              <NewWindowIcon class="inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-focus-visible:-translate-y-1 group-focus-visible:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" />
+            </a>
           </div>
           <hr />
         </li>
