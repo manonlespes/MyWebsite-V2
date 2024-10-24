@@ -1,6 +1,6 @@
-import { NewWindowIcon } from "./icons/Icons";
+import { SimpleLink } from "./SimpleLink";
 
-export const TimeLine = () => {
+export const TimeLine: React.FC = () => {
   return (
     <>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
@@ -33,6 +33,14 @@ export const TimeLine = () => {
               ongoing website review; monitor and maintain website
               functionality; participate in website architecture and design in
               collaboration with developers and designers colleagues or clients.
+            </p>
+            <p className="my-2">
+              <SimpleLink
+                label="Spade"
+                src="https://spade.be"
+                ariaLabel="Visit Spade"
+                isExternalLink
+              />
             </p>
 
             {spadebadges.map((badge: string, index: number) => {
@@ -96,8 +104,8 @@ export const TimeLine = () => {
               />
             </svg>
           </div>
-          <div className="timeline-start mb-10 md:text-end">
-            <time className="font-mono italic text-neutral-content">
+          <div className="timeline-start mb-10">
+            <time className="font-mono italic text-neutral-content block md:text-end">
               June 19th, 2024
             </time>
             <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-sm mt-1 mb-2">
@@ -106,6 +114,13 @@ export const TimeLine = () => {
             <p className="mb-3 text-neutral-content">
               Presentation of tools, web eco-design criteria and best practices
               applied within Spade.
+            </p>
+            <p className="my-2">
+              <SimpleLink
+                label="Green Tech Forum Brussels"
+                src="https://www.greentech-forum-brussels.com/conferences/eco-design-websites-tools-standards-best-practices-incl-accessibility-data-privacy-actors-testimonials"
+                isExternalLink
+              />
             </p>
           </div>
           <hr />
@@ -165,8 +180,8 @@ export const TimeLine = () => {
               />
             </svg>
           </div>
-          <div className="timeline-start mb-10 md:text-end">
-            <time className="font-mono italic text-neutral-content">
+          <div className="timeline-start mb-10">
+            <time className="font-mono italic text-neutral-content block md:text-end">
               March 2021 - March 2022
             </time>
 
@@ -177,6 +192,14 @@ export const TimeLine = () => {
               1-year training, study of programing languages, frameworks and
               CMS, follow lectures on design web and use of graphic design
               softwares.
+            </p>
+            <p className="my-2">
+              <SimpleLink
+                label="Interface3"
+                src="https://interface3.be/fr"
+                ariaLabel="Visit Interface3"
+                isExternalLink
+              />
             </p>
             {interfaceBadges.map((badge: string, index: number) => {
               return (
@@ -212,16 +235,12 @@ export const TimeLine = () => {
             <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-sm mt-1 mb-2">
               Different work experiences
             </div>
-            <a
-              className="inline-flex items-baseline group text-base link link-animation text-neutral-content "
-              href="#"
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label="View Full Résumé (opens in a new tab)"
-            >
-              View full résumé
-              <NewWindowIcon class="inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-focus-visible:-translate-y-1 group-focus-visible:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" />
-            </a>
+            <SimpleLink
+              label="View full résumé"
+              src="#"
+              ariaLabel="View full résumé"
+              isExternalLink
+            />
           </div>
           <hr />
         </li>
