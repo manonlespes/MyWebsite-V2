@@ -1,12 +1,17 @@
+import { Link } from "react-router-dom";
 import { EnvelopeIcon, GitHubIcon, LinkedInIcon } from "./icons/Icons";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
     <>
       <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
         <nav className="grid grid-flow-col gap-4">
-          <a className="link link-animation">About me</a>
-          <a className="link link-animation">Contact</a>
+          <Link to="/" className="link link-animation">
+            About me
+          </Link>
+          <Link to="contact" className="link link-animation">
+            Contact
+          </Link>
           <a className="link link-animation">Site map</a>
         </nav>
         <nav>

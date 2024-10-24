@@ -1,8 +1,9 @@
 import { ToggleTheme } from "./ToggleTheme";
 import Logo from "../assets/my-logo.webp";
 import { Button } from "./Button";
+import { Link } from "react-router-dom";
 
-export const Navbar = () => {
+export const Navbar: React.FC = () => {
   return (
     <>
       <div className="navbar bg-base-100 sticky top-0 z-30 bg-opacity-90 backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)] shadow-sm lg:px-6">
@@ -29,10 +30,7 @@ export const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Item 1</a>
-              </li>
-              <li>
-                <a>Parent</a>
+                <a>Projects</a>
                 <ul className="p-2">
                   <li>
                     <a>Submenu 1</a>
@@ -43,22 +41,19 @@ export const Navbar = () => {
                 </ul>
               </li>
               <li>
-                <a>Item 3</a>
+                <Link to="contact">Contact</Link>
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost block w-20 md:w-24 h-fit">
+          <Link to="/" className="btn btn-ghost block w-20 md:w-24 h-fit">
             <img alt="Home" src={Logo} />
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Item 1</a>
-            </li>
-            <li>
               <details>
-                <summary>Parent</summary>
+                <summary>Projects</summary>
                 <ul className="p-2">
                   <li>
                     <a>Submenu 1</a>
@@ -70,13 +65,13 @@ export const Navbar = () => {
               </details>
             </li>
             <li>
-              <a>Item 3</a>
+              <Link to="contact">Contact</Link>
             </li>
           </ul>
         </div>
         <div className="navbar-end gap-4">
           <ToggleTheme />
-          <Button label="Contact me" />
+          <Button label="Contact me" isLink linkTo={"contact"} />
         </div>
       </div>
     </>
