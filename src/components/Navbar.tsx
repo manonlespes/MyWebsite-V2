@@ -30,15 +30,15 @@ export const Navbar: React.FC = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Projects</a>
-                <ul className="p-2">
+                <Link to="projects">Projects</Link>
+                {/*   <ul className="p-2">
                   <li>
                     <a>Submenu 1</a>
                   </li>
                   <li>
                     <a>Submenu 2</a>
                   </li>
-                </ul>
+                </ul> */}
               </li>
               <li>
                 <Link to="contact">Contact</Link>
@@ -52,7 +52,8 @@ export const Navbar: React.FC = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <details>
+              <Link to="projects">Projects</Link>
+              {/* <details>
                 <summary>Projects</summary>
                 <ul className="p-2">
                   <li>
@@ -62,7 +63,7 @@ export const Navbar: React.FC = () => {
                     <a>Submenu 2</a>
                   </li>
                 </ul>
-              </details>
+              </details> */}
             </li>
             <li>
               <Link to="contact">Contact</Link>

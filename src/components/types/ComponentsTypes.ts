@@ -18,3 +18,15 @@ export interface ButtonType {
   isLink?: boolean;
   linkTo?: string;
 }
+
+export interface ProjectType {
+  id: string;
+  img?: {
+    alt: string;
+    src: string;
+  };
+  title: string;
+  description: string;
+  tags: string[];
+  links: LinkType[];
+}

@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { Layout } from "./pages/Layout";
 import { Contact } from "./pages/Contact";
 import { NotFound } from "./pages/NotFound";
+import { Project } from "./pages/Projects";
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
             //--------------gives access to child component
             <Route index element={<Home />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="projects" element={<Project />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
