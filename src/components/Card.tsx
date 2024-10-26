@@ -5,9 +5,11 @@ export const Card = (props: CardContentType) => {
   return (
     <>
       {img ? (
-        <div className="relative mx-4 -mt-6 overflow-hidden rounded-xl bg-clip-border shadow-lg aspect-[4/3]">
+        <div
+          className={`relative mx-4 -mt-6 overflow-hidden rounded-xl bg-clip-border shadow-lg aspect-square`}
+        >
           <img
-            className="object-contain h-fit"
+            className="object-cover h-fit"
             src={img?.source}
             alt={img?.alt}
           />

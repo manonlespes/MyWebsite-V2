@@ -43,13 +43,15 @@ export const TimeLine: React.FC = () => {
               />
             </p>
 
-            {spadebadges.map((badge: string, index: number) => {
-              return (
-                <div key={index} className="badge badge-info font-bold mr-3">
-                  {badge}
-                </div>
-              );
-            })}
+            <ul className="flex gap-3 flex-wrap list-none">
+              {spadebadges.map((badge: string, index: number) => {
+                return (
+                  <li key={index} className="badge badge-info font-bold">
+                    {badge}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
           <hr />
         </li>
@@ -153,13 +155,15 @@ export const TimeLine: React.FC = () => {
               Integrate new themes for the Spade's product and resolve tickets
               for various projects.
             </p>
-            {spadeInternBadges.map((badge: string, index: number) => {
-              return (
-                <div key={index} className="badge badge-info font-bold mr-3">
-                  {badge}
-                </div>
-              );
-            })}
+            <ul className="flex gap-3 flex-wrap list-none">
+              {spadeInternBadges.map((badge: string, index: number) => {
+                return (
+                  <li key={index} className="badge badge-info font-bold">
+                    {badge}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
           <hr />
         </li>
@@ -201,13 +205,15 @@ export const TimeLine: React.FC = () => {
                 isExternalLink
               />
             </p>
-            {interfaceBadges.map((badge: string, index: number) => {
-              return (
-                <div key={index} className="badge badge-info font-bold mr-3">
-                  {badge}
-                </div>
-              );
-            })}
+            <ul className="flex gap-3 flex-wrap list-none">
+              {interfaceBadges.map((badge: string, index: number) => {
+                return (
+                  <li key={index} className="badge badge-info font-bold">
+                    {badge}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
           <hr />
         </li>
