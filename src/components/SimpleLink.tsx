@@ -2,19 +2,19 @@ import { NewWindowIcon } from "./icons/Icons";
 import { LinkType } from "./types/ComponentsTypes";
 
 export const SimpleLink = (props: LinkType) => {
-  const { label, src, ariaLabel, isExternalLink } = props;
+  const { label, src, ariaLabel = "", isExternalLink, className = "" } = props;
   return (
     <>
       {isExternalLink ? (
         <a
-          className="inline-flex items-baseline group text-base link link-animation text-neutral-content "
+          className={`inline-flex items-baseline group text-base link link-animation text-inherit ${className}`}
           href={src}
           target="_blank"
           rel="noreferrer noopener"
           aria-label={ariaLabel + "(opens in a new tab)"}
         >
           {label}
-          <NewWindowIcon class="inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1 group-focus-visible:-translate-y-1 group-focus-visible:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" />
+          <NewWindowIcon className="h-4 w-4 " />
         </a>
       ) : (
         <a

@@ -11,6 +11,7 @@ export interface LinkType {
   src: string;
   ariaLabel?: string;
   isExternalLink: boolean;
+  className?: string;
 }
 
 export interface ButtonType {
