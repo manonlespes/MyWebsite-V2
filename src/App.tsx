@@ -5,6 +5,7 @@ import { Layout } from "./pages/Layout";
 import { Contact } from "./pages/Contact";
 import { NotFound } from "./pages/NotFound";
 import { Project } from "./pages/Projects";
+import { About } from "./pages/About";
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Layout />}>
             //--------------gives access to child component
             <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
             <Route path="projects" element={<Project />} />
             <Route path="*" element={<NotFound />} />
