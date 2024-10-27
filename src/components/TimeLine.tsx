@@ -1,3 +1,4 @@
+import { TimeLineIcon } from "./icons/Icons";
 import { SimpleLink } from "./SimpleLink";
 
 export const TimeLine: React.FC = () => {
@@ -6,25 +7,13 @@ export const TimeLine: React.FC = () => {
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
         <li>
           <div className="timeline-middle text-accent">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="h-5 w-5"
-              aria-hidden
-            >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clipRule="evenodd"
-              />
-            </svg>
+            <TimeLineIcon />
           </div>
           <div className="timeline-start mb-10">
             <time className="font-mono italic text-neutral-content block md:text-end">
-              2022 - currently
+              June 2022 - currently
             </time>
-            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-sm mt-1 mb-2">
+            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-md mt-1 mb-2">
               Front-end Developer, Spade scrl in Brussels (Belgium)
             </div>
             <p className="mb-3 text-neutral-content">
@@ -34,7 +23,7 @@ export const TimeLine: React.FC = () => {
               functionality; participate in website architecture and design in
               collaboration with developers and designers colleagues or clients.
             </p>
-            <p className="my-2">
+            <p className="my-2 text-neutral-content">
               <SimpleLink
                 label="Spade"
                 src="https://spade.be"
@@ -58,25 +47,13 @@ export const TimeLine: React.FC = () => {
         <li>
           <hr />
           <div className="timeline-middle text-accent">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="h-5 w-5"
-              aria-hidden
-            >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clipRule="evenodd"
-              />
-            </svg>
+            <TimeLineIcon />
           </div>
           <div className="timeline-end mb-10">
             <time className="font-mono italic text-neutral-content">
               Sept 2024
             </time>
-            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-sm mt-1 mb-2">
+            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-md mt-1 mb-2">
               Training Anysurfer, 2-day training
             </div>
             <p className="mb-3 text-neutral-content">
@@ -92,35 +69,24 @@ export const TimeLine: React.FC = () => {
         <li>
           <hr />
           <div className="timeline-middle text-accent">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="h-5 w-5"
-              aria-hidden
-            >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clipRule="evenodd"
-              />
-            </svg>
+            <TimeLineIcon />
           </div>
           <div className="timeline-start mb-10">
             <time className="font-mono italic text-neutral-content block md:text-end">
               June 19th, 2024
             </time>
-            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-sm mt-1 mb-2">
+            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-md mt-1 mb-2">
               Speaker at the GreenTech Forum Brussels (Belgium)
             </div>
             <p className="mb-3 text-neutral-content">
               Presentation of tools, web eco-design criteria and best practices
               applied within Spade.
             </p>
-            <p className="my-2">
+            <p className="my-2 text-neutral-content">
               <SimpleLink
                 label="Green Tech Forum Brussels"
                 src="https://www.greentech-forum-brussels.com/conferences/eco-design-websites-tools-standards-best-practices-incl-accessibility-data-privacy-actors-testimonials"
+                ariaLabel="Visit Green Tech Forum Brussels conference "
                 isExternalLink
               />
             </p>
@@ -130,25 +96,13 @@ export const TimeLine: React.FC = () => {
         <li>
           <hr />
           <div className="timeline-middle text-accent">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="h-5 w-5"
-              aria-hidden
-            >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clipRule="evenodd"
-              />
-            </svg>
+            <TimeLineIcon />
           </div>
           <div className="timeline-end mb-10">
             <time className="font-mono italic text-neutral-content">
               March 2022 - May 2022
             </time>
-            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-sm mt-1 mb-2">
+            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-md mt-1 mb-2">
               Front-end Developer Intern, Space scrl in Brussels (Belgium)
             </div>
             <p className="mb-3 text-neutral-content">
@@ -170,26 +124,14 @@ export const TimeLine: React.FC = () => {
         <li>
           <hr />
           <div className="timeline-middle text-accent">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="h-5 w-5"
-              aria-hidden
-            >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clipRule="evenodd"
-              />
-            </svg>
+            <TimeLineIcon />
           </div>
           <div className="timeline-start mb-10">
             <time className="font-mono italic text-neutral-content block md:text-end">
               March 2021 - March 2022
             </time>
 
-            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-sm mt-1 mb-2">
+            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-md mt-1 mb-2">
               Certificate - Front-end developer, Interface3 (Belgium)
             </div>
             <p className="mb-3 text-neutral-content">
@@ -197,7 +139,7 @@ export const TimeLine: React.FC = () => {
               CMS, follow lectures on design web and use of graphic design
               softwares.
             </p>
-            <p className="my-2">
+            <p className="my-2 text-neutral-content">
               <SimpleLink
                 label="Interface3"
                 src="https://interface3.be/fr"
@@ -220,33 +162,24 @@ export const TimeLine: React.FC = () => {
         <li>
           <hr />
           <div className="timeline-middle text-accent">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="h-5 w-5"
-              aria-hidden
-            >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clipRule="evenodd"
-              />
-            </svg>
+            <TimeLineIcon />
           </div>
           <div className="timeline-end mb-10">
             <time className="font-mono italic text-neutral-content">
               Before March 2021
             </time>
-            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-sm mt-1 mb-2">
+            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-md mt-1 mb-2">
               Different work experiences
             </div>
-            <SimpleLink
-              label="View full résumé"
-              src="#"
-              ariaLabel="View full résumé"
-              isExternalLink
-            />
+            <p className="text-neutral-content">
+              {" "}
+              <SimpleLink
+                label="View full résumé"
+                src="#"
+                ariaLabel="View full résumé"
+                isExternalLink
+              />
+            </p>
           </div>
           <hr />
         </li>

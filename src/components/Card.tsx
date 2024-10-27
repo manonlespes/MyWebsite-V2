@@ -4,9 +4,9 @@ export const Card = (props: CardContentType) => {
   const { text, title, img } = props;
   return (
     <>
-      {img ? (
+      {img && (
         <div
-          className={`relative mx-4 -mt-6 overflow-hidden rounded-xl bg-clip-border shadow-lg aspect-square`}
+          className={`relative mx-4 -mt-6 overflow-hidden rounded-xl bg-clip-border shadow-lg aspect-[4/3]`}
         >
           <img
             className="object-cover h-fit"
@@ -14,8 +14,6 @@ export const Card = (props: CardContentType) => {
             alt={img?.alt}
           />
         </div>
-      ) : (
-        ""
       )}
 
       <div className="p-6 card-body">

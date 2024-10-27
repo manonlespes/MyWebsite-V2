@@ -9,6 +9,13 @@ import { SimpleLink } from "../components/SimpleLink";
 export const About: React.FC = () => {
   return (
     <>
+      <section className="block w-fit m-auto bg-base-100 h-fit">
+        <div className="p-5 md:p-10 text-center">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold font-movement bg-clip-text text-transparent bg-gradient-to-r from-accent to-info">
+            About me
+          </h1>
+        </div>
+      </section>
       <section className="px-3 py-5 md:px-5 md:py-10 lg:px-10 lg:py-18 2xl:px-36 2xl:py-20">
         <div className="bg-base-200 mx-auto w-full max-w-7xl py-4 lg:p-8 rounded md:rounded-xl shadow-lg">
           <div className="relative px-4 sm:px-8 lg:px-12">
@@ -18,31 +25,30 @@ export const About: React.FC = () => {
                   <div className="max-w-xs px-2.5 lg:max-w-none">
                     <img
                       alt=""
-                      loading="lazy"
                       width="800"
                       height="800"
-                      decoding="async"
                       className="aspect-square rotate-3 rounded-2xl bg-base-100 object-cover"
                       sizes="(min-width: 1024px) 32rem, 20rem"
-                      src="/images/manon_lespes.webp"
+                      src="/images/about_me_pic.webp"
                     />
                   </div>
                 </div>
                 <div className="lg:order-first lg:row-span-2">
-                  <h1 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-bold font-movement bg-clip-text text-transparent bg-gradient-to-r from-accent to-info">
-                    I’m Manon Lespes.
-                  </h1>
+                  <h2 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-bold font-movement bg-clip-text text-transparent bg-gradient-to-r from-accent to-info">
+                    I’m Manon.
+                  </h2>
                   <p className="text-base">
-                    My name is Manon, and I’m a French developer with a unique
-                    journey that brought me to the world of tech.
+                    My name is Manon Lespes, and I’m a French developer with a
+                    unique journey that brought me to the world of tech.
                   </p>
                   <div className="mt-6 space-y-7 text-base">
                     <p>
                       Originally, I moved from Toulouse (South France) to
                       Brussels (Belgium, the big north for me!) to study
-                      translation and interpretation. After completing my
-                      studies, I fell in love with a Belgian (who is now my
-                      husband) and I decided to settle here for a while.
+                      translation/interpretation and multicultural communication
+                      (French, German and Spanish). After completing my studies,
+                      I fell in love with a Belgian (who is now my husband) and
+                      I decided to settle here for a while.
                     </p>
 
                     <p>
@@ -58,14 +64,14 @@ export const About: React.FC = () => {
                         src="https://interface3.be/fr"
                       />
                       , a training center dedicated to empowering women in tech.
-                      Shortly after, I started an internship at{" "}
+                      Shortly after, I started an internship at
                       <SimpleLink
-                        className="mr-2"
+                        className="mx-2"
                         label="a digital and
                       communication agency"
                         isExternalLink
                         ariaLabel="Visit Spade"
-                        src="https://interface3.be/fr"
+                        src="https://spade.be"
                       />
                       specialising in accessibility, and my dedication to
                       creating inclusive digital experiences led them to hire me

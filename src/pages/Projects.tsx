@@ -63,9 +63,9 @@ export const Project = () => {
       </div>
 
       <section className="px-3 pt-10 pb-5 md:px-5 md:pt-16 md:pb-10 lg:px-10 lg:pt-24 lg:pb-18 2xl:px-36 2xl:py-20">
-        <div className="bg-base-200 mx-auto w-full max-w-7xl py-4 lg:p-8 rounded md:rounded-xl shadow-lg">
+        <div className="bg-base-200 mx-auto w-full max-w-7xl py-4 lg:p-8 lg:pb-20 rounded md:rounded-xl shadow-lg">
           <div className="relative px-4 sm:px-8 lg:px-12">
-            <div className="mx-auto max-w-2xl lg:max-w-5xl">
+            <div className="mx-auto block w-fit text-center max-w-[800px]">
               <h2 className="text-xl md:text-3xl lg:text-4xl font-bold font-movement text-accent block mx-auto w-fit mb-10">
                 A view on my side projects
               </h2>
@@ -76,57 +76,60 @@ export const Project = () => {
                 frameworks or languages.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 mt-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 mt-10 md:mt-20">
               {projectList.map((project: ProjectType, index: number) => {
                 return (
-                  <div
-                    key={index}
-                    className="relative overflow-hidden h-80 md:h-96 2xl:h-[24em] rounded-3xl cursor-pointer text-2xl font-bold bg-secondary bg-blend-darken bg-opacity-10"
-                    style={{
-                      backgroundImage: `url(${project.img?.src})`,
-                      backgroundRepeat: "no-repeat",
-                      backgroundSize: "cover",
-                    }}
-                  >
-                    <div className="z-10 absolute w-full h-full peer"></div>
-                    <div className="absolute peer-hover:-top-20 peer-hover:-left-16 peer-hover:w-[140%] peer-hover:h-[140%] peer-focus:-top-20 peer-focus:-left-16 peer-focus:w-[140%] peer-focus:h-[140%] -top-32 -left-16 w-32 h-44 rounded-full bg-info transition-all duration-500"></div>
-                    <div className="absolute flex text-xl text-center items-end justify-end peer-hover:right-0 peer-hover:rounded-b-none peer-hover:bottom-0 peer-hover:items-center peer-hover:justify-center peer-hover:w-full peer-hover:h-full peer-focus:right-0 peer-focus:rounded-b-none peer-focus:bottom-0 peer-focus:items-center peer-focus:justify-center peer-focus:w-full peer-focus:h-full -bottom-32 -right-16 w-36 h-44 rounded-full bg-info transition-all duration-500 opacity-0 peer-hover:opacity-100 peer-focus:opacity-100">
-                      <div className="flex flex-col gap-y-5">
-                        <h3 className="sr-only">{project.title}</h3>
-                        <p className="text-base-content text-base md:text-lg px-5 max-w-[400px] text-center md:px-0">
+                  <>
+                    <div
+                      key={index}
+                      className="group flex flex-col justify-start items-start gap-2 w-fit sm:w-96 sm:h-[19rem] duration-500 relative rounded-xl p-4 bg-gray-900 hover:-translate-y-2 hover:shadow-xl shadow-neutral-800"
+                    >
+                      <div
+                        style={{
+                          backgroundImage: `url(${project.img?.src})`,
+                          backgroundRepeat: "no-repeat",
+                          backgroundSize: "cover",
+                        }}
+                        className="hidden sm:block absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-7 md:-bottom-10 -right-2 md:-right-10 w-1/2 h-1/2 rounded-xl bg-base-neutral"
+                      ></div>
+
+                      <div>
+                        <h3 className="text-2xl font-bold mb-2 text-neutral-content">
+                          {project.title}
+                        </h3>
+                        <p className="text-neutral-content text-sm md:text-base">
                           {project.description}
                         </p>
-                        <ul className="flex gap-4 flex-wrap px-5 list-none">
+
+                        <ul className="mt-2 flex gap-2 flex-wrap list-none">
                           {project.tags.map((tag: string, index: number) => {
                             return (
                               <li
                                 key={index}
-                                className="badge badge-neutral font-bold mr-3 p-3"
+                                className="badge badge-info text-[11px] font-bold p-2"
                               >
                                 {tag}
                               </li>
                             );
                           })}
                         </ul>
-                        <div className="flex gap-4 px-5">
-                          {project.links.map(
-                            (link: LinkType, index: number) => {
-                              return (
-                                <SimpleLink
-                                  key={index}
-                                  label={link.label}
-                                  src={link.src}
-                                  ariaLabel={link.ariaLabel}
-                                  isExternalLink
-                                />
-                              );
-                            }
-                          )}
-                        </div>
+                      </div>
+                      <div className="mt-auto flex gap-4">
+                        {project.links.map((link: LinkType, index: number) => {
+                          return (
+                            <SimpleLink
+                              className="text-neutral-content"
+                              key={index}
+                              label={link.label}
+                              src={link.src}
+                              ariaLabel={link.ariaLabel}
+                              isExternalLink
+                            />
+                          );
+                        })}
                       </div>
                     </div>
-                  </div>
+                  </>
                 );
               })}
             </div>
