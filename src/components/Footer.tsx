@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
-import { EnvelopeIcon, GitHubIcon, LinkedInIcon } from "./icons/Icons";
+import {
+  DeloreanIcon,
+  EnvelopeIcon,
+  GitHubIcon,
+  LinkedInIcon,
+} from "./icons/Icons";
 
 export const Footer: React.FC = () => {
   return (
     <>
       <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
         <nav className="grid grid-flow-col gap-4">
-          <Link to="/" className="link link-animation">
+          <Link to="about" className="link link-animation">
             About me
           </Link>
           <Link to="contact" className="link link-animation">
@@ -44,7 +49,14 @@ export const Footer: React.FC = () => {
             </a>
           </div>
         </nav>
-        <aside>
+        <aside title="Go back in time">
+          <a
+            href="https://manon-lespes-portfolio.be"
+            target="_blank"
+            className="overflow-hidden w-32 group"
+          >
+            <DeloreanIcon className="relative inline-block group-hover:animate-[drive_3s_linear_infinite] " />
+          </a>
           <p>
             Copyright © {new Date().getFullYear()} - All right reserved by Manon
             Lespes

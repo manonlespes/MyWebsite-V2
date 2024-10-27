@@ -20,6 +20,18 @@ const config: Config = {
           DEFAULT: "#c62a40",
         },
       },
+      keyframes: {
+        drive: {
+          "0%": {
+            transform: "rotateY(0deg) skewX(0deg)",
+            right: "-10px",
+          },
+          "2%": { transform: "skewX(-10deg)" },
+          "50%": { transform: "rotateY(0deg)", right: "100%" },
+          "51%": { transform: "rotateY(180deg) skewX(-16deg)", right: "100%" },
+          "100%": { transform: "rotateY(180deg)", right: "-100%" },
+        },
+      },
     },
 
     fontFamily: {

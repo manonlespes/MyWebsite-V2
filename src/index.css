@@ -15,5 +15,5 @@
 /* Links */
 
 .link-animation {
-  @apply no-underline relative w-fit inline-block after:block after:content-[''] after:absolute after:w-full after:h-[3px] after:hover:bg-accent after:rounded-sm after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center;
+  @apply no-underline relative w-fit inline-block after:block after:content-[''] after:absolute after:w-full after:h-[3px] after:hover:bg-accent after:focus:bg-accent after:rounded-sm after:scale-x-0 after:hover:scale-x-100 after:focus:scale-x-100 after:transition after:duration-300 after:origin-center;
 }
