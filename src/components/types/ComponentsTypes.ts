@@ -18,6 +18,7 @@ export interface ButtonType {
   label: string;
   isLink?: boolean;
   linkTo?: string;
+  className?: string;
 }
 
 export interface ProjectType {
