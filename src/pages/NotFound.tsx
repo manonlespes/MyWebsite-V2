@@ -1,6 +1,6 @@
 import { Button } from "../components/Button";
 
-export const NotFound: React.FC = () => {
+const NotFound: React.FC = () => {
   return (
     <>
       <div className="h-screen w-screen bg-base-200 flex items-center">
@@ -17,7 +17,9 @@ export const NotFound: React.FC = () => {
               homepage.
             </p>
 
-            <Button label="Go back" />
+            <p>
+              <Button label="Go back" isLink linkTo={"/"} className="btn-md" />
+            </p>
           </div>
 
           <div className="max-w-lg">{/* TODO add img */}</div>
@@ -26,3 +28,5 @@ export const NotFound: React.FC = () => {
     </>
   );
 };
+
+export default NotFound;
