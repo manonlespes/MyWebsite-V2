@@ -37,7 +37,7 @@ export const Navbar: React.FC = () => {
                     isPending ? "pending" : isActive ? "active" : ""
                   }
                 >
-                  About me
+                  About
                 </NavLink>
               </li>
               <li>
@@ -52,12 +52,12 @@ export const Navbar: React.FC = () => {
               </li>
               <li>
                 <NavLink
-                  to="contact"
+                  to="tools"
                   className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : ""
                   }
                 >
-                  Contact
+                  Tools
                 </NavLink>
               </li>
             </ul>
@@ -75,7 +75,7 @@ export const Navbar: React.FC = () => {
                   isPending ? "pending" : isActive ? "active" : ""
                 }
               >
-                About me
+                About
               </NavLink>
             </li>
             <li>
@@ -90,12 +90,12 @@ export const Navbar: React.FC = () => {
             </li>
             <li>
               <NavLink
-                to="contact"
+                to="tools"
                 className={({ isActive, isPending }) =>
                   isPending ? "pending" : isActive ? "active" : ""
                 }
               >
-                Contact
+                Tools
               </NavLink>
             </li>
           </ul>

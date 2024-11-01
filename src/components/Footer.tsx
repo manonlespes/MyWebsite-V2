@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
                 : "link link-animation"
             }
           >
-            About me
+            About
           </NavLink>
           <NavLink
             to="projects"
@@ -37,6 +37,18 @@ export const Footer: React.FC = () => {
             Project
           </NavLink>
           <NavLink
+            to="tools"
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "active link"
+                : "link link-animation"
+            }
+          >
+            Tools
+          </NavLink>
+          <NavLink
             to="contact"
             className={({ isActive, isPending }) =>
               isPending
@@ -48,7 +60,6 @@ export const Footer: React.FC = () => {
           >
             Contact
           </NavLink>
-          <a className="link link-animation">Site map</a>
         </nav>
         <nav>
           <div className="flex gap-5">

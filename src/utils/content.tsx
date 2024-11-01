@@ -1,7 +1,9 @@
+import { A11yIcon, DesignIcon, DevIcon } from "../components/icons/Icons";
 import {
   CardContentType,
   ImageType,
   ProjectType,
+  SmallCardType,
 } from "../components/types/ComponentsTypes";
 
 import { v4 as uuid } from "uuid";
@@ -134,5 +136,44 @@ export const projectImageList: ImageType[] = [
     width: "fit",
     className: "absolute inset-0 h-full w-full object-cover",
     src: "/images/background_img.webp",
+  },
+];
+
+export const toolList: SmallCardType[] = [
+  {
+    title: "Design & Eco-design Tools",
+    content: [
+      "Figma",
+      "Adobe",
+      "Font Awesome",
+      "Lighthouse",
+      "Handbook of Sustainable Design of Digital Services",
+    ],
+    svg: <DesignIcon className="w-11" />,
+  },
+  {
+    title: "Developer Tools",
+    content: [
+      "VsCode",
+      "GitLab / GitHub",
+      "Bruno",
+      "React Developer Tools",
+      "Vue DevTools",
+      "Tailwind CSS",
+      "DaisyUi",
+      "Bootstrap",
+      "Bulma",
+      "Oruga",
+      "Shadcn",
+      "Material UI",
+      "VeeValidate",
+      "Buefy",
+    ],
+    svg: <DevIcon className="w-11" />,
+  },
+  {
+    title: "Accessibility Tools",
+    content: ["AnySurfer Doc", "Eleven Ways Doc", "axe Accessibility Linter"],
+    svg: <A11yIcon className="w-11" />,
   },
 ];
