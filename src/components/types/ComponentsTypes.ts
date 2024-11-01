@@ -1,4 +1,30 @@
+import { ReactElement } from "react";
 import { ScrollPosition } from "react-lazy-load-image-component";
+
+export interface SEOtypes {
+  title: string;
+  description: string;
+  meta: any;
+  lang?: string;
+  siteName?: boolean;
+  ogDescription: string;
+  image?: string;
+}
+
+export interface SectionContentType {
+  title: string;
+  text: string;
+  children: any;
+  sectionBackground?: string;
+  titleColor?: string;
+  textColor?: string;
+}
+
+export interface SmallCardType {
+  title: string;
+  content: string[];
+  svg: ReactElement;
+}
 
 export interface CardContentType {
   title: string;
