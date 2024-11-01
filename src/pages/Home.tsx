@@ -1,8 +1,13 @@
-import { Card } from "../components/Card";
+import {
+  LazyLoadComponent,
+  trackWindowScroll,
+} from "react-lazy-load-image-component";
+import Card from "../components/Card";
 import { TimeLine } from "../components/TimeLine";
 import { CardContentType } from "../components/types/ComponentsTypes";
+import { aboutContentCards } from "../utils/content";
 
-export const Home: React.FC = () => {
+const Home: React.FC = () => {
   return (
     <>
       <section
@@ -54,8 +59,8 @@ export const Home: React.FC = () => {
                       >
                         <Card
                           title={card.title}
-                          text={card.text}
                           img={card.img}
+                          text={card.text}
                         />
                       </div>
                     );
@@ -86,6 +91,7 @@ export const Home: React.FC = () => {
                   skills to good use and where my strength lies.
                 </p>
               </div>
+
               <TimeLine />
             </div>
           </div>
@@ -95,21 +101,4 @@ export const Home: React.FC = () => {
   );
 };
 
-const aboutContentCards: CardContentType[] = [
-  {
-    title: "This is me, pretending to look pensively at the landscape",
-    text: "Before the pandemic, I was organising events and then I changed my career direction and jumped into the digital and IT world. I like coding, but also traveling, dancing and reading. But most of all, I am fond of my cat. I know, I sound like a cliché.",
-    img: {
-      alt: "Manon Lespes - in a train looking trhough the window.",
-      source: "/images/manon_lespes.webp",
-    },
-  },
-  {
-    title: "Chatshimi, the Spleeping Beauty",
-    text: " Chatshimi sometimes acts as my rubber-cat-debugging. When I'm working remotly, she's constantly by my side and even when she's taking a 10-hour power nap, she helps me debugg. Rest assured that the code is in safe and capable pawls and hands.",
-    img: {
-      alt: "Chatshimi, my lovely spleeping cat.",
-      source: "/images/chatshimi.webp",
-    },
-  },
-];
+export default trackWindowScroll(Home);
