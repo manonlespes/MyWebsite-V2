@@ -7,10 +7,14 @@ const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Project = lazy(() => import("./pages/Projects"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const Tools = lazy(() => import("./pages/Tools"));
+
+import { HelmetProvider } from "react-helmet-async";
 
 const App: React.FC = () => {
+  const helmetContext = {};
   return (
-    <>
+    <HelmetProvider context={helmetContext}>
       <Router>
         <Suspense
           fallback={<span className="loading loading-ring loading-lg"></span>}
@@ -22,12 +26,13 @@ const App: React.FC = () => {
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contact />} />
               <Route path="projects" element={<Project />} />
+              <Route path="tools" element={<Tools />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
         </Suspense>
       </Router>
-    </>
+    </HelmetProvider>
   );
 };
 

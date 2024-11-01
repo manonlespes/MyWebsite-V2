@@ -1,8 +1,19 @@
 import { Button } from "../components/Button";
+import SEO from "../components/SEO";
+import { SEOtypes } from "../components/types/ComponentsTypes";
 
 const NotFound: React.FC = () => {
+  const seo: SEOtypes = {
+    title: "Not Found",
+    description:
+      "Upsi daisy, something went wrong. We couldn't find what you were looking for.",
+    meta: [],
+    ogDescription:
+      "Upsi daisy, something went wrong. We couldn't find what you were looking for.",
+  };
   return (
     <>
+      <SEO props={seo} />
       <div className="h-screen w-screen bg-base-200 flex items-center">
         <div className="container flex flex-col md:flex-row items-center justify-center px-5">
           <div className="max-w-md">
