@@ -6,17 +6,23 @@ import {
   NewWindowIcon,
 } from "../components/icons/Icons";
 import { SimpleLink } from "../components/SimpleLink";
+import SEO from "../components/SEO";
+import { SEOtypes } from "../components/types/ComponentsTypes";
+import Header from "../components/Header";
 
 const About: React.FC = () => {
+  const seo: SEOtypes = {
+    title: "About",
+    description: "Who I am? Check this out to learn a bit more about me.",
+    meta: [],
+    ogDescription: "Who I am? Check this out to learn a bit more about me.",
+  };
   return (
     <>
-      <section className="block w-fit m-auto bg-base-100 h-fit">
-        <div className="p-5 md:p-10 text-center">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold font-movement bg-clip-text text-transparent bg-gradient-to-r from-accent to-info">
-            About me
-          </h1>
-        </div>
-      </section>
+      <SEO props={seo} />
+
+      <Header title="About" />
+
       <section className="px-3 py-5 md:px-5 md:py-10 lg:px-10 lg:py-18 2xl:px-36 2xl:py-20">
         <div className="bg-base-200 mx-auto w-full max-w-7xl py-4 lg:p-8 rounded md:rounded-xl shadow-lg">
           <div className="relative px-4 sm:px-8 lg:px-12">
