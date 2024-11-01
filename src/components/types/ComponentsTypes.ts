@@ -1,12 +1,24 @@
+import { ScrollPosition } from "react-lazy-load-image-component";
+
 export interface CardContentType {
-  title?: string;
-  text?: string;
-  img?: {
-    alt: string;
-    source: string;
-  };
+  title: string;
+  text: string;
+  img: ImageType;
 }
+
+export interface ImageType {
+  key: string;
+  src: string;
+  alt: string;
+  height: string;
+  width: string;
+  caption?: string;
+  className?: string;
+  scrollPosition?: ScrollPosition;
+}
+
 export interface LinkType {
+  id?: string;
   label: string;
   src: string;
   ariaLabel?: string;
