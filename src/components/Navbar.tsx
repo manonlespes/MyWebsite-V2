@@ -1,7 +1,8 @@
 import { ToggleTheme } from "./ToggleTheme";
 import Logo from "../assets/my-logo.webp";
 import { Button } from "./Button";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 export const Navbar: React.FC = () => {
   return (
@@ -30,21 +31,34 @@ export const Navbar: React.FC = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
-                <Link to="about">About me</Link>
+                <NavLink
+                  to="about"
+                  className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "active" : ""
+                  }
+                >
+                  About me
+                </NavLink>
               </li>
               <li>
-                <Link to="projects">Projects</Link>
-                {/*   <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul> */}
+                <NavLink
+                  to="projects"
+                  className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "active" : ""
+                  }
+                >
+                  Projects
+                </NavLink>
               </li>
               <li>
-                <Link to="contact">Contact</Link>
+                <NavLink
+                  to="contact"
+                  className={({ isActive, isPending }) =>
+                    isPending ? "pending" : isActive ? "active" : ""
+                  }
+                >
+                  Contact
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -53,32 +67,44 @@ export const Navbar: React.FC = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 gap-5">
             <li>
-              <Link to="about">About me</Link>
+              <NavLink
+                to="about"
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+              >
+                About me
+              </NavLink>
             </li>
             <li>
-              <Link to="projects">Projects</Link>
-              {/* <details>
-                <summary>Projects</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details> */}
+              <NavLink
+                to="projects"
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+              >
+                Projects
+              </NavLink>
             </li>
             <li>
-              <Link to="contact">Contact</Link>
+              <NavLink
+                to="contact"
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+              >
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>
         <div className="navbar-end gap-4">
-          <ToggleTheme />
-          <Button label="Contact me" isLink linkTo={"contact"} />
+          <LazyLoadComponent>
+            <ToggleTheme />
+            <Button label="Contact me" isLink linkTo={"contact"} />
+          </LazyLoadComponent>
         </div>
       </div>
     </>

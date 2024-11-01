@@ -1,22 +1,53 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   DeloreanIcon,
   EnvelopeIcon,
   GitHubIcon,
   LinkedInIcon,
 } from "./icons/Icons";
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 export const Footer: React.FC = () => {
   return (
-    <>
+    <LazyLoadComponent>
       <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
         <nav className="grid grid-flow-col gap-4">
-          <Link to="about" className="link link-animation">
+          <NavLink
+            to="about"
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "active link"
+                : "link link-animation"
+            }
+          >
             About me
-          </Link>
-          <Link to="contact" className="link link-animation">
+          </NavLink>
+          <NavLink
+            to="projects"
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "active link"
+                : "link link-animation"
+            }
+          >
+            Project
+          </NavLink>
+          <NavLink
+            to="contact"
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending"
+                : isActive
+                ? "active link"
+                : "link link-animation"
+            }
+          >
             Contact
-          </Link>
+          </NavLink>
           <a className="link link-animation">Site map</a>
         </nav>
         <nav>
@@ -63,6 +94,6 @@ export const Footer: React.FC = () => {
           </p>
         </aside>
       </footer>
-    </>
+    </LazyLoadComponent>
   );
 };
