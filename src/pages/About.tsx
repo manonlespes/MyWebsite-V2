@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   EnvelopeIcon,
   GitHubIcon,
@@ -6,7 +7,7 @@ import {
 } from "../components/icons/Icons";
 import { SimpleLink } from "../components/SimpleLink";
 
-export const About: React.FC = () => {
+const About: React.FC = () => {
   return (
     <>
       <section className="block w-fit m-auto bg-base-100 h-fit">
@@ -150,13 +151,13 @@ export const About: React.FC = () => {
                     </li>
 
                     <li className="mt-8 border-t border-primary-300 pt-8 flex">
-                      <a
+                      <Link
+                        to={"/contact"}
                         className="inline-flex items-center text-sm gap-5 group hover:text-accent transition-all ease-in-out self-center focus:text-accent"
-                        href="mailto:manonlespes@hotmail.fr"
                       >
                         <EnvelopeIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out w-5" />
-                        manonlespes@hotmail.fr
-                      </a>
+                        Drop me a line
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -168,3 +169,5 @@ export const About: React.FC = () => {
     </>
   );
 };
+
+export default About;
