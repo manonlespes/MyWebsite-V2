@@ -68,6 +68,7 @@ const About: React.FC = () => {
                         className="mr-2"
                         label="Interface3"
                         isExternalLink
+                        ariaLabel="Interface3"
                         src="https://interface3.be/fr"
                       />
                       , a training center dedicated to empowering women in tech.
@@ -131,7 +132,7 @@ const About: React.FC = () => {
                         href="https://github.com/manonlespes"
                         target="_blank"
                         rel="noreferrer noopener"
-                        aria-label="(opens in a new tab)"
+                        aria-label="Follow me on Github (opens in a new tab)"
                       >
                         <GitHubIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out w-6" />
                         <span>
@@ -146,7 +147,7 @@ const About: React.FC = () => {
                         href="https://be.linkedin.com/in/manon-lespes"
                         target="_blank"
                         rel="noreferrer noopener"
-                        aria-label="(opens in a new tab)"
+                        aria-label="Follow me on LinkedIn (opens in a new tab)"
                       >
                         <LinkedInIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out w-5" />
                         <span>
@@ -156,10 +157,11 @@ const About: React.FC = () => {
                       </a>
                     </li>
 
-                    <li className="mt-8 border-t border-primary-300 pt-8 flex">
+                    <li className="mt-8 border-t border-accent pt-8 flex">
                       <Link
                         to={"/contact"}
                         className="inline-flex items-center text-sm gap-5 group hover:text-accent transition-all ease-in-out self-center focus:text-accent"
+                        aria-label="Drop me a line"
                       >
                         <EnvelopeIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out w-5" />
                         Drop me a line

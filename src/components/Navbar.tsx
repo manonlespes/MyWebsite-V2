@@ -6,8 +6,8 @@ import { LazyLoadComponent } from "react-lazy-load-image-component";
 
 export const Navbar: React.FC = () => {
   return (
-    <>
-      <div className="navbar bg-base-100 sticky top-0 z-30 bg-opacity-90 backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)] shadow-sm lg:px-6">
+    <header>
+      <nav className="navbar bg-base-100 sticky top-0 z-30 bg-opacity-90 backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)] shadow-sm lg:px-6">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,7 +27,7 @@ export const Navbar: React.FC = () => {
               </svg>
             </div>
             <ul
-              tabIndex={0}
+              tab-index={1}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
@@ -52,22 +52,26 @@ export const Navbar: React.FC = () => {
               </li>
               <li>
                 <NavLink
-                  to="tools"
+                  to="uses"
                   className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : ""
                   }
                 >
-                  Tools
+                  Uses
                 </NavLink>
               </li>
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost block w-20 md:w-24 h-fit">
-            <img alt="Home" src={Logo} />
+          <Link
+            to="/"
+            className="btn btn-ghost block w-20 md:w-24 h-fit"
+            aria-label="Go back to Home Page"
+          >
+            <img alt="Manon Lespes' Portfolio" src={Logo} />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 gap-5">
+          <ul tab-index={0} className="menu menu-horizontal px-1 gap-5">
             <li>
               <NavLink
                 to="about"
@@ -90,12 +94,12 @@ export const Navbar: React.FC = () => {
             </li>
             <li>
               <NavLink
-                to="tools"
+                to="uses"
                 className={({ isActive, isPending }) =>
                   isPending ? "pending" : isActive ? "active" : ""
                 }
               >
-                Tools
+                Uses
               </NavLink>
             </li>
           </ul>
@@ -106,7 +110,7 @@ export const Navbar: React.FC = () => {
             <Button label="Contact me" isLink linkTo={"contact"} />
           </LazyLoadComponent>
         </div>
-      </div>
-    </>
+      </nav>
+    </header>
   );
 };

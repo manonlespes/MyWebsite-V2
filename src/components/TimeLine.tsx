@@ -1,3 +1,8 @@
+import {
+  interfaceBadges,
+  spadebadges,
+  spadeInternBadges,
+} from "../utils/content";
 import { TimeLineIcon } from "./icons/Icons";
 import { SimpleLink } from "./SimpleLink";
 
@@ -6,7 +11,7 @@ export const TimeLine: React.FC = () => {
     <>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
         <li>
-          <div className="timeline-middle text-accent">
+          <div className="timeline-middle text-info">
             <TimeLineIcon />
           </div>
           <div className="timeline-start mb-10">
@@ -46,7 +51,7 @@ export const TimeLine: React.FC = () => {
         </li>
         <li>
           <hr />
-          <div className="timeline-middle text-accent">
+          <div className="timeline-middle text-info">
             <TimeLineIcon />
           </div>
           <div className="timeline-end mb-10">
@@ -68,7 +73,7 @@ export const TimeLine: React.FC = () => {
         </li>
         <li>
           <hr />
-          <div className="timeline-middle text-accent">
+          <div className="timeline-middle text-info">
             <TimeLineIcon />
           </div>
           <div className="timeline-start mb-10">
@@ -95,7 +100,7 @@ export const TimeLine: React.FC = () => {
         </li>
         <li>
           <hr />
-          <div className="timeline-middle text-accent">
+          <div className="timeline-middle text-info">
             <TimeLineIcon />
           </div>
           <div className="timeline-end mb-10">
@@ -123,7 +128,7 @@ export const TimeLine: React.FC = () => {
         </li>
         <li>
           <hr />
-          <div className="timeline-middle text-accent">
+          <div className="timeline-middle text-info">
             <TimeLineIcon />
           </div>
           <div className="timeline-start mb-10">
@@ -161,7 +166,7 @@ export const TimeLine: React.FC = () => {
         </li>
         <li>
           <hr />
-          <div className="timeline-middle text-accent">
+          <div className="timeline-middle text-info">
             <TimeLineIcon />
           </div>
           <div className="timeline-end mb-10">
@@ -187,37 +192,3 @@ export const TimeLine: React.FC = () => {
     </>
   );
 };
-
-const spadebadges: string[] = [
-  "Vue.js",
-  "React",
-  "TypeScript",
-  "Javascript",
-  "WordPress",
-  "Html & CSS/SCSS",
-  "PHP",
-];
-
-const spadeInternBadges: string[] = [
-  "Javascript",
-  "Html & CSS/SCSS",
-  "WordPress",
-  "Twig",
-  "PHP",
-  "React",
-];
-
-const interfaceBadges: string[] = [
-  "Javascript",
-  "Html & CSS",
-  "WordPress",
-  "PHP / MySQL",
-  "JQuery",
-  "Bootstrap 4 & 5",
-  "Node.js / NoSQL",
-  "React",
-  "Photoshop",
-  "Illustrator",
-  "XD",
-  "Animate",
-];

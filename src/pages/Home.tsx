@@ -46,7 +46,7 @@ const Home: React.FC = () => {
             src="/images/front_end_img.webp"
           />
           <div className="max-w-sm text-center lg:max-w-md lg:text-left">
-            <h1 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-bold font-movement bg-clip-text text-transparent bg-gradient-to-r from-accent to-info">
+            <h1 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-bold font-movement bg-clip-text text-transparent bg-gradient-to-r from-neutral-content to-info">
               Hello there, I'm Manon!
             </h1>
 
