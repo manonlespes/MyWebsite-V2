@@ -22,7 +22,7 @@ const Project = () => {
   };
 
   const sectionContent = {
-    text: "Whenever I can, I am working on small projects. Sometimes, itallows me to reinforce my knowledge and to experience new frameworks or languages.",
+    text: "Whenever I can, I am working on small projects. Sometimes, it allows me to reinforce my knowledge and to experience new frameworks or languages.",
     title: "A view on my side projects",
   };
 

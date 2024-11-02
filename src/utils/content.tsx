@@ -1,4 +1,11 @@
-import { A11yIcon, DesignIcon, DevIcon } from "../components/icons/Icons";
+import {
+  A11yIcon,
+  DesignIcon,
+  DevIcon,
+  SpokenIcon,
+  LaptopIcon,
+  CssIcon,
+} from "../components/icons/Icons";
 import {
   CardContentType,
   ImageType,
@@ -141,39 +148,138 @@ export const projectImageList: ImageType[] = [
 
 export const toolList: SmallCardType[] = [
   {
+    id: uuid(),
     title: "Design & Eco-design Tools",
     content: [
-      "Figma",
-      "Adobe",
-      "Font Awesome",
-      "Lighthouse",
-      "Handbook of Sustainable Design of Digital Services",
+      { value: "Figma" },
+      { value: "Adobe (animate and XD)" },
+      { value: "Font Awesome" },
+      { value: "Lighthouse" },
+      {
+        value: "Handbook of Sustainable Design of Digital Services",
+        link: "https://gr491.isit-europe.org/en/",
+      },
+      {
+        value: "Website Carbon Calculator",
+        link: "https://www.websitecarbon.com/",
+      },
     ],
-    svg: <DesignIcon className="w-11" />,
+    svg: <DesignIcon className="w-11 lg:w-14" />,
   },
   {
+    id: uuid(),
     title: "Developer Tools",
     content: [
-      "VsCode",
-      "GitLab / GitHub",
-      "Bruno",
-      "React Developer Tools",
-      "Vue DevTools",
-      "Tailwind CSS",
-      "DaisyUi",
-      "Bootstrap",
-      "Bulma",
-      "Oruga",
-      "Shadcn",
-      "Material UI",
-      "VeeValidate",
-      "Buefy",
+      { value: "Visual Studio Code" },
+      { value: "GitLab / GitHub" },
+      { value: "Commitizen" },
+      { value: "Bruno" },
+      { value: "React Developer Tools" },
+      { value: "Vue DevTools" },
+      { value: "DaisyUi" },
+      { value: "Oruga" },
+      { value: "Shadcn" },
+      { value: "Material UI" },
+      { value: "VeeValidate" },
+      { value: "Buefy" },
     ],
-    svg: <DevIcon className="w-11" />,
+    svg: <LaptopIcon className="w-11 lg:w-14" />,
   },
   {
+    id: uuid(),
     title: "Accessibility Tools",
-    content: ["AnySurfer Doc", "Eleven Ways Doc", "axe Accessibility Linter"],
-    svg: <A11yIcon className="w-11" />,
+    content: [
+      { value: "WCAG 2.2", link: "https://www.w3.org/TR/WCAG22/" },
+      { value: "Accessible Tree from the console" },
+      { value: "Voice Over" },
+      { value: "Contrast Checker" },
+      {
+        value: "AnySurfer Doc",
+        link: "https://www.anysurfer.be/en/documentation",
+      },
+      { value: "Eleven Ways Doc", link: "https://elevenways.be/en/" },
+      { value: "Axe Accessibility Linter" },
+    ],
+    svg: <A11yIcon className="w-11 lg:w-14" />,
   },
+];
+
+export const languageList: SmallCardType[] = [
+  {
+    id: uuid(),
+    title: "Languages and Frameworks",
+    content: [
+      { value: "JavaScript" },
+      { value: "React" },
+      { value: "Vue.js" },
+      { value: "TypeScript" },
+      { value: "Node.js" },
+      { value: "JQuery" },
+      { value: "Twig / PHP" },
+      { value: "SQL" },
+    ],
+    svg: <DevIcon className="w-11 lg:w-14" />,
+  },
+  {
+    id: uuid(),
+    title: "CSS Frameworks",
+    content: [
+      { value: "CSS / SCSS" },
+      { value: "Tailwind CSS" },
+      { value: "Bootstrap 4 & 5" },
+      { value: "Bulma" },
+    ],
+    svg: <CssIcon className="w-11" />,
+  },
+  {
+    id: uuid(),
+    title: "Spoken Languages",
+    content: [
+      { value: "French (mother tongue)" },
+      { value: "English (B2)" },
+      {
+        value: "German (B2)",
+      },
+      {
+        value: "Spanish (B1)",
+      },
+    ],
+    svg: <SpokenIcon className="w-11 lg:w-14" />,
+  },
+];
+
+export const spadebadges: string[] = [
+  "Vue.js",
+  "React",
+  "TypeScript",
+  "JavaScript",
+  "WordPress",
+  "HTML & CSS/SCSS",
+  "Node.js",
+  "PHP",
+];
+
+export const spadeInternBadges: string[] = [
+  "JavaScript",
+  "HTML & CSS/SCSS",
+  "WordPress",
+  "Twig",
+  "PHP",
+  "React",
+  "Node.js",
+];
+
+export const interfaceBadges: string[] = [
+  "JavaScript",
+  "HTML & CSS",
+  "WordPress",
+  "PHP / MySQL",
+  "JQuery",
+  "Bootstrap 4 & 5",
+  "Node.js / NoSQL",
+  "React",
+  "Photoshop",
+  "Illustrator",
+  "XD",
+  "Animate",
 ];

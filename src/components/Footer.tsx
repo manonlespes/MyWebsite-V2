@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
             Project
           </NavLink>
           <NavLink
-            to="tools"
+            to="uses"
             className={({ isActive, isPending }) =>
               isPending
                 ? "pending"
@@ -46,7 +46,7 @@ export const Footer: React.FC = () => {
                 : "link link-animation"
             }
           >
-            Tools
+            Uses
           </NavLink>
           <NavLink
             to="contact"
@@ -96,6 +96,7 @@ export const Footer: React.FC = () => {
             href="https://manon-lespes-portfolio.be"
             target="_blank"
             className="overflow-hidden w-32 group"
+            aria-label="Visit my past not accessible portfolio (opens in new tabs)"
           >
             <DeloreanIcon className="relative inline-block group-hover:animate-[drive_3s_linear_infinite] " />
           </a>

@@ -21,8 +21,12 @@ export interface SectionContentType {
 }
 
 export interface SmallCardType {
+  id: string;
   title: string;
-  content: string[];
+  content: {
+    value: string;
+    link?: string;
+  }[];
   svg: ReactElement;
 }
 
