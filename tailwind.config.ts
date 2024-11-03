@@ -10,6 +10,31 @@ const config: Config = {
       link: "0px 3px",
       "link-hover": "100% 3px",
     },
+    fontSize: {
+      sm: [
+        "1rem",
+        {
+          letterSpacing: "0.025em",
+        },
+      ],
+      base: [
+        "1.25rem",
+        {
+          letterSpacing: "0.030em",
+        },
+      ],
+      lg: [
+        "1.27rem",
+        {
+          letterSpacing: "0.030em",
+        },
+      ],
+      xl: "1.5rem",
+      "2xl": "1.563rem",
+      "3xl": "1.953rem",
+      "4xl": "2.441rem",
+      "5xl": "3.052rem",
+    },
     extend: {
       colors: {
         primary: {

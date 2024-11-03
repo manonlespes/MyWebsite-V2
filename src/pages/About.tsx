@@ -41,14 +41,14 @@ const About: React.FC = () => {
                   </div>
                 </div>
                 <div className="lg:order-first lg:row-span-2">
-                  <h2 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-bold font-movement bg-clip-text text-transparent bg-gradient-to-r from-accent to-info">
+                  <h2 className="mb-5 text-xl md:text-3xl lg:text-4xl font-bold font-movement bg-clip-text text-transparent bg-gradient-to-r from-accent to-info">
                     I’m Manon.
                   </h2>
-                  <p className="text-base">
+                  <p className="text-sm md:text-base">
                     My name is Manon Lespes, and I’m a French developer with a
                     unique journey that brought me to the world of tech.
                   </p>
-                  <div className="mt-6 space-y-7 text-base">
+                  <div className="mt-6 space-y-7 text-sm md:text-base">
                     <p>
                       Originally, I moved from Toulouse (South France) to
                       Brussels (Belgium, the big north for me!) to study
@@ -65,7 +65,7 @@ const About: React.FC = () => {
                       to set sail for the world of IT. I enrolled in an intense,
                       short-term program at
                       <SimpleLink
-                        className="mr-2"
+                        className="mx-2 md:text-base"
                         label="Interface3"
                         isExternalLink
                         ariaLabel="Interface3"
@@ -74,7 +74,7 @@ const About: React.FC = () => {
                       , a training center dedicated to empowering women in tech.
                       Shortly after, I started an internship at
                       <SimpleLink
-                        className="mx-2"
+                        className="mx-2 md:text-base"
                         label="a digital and
                       communication agency"
                         isExternalLink

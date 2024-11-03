@@ -50,7 +50,7 @@ const Home: React.FC = () => {
               Hello there, I'm Manon!
             </h1>
 
-            <p className="mb-5 text-neutral-content">
+            <p className="mb-5 text-neutral-content text-sm md:text-base">
               A front-end developer, eager to code with passion your project.
             </p>
           </div>

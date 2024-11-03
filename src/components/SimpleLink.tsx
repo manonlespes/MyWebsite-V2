@@ -15,7 +15,7 @@ export const SimpleLink = (props: LinkType) => {
       {isExternalLink ? (
         <a
           key={id}
-          className={`group text-base link link-animation text-inherit ${className}`}
+          className={`group text-sm link link-animation text-inherit ${className}`}
           href={src}
           target="_blank"
           rel="noreferrer noopener"

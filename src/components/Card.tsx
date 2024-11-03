@@ -15,9 +15,11 @@ const Card = (props: CardContentType) => {
       )}
 
       <div className="p-6 card-body">
-        {title && <h3 className="mb-2 block card-title">{title}</h3>}
+        {title && (
+          <h3 className="mb-2 block card-title tracking-wide">{title}</h3>
+        )}
 
-        <p>{text}</p>
+        <p className="text-sm">{text}</p>
       </div>
     </LazyLoadComponent>
   );

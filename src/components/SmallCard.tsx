@@ -11,10 +11,10 @@ const SmallCard = ({ title, content, svg, id }: SmallCardType) => {
       <div className="flex flex-col h-full w-full">
         <div className="">
           <div className="block mb-auto mx-auto w-fit">{svg}</div>
-          <h3 className="my-9 card-title">{title}</h3>
+          <h3 className="my-9 card-title tracking-wide">{title}</h3>
         </div>
 
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2 text-sm">
           {content.map((item, index) => {
             return (
               <Fragment key={index}>

@@ -16,10 +16,10 @@ export const Footer: React.FC = () => {
             to="about"
             className={({ isActive, isPending }) =>
               isPending
-                ? "pending"
+                ? "pending text-sm"
                 : isActive
-                ? "active link"
-                : "link link-animation"
+                ? "active link text-sm"
+                : "link link-animation text-sm"
             }
           >
             About
@@ -28,10 +28,10 @@ export const Footer: React.FC = () => {
             to="projects"
             className={({ isActive, isPending }) =>
               isPending
-                ? "pending"
+                ? "pending text-sm"
                 : isActive
-                ? "active link"
-                : "link link-animation"
+                ? "active link text-sm"
+                : "link link-animation text-sm"
             }
           >
             Project
@@ -40,10 +40,10 @@ export const Footer: React.FC = () => {
             to="uses"
             className={({ isActive, isPending }) =>
               isPending
-                ? "pending"
+                ? "pending text-sm"
                 : isActive
-                ? "active link"
-                : "link link-animation"
+                ? "active link text-sm"
+                : "link link-animation text-sm"
             }
           >
             Uses
@@ -52,10 +52,10 @@ export const Footer: React.FC = () => {
             to="contact"
             className={({ isActive, isPending }) =>
               isPending
-                ? "pending"
+                ? "pending text-sm"
                 : isActive
-                ? "active link"
-                : "link link-animation"
+                ? "active link text-sm"
+                : "link link-animation text-sm"
             }
           >
             Contact

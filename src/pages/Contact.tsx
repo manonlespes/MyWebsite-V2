@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
               <input
                 required
                 type="text"
-                className="grow"
+                className="grow text-sm md:text-base"
                 placeholder="Email"
                 name="email_address"
               />
@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
               <input
                 required
                 type="text"
-                className="grow"
+                className="grow text-sm md:text-base"
                 placeholder="Name"
                 name="full_name"
               />
@@ -101,14 +101,14 @@ const Contact: React.FC = () => {
                 required
                 type="text"
                 placeholder="Subject"
-                className="input grow input-bordered"
+                className="input grow input-bordered text-sm md:text-base"
                 name="subject"
               />
             </label>
 
             <textarea
               required
-              className="textarea textarea-bordered min-h-48 text-base"
+              className="textarea textarea-bordered min-h-48 text-sm md:text-base"
               placeholder="Your message here"
               name="message"
             ></textarea>

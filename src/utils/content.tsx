@@ -154,6 +154,10 @@ export const toolList: SmallCardType[] = [
       { value: "Figma" },
       { value: "Adobe (animate and XD)" },
       { value: "Font Awesome" },
+      {
+        value: "Fonts designed by Womxn",
+        link: "https://www.design-research.be/by-womxn/",
+      },
       { value: "Lighthouse" },
       {
         value: "Handbook of Sustainable Design of Digital Services",

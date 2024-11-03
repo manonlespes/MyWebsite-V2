@@ -15,13 +15,13 @@ export const TimeLine: React.FC = () => {
             <TimeLineIcon />
           </div>
           <div className="timeline-start mb-10">
-            <time className="font-mono italic text-neutral-content block md:text-end">
+            <time className="tracking-wider italic text-neutral-content block md:text-end">
               June 2022 - currently
             </time>
-            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-md mt-1 mb-2">
+            <div className="text-sm md:text-base font-black p-2 bg-base-200 w-fit rounded-md mt-1 mb-2">
               Front-end Developer, Spade scrl in Brussels (Belgium)
             </div>
-            <p className="mb-3 text-neutral-content">
+            <p className="mb-3 text-neutral-content text-sm">
               Develop, write, modify, integrate and test code with accessibility
               and WCAG criteria in mind; develop and implement procedures for
               ongoing website review; monitor and maintain website
@@ -37,7 +37,7 @@ export const TimeLine: React.FC = () => {
               />
             </p>
 
-            <ul className="flex gap-3 flex-wrap list-none">
+            <ul className="flex gap-3 flex-wrap list-none mb-10">
               {spadebadges.map((badge: string, index: number) => {
                 return (
                   <li key={index} className="badge badge-info font-bold">
@@ -55,13 +55,13 @@ export const TimeLine: React.FC = () => {
             <TimeLineIcon />
           </div>
           <div className="timeline-end mb-10">
-            <time className="font-mono italic text-neutral-content">
+            <time className="tracking-wider italic text-neutral-content">
               Sept 2024
             </time>
-            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-md mt-1 mb-2">
+            <div className="text-sm md:text-base font-black p-2 bg-base-200 w-fit rounded-md mt-1 mb-2">
               Training Anysurfer, 2-day training
             </div>
-            <p className="mb-3 text-neutral-content">
+            <p className="mb-3 text-neutral-content text-sm">
               AnySurfer offers advice, auditing, and training to help you create
               accessible websites, documents and apps. Analysis of keyboard
               accessibility, semantics, text alternatives, use of colors, forms;
@@ -77,17 +77,17 @@ export const TimeLine: React.FC = () => {
             <TimeLineIcon />
           </div>
           <div className="timeline-start mb-10">
-            <time className="font-mono italic text-neutral-content block md:text-end">
+            <time className="tracking-wider italic text-neutral-content block md:text-end">
               June 19th, 2024
             </time>
-            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-md mt-1 mb-2">
+            <div className="text-sm md:text-base font-black p-2 bg-base-200 w-fit rounded-md mt-1 mb-2">
               Speaker at the GreenTech Forum Brussels (Belgium)
             </div>
-            <p className="mb-3 text-neutral-content">
+            <p className="mb-3 text-neutral-content text-sm">
               Presentation of tools, web eco-design criteria and best practices
               applied within Spade.
             </p>
-            <p className="my-2 text-neutral-content">
+            <p className="my-2 text-neutral-content mb-10">
               <SimpleLink
                 label="Green Tech Forum Brussels"
                 src="https://www.greentech-forum-brussels.com/conferences/eco-design-websites-tools-standards-best-practices-incl-accessibility-data-privacy-actors-testimonials"
@@ -104,13 +104,13 @@ export const TimeLine: React.FC = () => {
             <TimeLineIcon />
           </div>
           <div className="timeline-end mb-10">
-            <time className="font-mono italic text-neutral-content">
+            <time className="tracking-wider italic text-neutral-content">
               March 2022 - May 2022
             </time>
-            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-md mt-1 mb-2">
+            <div className="text-sm md:text-base font-black p-2 bg-base-200 w-fit rounded-md mt-1 mb-2">
               Front-end Developer Intern, Space scrl in Brussels (Belgium)
             </div>
-            <p className="mb-3 text-neutral-content">
+            <p className="mb-3 text-neutral-content text-sm">
               Integrate new themes for the Spade's product and resolve tickets
               for various projects.
             </p>
@@ -132,14 +132,14 @@ export const TimeLine: React.FC = () => {
             <TimeLineIcon />
           </div>
           <div className="timeline-start mb-10">
-            <time className="font-mono italic text-neutral-content block md:text-end">
+            <time className="tracking-wider italic text-neutral-content block md:text-end">
               March 2021 - March 2022
             </time>
 
-            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-md mt-1 mb-2">
+            <div className="text-sm md:text-base font-black p-2 bg-base-200 w-fit rounded-md mt-1 mb-2">
               Certificate - Front-end developer, Interface3 (Belgium)
             </div>
-            <p className="mb-3 text-neutral-content">
+            <p className="mb-3 text-neutral-content text-sm">
               1-year training, study of programing languages, frameworks and
               CMS, follow lectures on design web and use of graphic design
               softwares.
@@ -152,7 +152,7 @@ export const TimeLine: React.FC = () => {
                 isExternalLink
               />
             </p>
-            <ul className="flex gap-3 flex-wrap list-none">
+            <ul className="flex gap-3 flex-wrap list-none mb-10">
               {interfaceBadges.map((badge: string, index: number) => {
                 return (
                   <li key={index} className="badge badge-info font-bold">
@@ -170,10 +170,10 @@ export const TimeLine: React.FC = () => {
             <TimeLineIcon />
           </div>
           <div className="timeline-end mb-10">
-            <time className="font-mono italic text-neutral-content">
+            <time className="tracking-wider italic text-neutral-content">
               Before March 2021
             </time>
-            <div className="text-lg font-black p-1 bg-base-200 w-fit rounded-md mt-1 mb-2">
+            <div className="text-sm md:text-base font-black p-2 bg-base-200 w-fit rounded-md mt-1 mb-2">
               Different work experiences
             </div>
             <p className="text-neutral-content">

@@ -18,6 +18,7 @@ export interface SectionContentType {
   sectionBackground?: string;
   titleColor?: string;
   textColor?: string;
+  padding?: string;
 }
 
 export interface SmallCardType {
