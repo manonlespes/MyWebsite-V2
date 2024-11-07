@@ -9,6 +9,7 @@ export const MyImage = ({ image }: { image: ImageType }) => (
     height={image.height}
     width={image.width}
     src={image?.src}
+    className={image?.className}
     /*    scrollPosition={image.scrollPosition}
     effect="blur"
     delayTime={1} */

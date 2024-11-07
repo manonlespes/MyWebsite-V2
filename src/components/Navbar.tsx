@@ -1,5 +1,5 @@
 import { ToggleTheme } from "./ToggleTheme";
-import Logo from "../assets/my-logo.webp";
+import Logo from "../images/my-logo.webp";
 import { Button } from "./Button";
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -88,6 +88,20 @@ export const Navbar: React.FC = () => {
               </li>
               <li>
                 <NavLink
+                  to="speaking"
+                  className={({ isActive, isPending }) =>
+                    isPending
+                      ? "pending text-sm"
+                      : isActive
+                      ? "active text-sm"
+                      : "text-sm"
+                  }
+                >
+                  Speaking
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
                   to="uses"
                   className={({ isActive, isPending }) =>
                     isPending
@@ -147,6 +161,20 @@ export const Navbar: React.FC = () => {
                 }
               >
                 Projects
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="speaking"
+                className={({ isActive, isPending }) =>
+                  isPending
+                    ? "pending text-sm"
+                    : isActive
+                    ? "active text-sm"
+                    : "text-sm"
+                }
+              >
+                Speaking
               </NavLink>
             </li>
             <li>

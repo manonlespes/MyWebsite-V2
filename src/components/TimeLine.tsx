@@ -140,9 +140,9 @@ export const TimeLine: React.FC = () => {
               Certificate - Front-end developer, Interface3 (Belgium)
             </div>
             <p className="mb-3 text-neutral-content text-sm">
-              1-year training, study of programing languages, frameworks and
-              CMS, follow lectures on design web and use of graphic design
-              softwares.
+              Professionnal retraining : 1-year training, study of programming
+              languages, frameworks and CMS, follow lectures on design web and
+              use of graphic design softwares.
             </p>
             <p className="my-2 text-neutral-content">
               <SimpleLink
@@ -180,8 +180,8 @@ export const TimeLine: React.FC = () => {
               {" "}
               <SimpleLink
                 label="View full résumé"
-                src="#"
-                ariaLabel="View full résumé"
+                src="/resume.pdf"
+                ariaLabel="View full résumé "
                 isExternalLink
               />
             </p>

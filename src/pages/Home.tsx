@@ -3,6 +3,8 @@ import Card from "../components/Card";
 import { TimeLine } from "../components/TimeLine";
 import { CardContentType, SEOtypes } from "../components/types/ComponentsTypes";
 import { aboutContentCards } from "../utils/content";
+import BackgroundImg from "../images/background_img.webp";
+import Front from "../images/front_end_img.webp";
 
 import SEO from "../components/SEO";
 import Section from "../components/Section";
@@ -36,15 +38,12 @@ const Home: React.FC = () => {
       <section
         className="hero min-h-screen"
         style={{
-          backgroundImage: "url(/images/background_img.webp)",
+          backgroundImage: `url(${BackgroundImg})`,
         }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content flex flex-col lg:flex-row w-full justify-evenly">
-          <img
-            className="mask mask-hexagon-2 w-[750px]"
-            src="/images/front_end_img.webp"
-          />
+          <img className="mask mask-hexagon-2 w-[750px]" src={Front} />
           <div className="max-w-sm text-center lg:max-w-md lg:text-left">
             <h1 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-bold font-movement bg-clip-text text-transparent bg-gradient-to-r from-neutral-content to-info">
               Hello there, I'm Manon!

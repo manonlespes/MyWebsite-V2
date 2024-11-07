@@ -9,6 +9,7 @@ import { SimpleLink } from "../components/SimpleLink";
 import SEO from "../components/SEO";
 import { SEOtypes } from "../components/types/ComponentsTypes";
 import Header from "../components/Header";
+import MePicture from "../images/about_me_pic.webp";
 
 const About: React.FC = () => {
   const seo: SEOtypes = {
@@ -36,7 +37,8 @@ const About: React.FC = () => {
                       height="800"
                       className="aspect-square rotate-3 rounded-2xl bg-base-100 object-cover"
                       sizes="(min-width: 1024px) 32rem, 20rem"
-                      src="/images/about_me_pic.webp"
+                      src={MePicture}
+                      loading="lazy"
                     />
                   </div>
                 </div>
