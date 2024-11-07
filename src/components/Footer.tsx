@@ -11,7 +11,7 @@ export const Footer: React.FC = () => {
   return (
     <LazyLoadComponent>
       <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
-        <nav className="grid grid-flow-col gap-4">
+        <nav className="grid sm:grid-flow-col gap-4">
           <NavLink
             to="about"
             className={({ isActive, isPending }) =>
@@ -35,6 +35,18 @@ export const Footer: React.FC = () => {
             }
           >
             Project
+          </NavLink>
+          <NavLink
+            to="speaking"
+            className={({ isActive, isPending }) =>
+              isPending
+                ? "pending text-sm"
+                : isActive
+                ? "active link text-sm"
+                : "link link-animation text-sm"
+            }
+          >
+            Speaking
           </NavLink>
           <NavLink
             to="uses"

@@ -8,6 +8,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Project = lazy(() => import("./pages/Projects"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Tools = lazy(() => import("./pages/Tools"));
+const Speaking = lazy(() => import("./pages/Speaking"));
 
 import { HelmetProvider } from "react-helmet-async";
 
@@ -26,6 +27,7 @@ const App: React.FC = () => {
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contact />} />
               <Route path="projects" element={<Project />} />
+              <Route path="speaking" element={<Speaking />} />
               <Route path="uses" element={<Tools />} />
               <Route path="*" element={<NotFound />} />
             </Route>

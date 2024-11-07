@@ -11,9 +11,19 @@ import {
   ImageType,
   ProjectType,
   SmallCardType,
+  speakingContentType,
 } from "../components/types/ComponentsTypes";
 
 import { v4 as uuid } from "uuid";
+
+import Chatshimi from "../images/chatshimi.webp";
+import Manon from "../images/manon_lespes.webp";
+import ColorPicker from "../images/color_picker.webp";
+import FrontEnd from "../images/front_end_img.webp";
+import KeyBoard from "../images/background_img.webp";
+import Blog from "../images/blog.webp";
+import WarGame from "../images/war_game.webp";
+import Amelie from "../images/amelie_website.webp";
 
 export const aboutContentCards: CardContentType[] = [
   {
@@ -21,8 +31,8 @@ export const aboutContentCards: CardContentType[] = [
     text: "Before the pandemic, I was organising events and then I changed my career direction and jumped into the digital and IT world. I like coding, but also traveling, dancing and reading. But most of all, I am fond of my cat. I know, I sound like a cliché.",
     img: {
       key: uuid(),
-      alt: "Manon Lespes - in a train looking trhough the window.",
-      src: "/images/manon_lespes.webp",
+      alt: "Manon Lespes - in a train looking through the window.",
+      src: Manon,
       height: "fit",
       width: "fit",
       scrollPosition: { x: 0, y: 0 },
@@ -34,7 +44,7 @@ export const aboutContentCards: CardContentType[] = [
     img: {
       key: uuid(),
       alt: "Chatshimi, my lovely spleeping cat.",
-      src: "/images/chatshimi.webp",
+      src: Chatshimi,
       height: "fit",
       width: "fit",
       scrollPosition: { x: 0, y: 0 },
@@ -47,10 +57,11 @@ export const projectList: ProjectType[] = [
     id: uuid(),
     img: {
       alt: "",
-      src: "/images/color_picker.png",
+      src: ColorPicker,
     },
     title: "Color Picker",
-    description: "This is a color picker",
+    description:
+      "This is simple color picker with beautiful effects. Check this out!",
     tags: ["Javascript", "HTML5", "CSS", "Color API"],
     links: [
       {
@@ -66,10 +77,11 @@ export const projectList: ProjectType[] = [
     id: uuid(),
     img: {
       alt: "",
-      src: "/images/blog.png",
+      src: Blog,
     },
     title: "My blog Space",
-    description: "A quick fun project to test APIs",
+    description:
+      "A quick project to test APIs from Scrimba, a code learning platform.",
     tags: ["Javascript", "HTML5", "CSS", "Scrimba API"],
     links: [
       {
@@ -85,7 +97,7 @@ export const projectList: ProjectType[] = [
     id: uuid(),
     img: {
       alt: "",
-      src: "/images/friend_web.png",
+      src: Amelie,
     },
     title: "Amelie's website",
     description:
@@ -101,6 +113,26 @@ export const projectList: ProjectType[] = [
       },
     ],
   },
+  {
+    id: uuid(),
+    img: {
+      alt: "",
+      src: WarGame,
+    },
+    title: "War Game",
+    description:
+      "I like playing card! Do you like it as well? If so, have fun and clone my repo!",
+    tags: ["Javascript", "HTML5", "CSS", "Deck of Cards API"],
+    links: [
+      {
+        id: uuid(),
+        label: "GitHub",
+        isExternalLink: true,
+        src: "https://github.com/manonlespes/war-game",
+        ariaLabel: "Go to repo",
+      },
+    ],
+  },
 ];
 
 export const projectImageList: ImageType[] = [
@@ -110,7 +142,7 @@ export const projectImageList: ImageType[] = [
     height: "fit",
     width: "fit",
     className: "absolute inset-0 h-full w-full object-cover",
-    src: "/images/front_end_img.webp",
+    src: FrontEnd,
   },
   {
     key: uuid(),
@@ -118,7 +150,7 @@ export const projectImageList: ImageType[] = [
     height: "fit",
     width: "fit",
     className: "absolute inset-0 h-full w-full object-cover",
-    src: "/images/blog.png",
+    src: Blog,
   },
   {
     key: uuid(),
@@ -126,7 +158,7 @@ export const projectImageList: ImageType[] = [
     height: "fit",
     width: "fit",
     className: "absolute inset-0 h-full w-full object-cover",
-    src: "/images/color_picker.png",
+    src: ColorPicker,
   },
   {
     key: uuid(),
@@ -134,7 +166,7 @@ export const projectImageList: ImageType[] = [
     height: "fit",
     width: "fit",
     className: "absolute inset-0 h-full w-full object-cover",
-    src: "/images/friend_web.png",
+    src: Amelie,
   },
   {
     key: uuid(),
@@ -142,7 +174,15 @@ export const projectImageList: ImageType[] = [
     height: "fit",
     width: "fit",
     className: "absolute inset-0 h-full w-full object-cover",
-    src: "/images/background_img.webp",
+    src: WarGame,
+  },
+  {
+    key: uuid(),
+    alt: "",
+    height: "fit",
+    width: "fit",
+    className: "absolute inset-0 h-full w-full object-cover",
+    src: KeyBoard,
   },
 ];
 
@@ -172,7 +212,7 @@ export const toolList: SmallCardType[] = [
   },
   {
     id: uuid(),
-    title: "Developer Tools",
+    title: "Developer Tools & Platforms",
     content: [
       { value: "Visual Studio Code" },
       { value: "GitLab / GitHub" },
@@ -186,6 +226,9 @@ export const toolList: SmallCardType[] = [
       { value: "Material UI" },
       { value: "VeeValidate" },
       { value: "Buefy" },
+      { value: "Vite" },
+      { value: "Netlify" },
+      { value: "Firebase" },
     ],
     svg: <LaptopIcon className="w-11 lg:w-14" />,
   },
@@ -194,7 +237,7 @@ export const toolList: SmallCardType[] = [
     title: "Accessibility Tools",
     content: [
       { value: "WCAG 2.2", link: "https://www.w3.org/TR/WCAG22/" },
-      { value: "Accessible Tree from the console" },
+      { value: "Accessible Tree from the browsers' devtool" },
       { value: "Voice Over" },
       { value: "Contrast Checker" },
       {
@@ -211,7 +254,7 @@ export const toolList: SmallCardType[] = [
 export const languageList: SmallCardType[] = [
   {
     id: uuid(),
-    title: "Languages and Frameworks",
+    title: "Languages, Librairies & Frameworks",
     content: [
       { value: "JavaScript" },
       { value: "React" },
@@ -219,6 +262,7 @@ export const languageList: SmallCardType[] = [
       { value: "TypeScript" },
       { value: "Node.js" },
       { value: "JQuery" },
+      { value: "Timber for WordPress" },
       { value: "Twig / PHP" },
       { value: "SQL" },
     ],
@@ -286,4 +330,46 @@ export const interfaceBadges: string[] = [
   "Illustrator",
   "XD",
   "Animate",
+];
+
+export const speakingContent: speakingContentType[] = [
+  {
+    id: uuid(),
+    title: "Speaker and Member of the Organising Committee (in French)",
+    subtitle: "Digital Change with Ethics - 22 November 2024",
+    desc: "As part of the organising committee for this first edition, I worked on the theme, the programme and the speakers to be invited. The theme is based on the 3Ps: People, Planet & Prosperity; the aim was to bring together IT industry professionals to share and debate on the subject of digital eco-design.",
+    link: {
+      src: "https://dcwe.be",
+      label: "Visit Digital Change with Ethics",
+      ariaLabel: "Visit Digital Change with Ethics",
+      isExternalLink: true,
+    },
+  },
+  {
+    id: uuid(),
+    title: "Speaker at Green Tech Forum Brussels (in English)",
+    subtitle: "Green Tech Forum Brussels - 19 June 2024",
+    desc: " Presentation of tools, web eco-design criteria and best practices applied within Spade.",
+    link: {
+      src: "https://www.greentech-forum-brussels.com/program/conferences",
+      label: "Visit Green Tech Forum Programme",
+      ariaLabel: "Visit Green Tech Forum Programme",
+      isExternalLink: true,
+    },
+  },
+];
+
+export const podcast: speakingContentType[] = [
+  {
+    id: uuid(),
+    title: "Presentation of GR491 (in French)",
+    subtitle: "Abécédaire de Spade",
+    desc: "Presentation of the Handbook of Sustainable Design of Digital Services, with a brief explanation of how it could be used in agencies wishing to apply an eco-design approach.",
+    link: {
+      src: "https://www.spade.be/fr/articles/abecedaire-g-le-gr491/",
+      label: "Visit Digital Change with Ethics",
+      ariaLabel: "Visit Digital Change with Ethics",
+      isExternalLink: true,
+    },
+  },
 ];
