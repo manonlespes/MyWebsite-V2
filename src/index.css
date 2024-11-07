@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: "Movement";
-  src: url("/fonts/Movement-DirectBlack.woff");
+  src: url("/fonts/Movement-DirectBlack.woff") format("woff"),
+    url("/fonts/Movement-DirectBlack.woff2") format("woff2");
 }
 
 @font-face {
