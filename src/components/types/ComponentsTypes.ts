@@ -48,6 +48,14 @@ export interface ImageType {
   scrollPosition?: ScrollPosition;
 }
 
+export interface speakingContentType {
+  id: string;
+  title: string;
+  subtitle: string;
+  desc: string;
+  link: LinkType;
+}
+
 export interface LinkType {
   id?: string;
   label: string;

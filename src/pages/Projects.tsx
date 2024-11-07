@@ -11,7 +11,7 @@ import {
 } from "../components/types/ComponentsTypes";
 import { projectImageList, projectList } from "../utils/content";
 
-const Project = () => {
+const Project: React.FC = () => {
   const seo: SEOtypes = {
     title: "Projects",
     description:
