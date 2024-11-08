@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import { SEOtypes } from "./types/ComponentsTypes";
-import Image from "/images/front_end_img.webp";
 
 const SEO = ({ props }: { props: SEOtypes }) => {
   const {

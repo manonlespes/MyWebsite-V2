@@ -7,9 +7,10 @@ import {
 } from "../components/icons/Icons";
 import { SimpleLink } from "../components/SimpleLink";
 import SEO from "../components/SEO";
-import { SEOtypes } from "../components/types/ComponentsTypes";
+import { ImageType, SEOtypes } from "../components/types/ComponentsTypes";
 import Header from "../components/Header";
 import MePicture from "../images/about_me_pic.webp";
+import ImageLazy from "../components/ImageLazy";
 
 const About: React.FC = () => {
   const seo: SEOtypes = {
@@ -18,6 +19,13 @@ const About: React.FC = () => {
     meta: [],
     ogDescription: "Who I am? Check this out to learn a bit more about me.",
   };
+
+  const image: ImageType = {
+    src: MePicture,
+    className: "rounded-2xl bg-base-100 object-cover shadow-lg",
+    width: "fit",
+    height: "fit",
+  };
   return (
     <>
       <SEO props={seo} />
@@ -25,21 +33,13 @@ const About: React.FC = () => {
       <Header title="About" />
 
       <section className="px-3 py-5 md:px-5 md:py-10 lg:px-10 lg:py-18 2xl:px-36 2xl:py-20">
-        <div className="bg-base-200 mx-auto w-full max-w-7xl py-4 lg:p-8 rounded md:rounded-xl shadow-lg">
+        <div className="bg-base-200 mx-auto w-full max-w-7xl py-4 lg:p-8 rounded-xl shadow-lg">
           <div className="relative px-4 sm:px-8 lg:px-12">
             <div className="mx-auto max-w-2xl lg:max-w-5xl">
               <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
                 <div className="lg:pl-20">
-                  <div className="max-w-xs px-2.5 lg:max-w-none">
-                    <img
-                      alt=""
-                      width="800"
-                      height="800"
-                      className="aspect-square rotate-3 rounded-2xl bg-base-100 object-cover"
-                      sizes="(min-width: 1024px) 32rem, 20rem"
-                      src={MePicture}
-                      loading="lazy"
-                    />
+                  <div className="max-w-xs px-2.5 lg:max-w-none rotate-3 aspect-square w-96 ">
+                    <ImageLazy image={image} />
                   </div>
                 </div>
                 <div className="lg:order-first lg:row-span-2">

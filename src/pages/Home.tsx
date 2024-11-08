@@ -1,13 +1,17 @@
-import { trackWindowScroll } from "react-lazy-load-image-component";
 import Card from "../components/Card";
 import { TimeLine } from "../components/TimeLine";
-import { CardContentType, SEOtypes } from "../components/types/ComponentsTypes";
+import {
+  CardContentType,
+  ImageType,
+  SEOtypes,
+} from "../components/types/ComponentsTypes";
 import { aboutContentCards } from "../utils/content";
 import BackgroundImg from "../images/background_img.webp";
 import Front from "../images/front_end_img.webp";
 
 import SEO from "../components/SEO";
 import Section from "../components/Section";
+import ImageLazy from "../components/ImageLazy";
 
 const Home: React.FC = () => {
   const seo: SEOtypes = {
@@ -32,6 +36,13 @@ const Home: React.FC = () => {
     textColor: "text-neutral-content",
   };
 
+  const image: ImageType = {
+    src: Front,
+    className: "mask mask-hexagon-2 w-[750px]",
+    width: "fit",
+    height: "fit",
+  };
+
   return (
     <>
       <SEO props={seo} />
@@ -43,7 +54,7 @@ const Home: React.FC = () => {
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content flex flex-col lg:flex-row w-full justify-evenly">
-          <img className="mask mask-hexagon-2 w-[750px]" src={Front} />
+          <ImageLazy image={image} />
           <div className="max-w-sm text-center lg:max-w-md lg:text-left">
             <h1 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-bold font-movement bg-clip-text text-transparent bg-gradient-to-r from-neutral-content to-info">
               Hello there, I'm Manon!
@@ -78,4 +89,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default trackWindowScroll(Home);
+export default Home;

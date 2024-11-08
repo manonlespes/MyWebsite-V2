@@ -1,5 +1,7 @@
+import { LazyLoadComponent } from "react-lazy-load-image-component";
 import Header from "../components/Header";
-import { MyImage } from "../components/ImgLazy";
+import ImageLazy from "../components/ImageLazy";
+
 import Section from "../components/Section";
 import SEO from "../components/SEO";
 import { SimpleLink } from "../components/SimpleLink";
@@ -24,7 +26,6 @@ const Project: React.FC = () => {
   const sectionContent = {
     text: "Whenever I can, I am working on small projects. Sometimes, it allows me to reinforce my knowledge and to experience new frameworks or languages.",
     title: "A view on my side projects",
-    padding: "lg:pb-24 lg:p-8 md:pb-24",
   };
 
   return (
@@ -39,9 +40,9 @@ const Project: React.FC = () => {
             return (
               <div
                 key={image.key}
-                className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-base-300 sm:w-72 sm:rounded-2xl rotate-2 last-of-type:-rotate-2 [&:nth-child(2)]:-rotate-2"
+                className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-base-300 sm:w-72 sm:rounded-2xl rotate-2 last-of-type:-rotate-2 [&:nth-child(2)]:-rotate-2 shadow-md"
               >
-                <MyImage image={image} />
+                <ImageLazy image={image} />
               </div>
             );
           })}
@@ -49,58 +50,48 @@ const Project: React.FC = () => {
       </div>
 
       <Section {...sectionContent}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-24 mt-10 md:mt-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10">
           {projectList.map((project: ProjectType) => {
             return (
-              <div
-                key={project.id}
-                className="group flex flex-col justify-start items-start gap-2 w-fit sm:w-96 sm:h-[19rem] duration-500 relative rounded-xl p-6 bg-neutral hover:-translate-y-2 hover:shadow-xl shadow-md"
-              >
-                <div
-                  style={{
-                    backgroundImage: `url(${project.img?.src})`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "cover",
-                  }}
-                  className="hidden sm:block absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-7 md:-bottom-16 -right-2 md:-right-10 w-1/2 h-1/2 rounded-xl bg-base-neutral"
-                ></div>
+              <LazyLoadComponent key={project.id}>
+                <div className="group flex flex-col justify-start items-start gap-2 w-fit sm:h-[19rem] duration-500 relative rounded-xl p-6 bg-neutral hover:-translate-y-2 hover:shadow-xl shadow-md">
+                  <div>
+                    <h3 className="card-title tracking-wide mb-2 text-neutral-content">
+                      {project.title}
+                    </h3>
+                    <p className="text-neutral-content text-sm">
+                      {project.description}
+                    </p>
 
-                <div>
-                  <h3 className="card-title tracking-wide mb-2 text-neutral-content">
-                    {project.title}
-                  </h3>
-                  <p className="text-neutral-content text-sm">
-                    {project.description}
-                  </p>
-
-                  <ul className="mt-2 flex gap-2 flex-wrap list-none">
-                    {project.tags.map((tag: string, index: number) => {
+                    <ul className="mt-2 flex gap-2 flex-wrap list-none">
+                      {project.tags.map((tag: string, index: number) => {
+                        return (
+                          <li
+                            key={index}
+                            className="badge badge-info font-bold p-2"
+                          >
+                            {tag}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                  <div className="mt-auto flex gap-4">
+                    {project.links.map((link: LinkType) => {
                       return (
-                        <li
-                          key={index}
-                          className="badge badge-info font-bold p-2"
-                        >
-                          {tag}
-                        </li>
+                        <SimpleLink
+                          key={link?.id}
+                          className="text-neutral-content"
+                          label={link.label}
+                          src={link.src}
+                          ariaLabel={link.ariaLabel}
+                          isExternalLink
+                        />
                       );
                     })}
-                  </ul>
+                  </div>
                 </div>
-                <div className="mt-auto flex gap-4">
-                  {project.links.map((link: LinkType) => {
-                    return (
-                      <SimpleLink
-                        key={link?.id}
-                        className="text-neutral-content"
-                        label={link.label}
-                        src={link.src}
-                        ariaLabel={link.ariaLabel}
-                        isExternalLink
-                      />
-                    );
-                  })}
-                </div>
-              </div>
+              </LazyLoadComponent>
             );
           })}
         </div>

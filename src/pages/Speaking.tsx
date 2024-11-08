@@ -9,9 +9,11 @@ import { podcast, speakingContent } from "../utils/content";
 const Speaking: React.FC = () => {
   const seo: SEOtypes = {
     title: "Speaking",
-    description: "Sharing is caring as we say, so I do as I preach.",
+    description:
+      "Sharing is caring as we say, so I do as I preach. I will continue to talk about digital eco-design.",
     meta: [],
-    ogDescription: "Sharing is caring as we say, so I do as I preach.",
+    ogDescription:
+      "Sharing is caring as we say, so I do as I preach. I will continue to talk about digital eco-design.",
   };
 
   const sectionContent = {
@@ -27,7 +29,7 @@ const Speaking: React.FC = () => {
 
       <Section {...sectionContent}>
         <div className="grid max-w-3xl grid-cols-1 items-baseline gap-y-8 md:grid-cols-4 mt-10 md:mt-20">
-          <h3 className="card-title tracking-wide mb-2 text-secondary">
+          <h3 className="card-title tracking-wide mb-2 text-accent">
             Conferences
           </h3>
           <div className="md:col-span-3">
@@ -38,13 +40,13 @@ const Speaking: React.FC = () => {
                     key={content.id}
                     className=" relative flex flex-col items-start"
                   >
-                    <h3 className="text-base">{content.title}</h3>
+                    <h4 className="text-base">{content.title}</h4>
                     <p className="relative order-first mb-3 flex items-center text-sm pl-3.5">
                       <span
                         className="absolute inset-y-0 left-0 flex items-center"
                         aria-hidden="true"
                       >
-                        <span className="h-4 w-0.5 rounded-full bg-accent"></span>
+                        <span className="h-4 w-0.5 rounded-full bg-secondary"></span>
                       </span>
                       {content.subtitle}
                     </p>
@@ -63,9 +65,7 @@ const Speaking: React.FC = () => {
             </div>
           </div>
 
-          <h3 className="card-title tracking-wide mb-2 text-secondary">
-            Podcast
-          </h3>
+          <h3 className="card-title tracking-wide mb-2 text-accent">Podcast</h3>
           <div className="md:col-span-3">
             <div className="space-y-10">
               {podcast.map((content) => {
@@ -74,13 +74,13 @@ const Speaking: React.FC = () => {
                     key={content.id}
                     className=" relative flex flex-col items-start"
                   >
-                    <h3 className="text-base">{content.title}</h3>
+                    <h4 className="text-base">{content.title}</h4>
                     <p className="relative order-first mb-3 flex items-center text-sm pl-3.5">
                       <span
                         className="absolute inset-y-0 left-0 flex items-center"
                         aria-hidden="true"
                       >
-                        <span className="h-4 w-0.5 rounded-full bg-accent"></span>
+                        <span className="h-4 w-0.5 rounded-full bg-secondary"></span>
                       </span>
                       {content.subtitle}
                     </p>

@@ -1,5 +1,4 @@
 import { ReactElement } from "react";
-import { ScrollPosition } from "react-lazy-load-image-component";
 
 export interface SEOtypes {
   title: string;
@@ -38,14 +37,13 @@ export interface CardContentType {
 }
 
 export interface ImageType {
-  key: string;
+  key?: string;
   src: string;
-  alt: string;
+  alt?: string;
   height: string;
   width: string;
   caption?: string;
   className?: string;
-  scrollPosition?: ScrollPosition;
 }
 
 export interface speakingContentType {

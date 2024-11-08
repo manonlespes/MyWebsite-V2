@@ -35,7 +35,6 @@ export const aboutContentCards: CardContentType[] = [
       src: Manon,
       height: "fit",
       width: "fit",
-      scrollPosition: { x: 0, y: 0 },
     },
   },
   {
@@ -47,7 +46,6 @@ export const aboutContentCards: CardContentType[] = [
       src: Chatshimi,
       height: "fit",
       width: "fit",
-      scrollPosition: { x: 0, y: 0 },
     },
   },
 ];
@@ -367,8 +365,8 @@ export const podcast: speakingContentType[] = [
     desc: "Presentation of the Handbook of Sustainable Design of Digital Services, with a brief explanation of how it could be used in agencies wishing to apply an eco-design approach.",
     link: {
       src: "https://www.spade.be/fr/articles/abecedaire-g-le-gr491/",
-      label: "Visit Digital Change with Ethics",
-      ariaLabel: "Visit Digital Change with Ethics",
+      label: "Go to the podcast",
+      ariaLabel: "Listen the podcast or read the retranscription ",
       isExternalLink: true,
     },
   },

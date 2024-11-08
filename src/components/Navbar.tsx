@@ -195,7 +195,7 @@ export const Navbar: React.FC = () => {
         </div>
         <div className="navbar-end gap-4">
           <ToggleTheme />
-          <Button label="Contact me" isLink linkTo={"contact"} />
+          <Button label="Contact" isLink linkTo={"contact"} />
         </div>
       </nav>
     </header>
