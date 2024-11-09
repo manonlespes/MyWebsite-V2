@@ -103,7 +103,7 @@ export const Footer: React.FC = () => {
       </nav>
       <aside title="Go back in time">
         <a
-          href="https://manon-lespes-portfolio.be"
+          href="https://v1.manonlespes.com"
           rel="noreferrer"
           className="overflow-hidden w-32 group"
           aria-label="Visit my past not accessible portfolio (opens in new tabs)"
