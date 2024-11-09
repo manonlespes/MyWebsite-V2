@@ -22,7 +22,7 @@ const App: React.FC = () => {
         >
           <Routes>
             <Route path="/" element={<Layout />}>
-              //--------------gives access to child component
+              {/*  //--------------gives access to child component */}
               <Route index element={<Home />} />
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contact />} />

@@ -98,7 +98,7 @@ const SEO = ({ props }: { props: SEOtypes }) => {
                         "@context":"",
                         "@type":"",
                         "name":"Manon Lespes Portfolio",
-                        "url":"",
+                        "url":"https://manonlespes.com",
                         "logo":"${site.siteMetadata.siteUrl}${site.logo}",
 
                     }

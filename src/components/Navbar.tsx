@@ -55,7 +55,7 @@ export const Navbar: React.FC = () => {
               </svg>
             </div>
             <ul
-              tab-index={1}
+              tabIndex={1}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-4 shadow gap-4"
             >
               <li>
@@ -132,7 +132,7 @@ export const Navbar: React.FC = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul
-            tab-index={0}
+            tabIndex={0}
             className="menu menu-horizontal px-1 gap-5 font-bold"
           >
             <li className="">
