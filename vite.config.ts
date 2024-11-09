@@ -10,4 +10,5 @@ export default defineConfig({
       input: "./index.html",
     },
   },
+  base: "https://manonlespes.com",
 });
