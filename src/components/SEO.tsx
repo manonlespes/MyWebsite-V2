@@ -32,9 +32,6 @@ const SEO = ({ props }: { props: SEOtypes }) => {
     },
   };
 
-  console.log(site.url);
-  console.log(site.siteMetadata.siteUrl);
-
   const metaDescription = description || site.siteMetadata.description;
 
   const titleTemplate = siteName ? `%s | ${site.siteMetadata.siteName}` : "%s";
