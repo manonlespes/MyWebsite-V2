@@ -7,7 +7,7 @@ const Card = (props: CardContentType) => {
     <>
       {img && (
         <div
-          className={`relative mx-4 -mt-6 overflow-hidden rounded-xl bg-clip-border shadow-lg aspect-[4/3]`}
+          className={`relative mx-4 -mt-6 overflow-hidden rounded-xl bg-clip-border shadow-lg aspect-[4/3] bg-center bg-cover`}
         >
           <ImageLazy image={img} />
         </div>

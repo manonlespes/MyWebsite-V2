@@ -17,9 +17,11 @@ const Image = ({ inView, image }: { inView: boolean; image: ImageType }) => {
           <img
             key={image?.key}
             alt={image?.alt}
-            height={image.height}
-            width={image.width}
+            height={image?.height}
+            width={image?.width}
             src={image?.src}
+            srcSet={`${image?.src}?w=300 300w, ${image?.src}?w=600 600w, ${image?.src}?w=1200 1200w`}
+            sizes="(max-width: 600px) 300px, (max-width: 1200px) 600px, 1200px"
             className={image?.className}
             onLoad={() => setStatus("loaded")}
             onError={() => setStatus("failed")}
