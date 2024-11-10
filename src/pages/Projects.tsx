@@ -8,19 +8,38 @@ import { SimpleLink } from "../components/SimpleLink";
 import {
   ImageType,
   LinkType,
+  MetaTag,
   ProjectType,
   SEOtypes,
 } from "../components/types/ComponentsTypes";
 import { projectImageList, projectList } from "../utils/content";
 
 const Project: React.FC = () => {
+  const descriptionContent: string =
+    "This is where you can find all my projects that are on my GitHub.";
+
+  const meta: (
+    | MetaTag
+    | { name: string; content: string }
+    | { property: string; content: string }
+  )[] = [
+    {
+      name: "description",
+      content: descriptionContent,
+    },
+    { name: "keywords", content: "portfolio, web developer, projects, GitHub" },
+    { property: "og:title", content: "Projects" },
+    {
+      property: "og:description",
+      content: descriptionContent,
+    },
+  ];
+
   const seo: SEOtypes = {
     title: "Projects",
-    description:
-      "This is where you can find all my projects that are on my GitHub.",
-    meta: [],
-    ogDescription:
-      "This is where you can find all my projects that are on my GitHub.",
+    description: descriptionContent,
+    meta: meta,
+    ogDescription: descriptionContent,
   };
 
   const sectionContent = {

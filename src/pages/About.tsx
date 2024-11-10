@@ -7,17 +7,44 @@ import {
 } from "../components/icons/Icons";
 import { SimpleLink } from "../components/SimpleLink";
 import SEO from "../components/SEO";
-import { ImageType, SEOtypes } from "../components/types/ComponentsTypes";
+import {
+  ImageType,
+  MetaTag,
+  SEOtypes,
+} from "../components/types/ComponentsTypes";
 import Header from "../components/Header";
 import MePicture from "../images/about_me_pic.webp";
 import ImageLazy from "../components/ImageLazy";
 
 const About: React.FC = () => {
+  const descriptionContent: string =
+    "Who I am? Check this out to learn a bit more about me.";
+
+  const meta: (
+    | MetaTag
+    | { name: string; content: string }
+    | { property: string; content: string }
+  )[] = [
+    {
+      name: "description",
+      content: descriptionContent,
+    },
+    {
+      name: "keywords",
+      content: "about me, web developer, backgrounds, passions",
+    },
+    { property: "og:title", content: "About" },
+    {
+      property: "og:description",
+      content: descriptionContent,
+    },
+  ];
+
   const seo: SEOtypes = {
     title: "About",
-    description: "Who I am? Check this out to learn a bit more about me.",
-    meta: [],
-    ogDescription: "Who I am? Check this out to learn a bit more about me.",
+    description: descriptionContent,
+    meta: meta,
+    ogDescription: descriptionContent,
   };
 
   const image: ImageType = {

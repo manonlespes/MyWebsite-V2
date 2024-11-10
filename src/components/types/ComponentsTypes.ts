@@ -1,9 +1,19 @@
-import { ReactElement } from "react";
+import { ReactElement, ReactNode } from "react";
+
+export interface MetaTag {
+  name?: string;
+  content?: string;
+  property?: string; // facultatif pour les propriétés OpenGraph par exemple
+}
 
 export interface SEOtypes {
   title: string;
   description: string;
-  meta: any;
+  meta: (
+    | MetaTag
+    | { name: string; content: string }
+    | { property: string; content: string }
+  )[];
   lang?: string;
   siteName?: boolean;
   ogDescription: string;
@@ -13,7 +23,7 @@ export interface SEOtypes {
 export interface SectionContentType {
   title: string;
   text: string;
-  children: any;
+  children: ReactNode;
   sectionBackground?: string;
   titleColor?: string;
   textColor?: string;

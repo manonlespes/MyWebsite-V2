@@ -3,17 +3,42 @@ import Header from "../components/Header";
 import Section from "../components/Section";
 import SEO from "../components/SEO";
 import SmallCard from "../components/SmallCard";
-import { SEOtypes, SmallCardType } from "../components/types/ComponentsTypes";
+import {
+  MetaTag,
+  SEOtypes,
+  SmallCardType,
+} from "../components/types/ComponentsTypes";
 import { languageList, toolList } from "../utils/content";
 
 export const Tools: React.FC = () => {
+  const descriptionContent: string =
+    "As a front-end developper, I am using a certain amout of tools. Look at which ones. Discover also the languages I develop in.";
+
+  const meta: (
+    | MetaTag
+    | { name: string; content: string }
+    | { property: string; content: string }
+  )[] = [
+    {
+      name: "description",
+      content: descriptionContent,
+    },
+    {
+      name: "keywords",
+      content: "uses, web development tools, languages",
+    },
+    { property: "og:title", content: "Uses" },
+    {
+      property: "og:description",
+      content: descriptionContent,
+    },
+  ];
+
   const seo: SEOtypes = {
     title: "Uses",
-    description:
-      "As a front-end developper, I am using a certain amout of tools. Look at which ones. Discover also the languages I develop in.",
-    meta: [],
-    ogDescription:
-      "As a front-end developper, I am using a certain amout of tools. Look at which ones. Discover also the languages I develop in.",
+    description: descriptionContent,
+    meta: meta,
+    ogDescription: descriptionContent,
   };
 
   const sectionLanguages = {

@@ -3,17 +3,39 @@ import Header from "../components/Header";
 import Section from "../components/Section";
 import SEO from "../components/SEO";
 import { SimpleLink } from "../components/SimpleLink";
-import { SEOtypes } from "../components/types/ComponentsTypes";
+import { MetaTag, SEOtypes } from "../components/types/ComponentsTypes";
 import { podcast, speakingContent } from "../utils/content";
 
 const Speaking: React.FC = () => {
+  const descriptionContent: string =
+    "Sharing is caring as we say, so I do as I preach. I will continue to talk about digital eco-design.";
+
+  const meta: (
+    | MetaTag
+    | { name: string; content: string }
+    | { property: string; content: string }
+  )[] = [
+    {
+      name: "description",
+      content: descriptionContent,
+    },
+    {
+      name: "keywords",
+      content:
+        "conferences, web developer, podcasts, eco-design, accessibility",
+    },
+    { property: "og:title", content: "Speaking" },
+    {
+      property: "og:description",
+      content: descriptionContent,
+    },
+  ];
+
   const seo: SEOtypes = {
     title: "Speaking",
-    description:
-      "Sharing is caring as we say, so I do as I preach. I will continue to talk about digital eco-design.",
-    meta: [],
-    ogDescription:
-      "Sharing is caring as we say, so I do as I preach. I will continue to talk about digital eco-design.",
+    description: descriptionContent,
+    meta: meta,
+    ogDescription: descriptionContent,
   };
 
   const sectionContent = {

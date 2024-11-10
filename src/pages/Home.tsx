@@ -3,6 +3,7 @@ import { TimeLine } from "../components/TimeLine";
 import {
   CardContentType,
   ImageType,
+  MetaTag,
   SEOtypes,
 } from "../components/types/ComponentsTypes";
 import { aboutContentCards } from "../utils/content";
@@ -14,13 +15,31 @@ import Section from "../components/Section";
 import ImageLazy from "../components/ImageLazy";
 
 const Home: React.FC = () => {
+  const descriptionContent: string =
+    "Welcome on my portfolio, where I am introducing myself and the different projects I've been working on so far!";
+
+  const meta: (
+    | MetaTag
+    | { name: string; content: string }
+    | { property: string; content: string }
+  )[] = [
+    {
+      name: "description",
+      content: descriptionContent,
+    },
+    { name: "keywords", content: "portfolio, web developer" },
+    { property: "og:title", content: "Home" },
+    {
+      property: "og:description",
+      content: descriptionContent,
+    },
+  ];
+
   const seo: SEOtypes = {
     title: "Home",
-    description:
-      "Welcome on my portfolio, where I am introducing myself and the different projects I've been working on so far!",
-    meta: [],
-    ogDescription:
-      "Welcome on my portfolio, where I am introducing myself and the different projects I've been working on so far!",
+    description: descriptionContent,
+    meta: meta,
+    ogDescription: descriptionContent,
   };
 
   const sectionIntro = {
@@ -47,7 +66,7 @@ const Home: React.FC = () => {
     <>
       <SEO props={seo} />
       <section
-        className="hero min-h-screen"
+        className="hero min-h-screen bg-cover bg-center md:bg-contain lg:bg-cover"
         style={{
           backgroundImage: `url(${BackgroundImg})`,
         }}
@@ -57,7 +76,7 @@ const Home: React.FC = () => {
           <ImageLazy image={image} />
           <div className="max-w-sm text-center lg:max-w-md lg:text-left">
             <h1 className="mb-5 text-2xl md:text-4xl lg:text-5xl font-bold font-movement bg-clip-text text-transparent bg-gradient-to-r from-neutral-content to-info">
-              Hello there, I'm Manon!
+              Hello there, I&apos;m Manon!
             </h1>
 
             <p className="mb-5 text-neutral-content text-sm md:text-base">

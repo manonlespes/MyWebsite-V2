@@ -1,20 +1,41 @@
-import { useRef } from "react";
+import { FormEvent, useRef } from "react";
 import { Button } from "../components/Button";
 import emailJs from "@emailjs/browser";
 
 import SEO from "../components/SEO";
-import { SEOtypes } from "../components/types/ComponentsTypes";
+import { MetaTag, SEOtypes } from "../components/types/ComponentsTypes";
 import Header from "../components/Header";
 import Section from "../components/Section";
 
 const Contact: React.FC = () => {
-  const form = useRef<HTMLFormElement | null>(null);
+  const descriptionContent: string =
+    "Any questions or just wanna talk? Write me here!";
+
+  const meta: (
+    | MetaTag
+    | { name: string; content: string }
+    | { property: string; content: string }
+  )[] = [
+    {
+      name: "description",
+      content: descriptionContent,
+    },
+    {
+      name: "keywords",
+      content: "contact, web developer",
+    },
+    { property: "og:title", content: "Contact" },
+    {
+      property: "og:description",
+      content: descriptionContent,
+    },
+  ];
 
   const seo: SEOtypes = {
     title: "Contact",
-    description: "Any questions or just wanna talk? Write me here!",
-    meta: [],
-    ogDescription: "Any questions or just wanna talk? Write me here!",
+    description: descriptionContent,
+    meta: meta,
+    ogDescription: descriptionContent,
   };
 
   const sectionContent = {
@@ -22,7 +43,9 @@ const Contact: React.FC = () => {
     text: "Wanna say hello, well you are at the right place!",
   };
 
-  const sendEmail = (e: any) => {
+  const form = useRef<HTMLFormElement | null>(null);
+
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const currentForm = form.current;
@@ -35,16 +58,17 @@ const Contact: React.FC = () => {
     const publicKey = "Lbu16oVY-0yb-Qbk6";
 
     emailJs.sendForm(serviceId, templateId, currentForm, publicKey).then(
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       (_result) => {
         alert("Message Sent Successfully");
       },
-      (error) => {
+      (error: { text: string }) => {
         console.log(error.text);
         alert("Something went wrong!");
       }
     );
 
-    e.target.reset();
+    (e.target as HTMLFormElement).reset();
   };
   return (
     <>

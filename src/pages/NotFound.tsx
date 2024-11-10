@@ -1,15 +1,33 @@
 import { Button } from "../components/Button";
 import SEO from "../components/SEO";
-import { SEOtypes } from "../components/types/ComponentsTypes";
+import { MetaTag, SEOtypes } from "../components/types/ComponentsTypes";
 
 const NotFound: React.FC = () => {
+  const descriptionContent: string =
+    "Upsi daisy, something went wrong. We couldn't find what you were looking for.";
+
+  const meta: (
+    | MetaTag
+    | { name: string; content: string }
+    | { property: string; content: string }
+  )[] = [
+    {
+      name: "description",
+      content: descriptionContent,
+    },
+    { name: "keywords", content: "page not found, web developer" },
+    { property: "og:title", content: "Not Found" },
+    {
+      property: "og:description",
+      content: descriptionContent,
+    },
+  ];
+
   const seo: SEOtypes = {
     title: "Not Found",
-    description:
-      "Upsi daisy, something went wrong. We couldn't find what you were looking for.",
-    meta: [],
-    ogDescription:
-      "Upsi daisy, something went wrong. We couldn't find what you were looking for.",
+    description: descriptionContent,
+    meta: meta,
+    ogDescription: descriptionContent,
   };
   return (
     <>
@@ -21,10 +39,10 @@ const NotFound: React.FC = () => {
               Not Found
             </h1>
             <p className="text-2xl md:text-3xl text-accent font-movement leading-normal">
-              Sorry we couldn't find this page.
+              Sorry we couldn&apos;t find this page.
             </p>
             <p className="my-5 text-sm md:text-base">
-              But dont worry, you'll look your way to go back home.
+              But dont worry, you&apos;ll look your way to go back home.
             </p>
             <p className="w-fit h-fit !overflow-hidden rounded-md">
               <Button label="Home" isLink linkTo="/" />
