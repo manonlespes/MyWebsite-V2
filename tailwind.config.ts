@@ -7,8 +7,8 @@ const config: Config = {
       fromTo: "0 100%",
     },
     backgroundSize: {
-      link: "0px 3px",
-      "link-hover": "100% 3px",
+      link: "0px 2px",
+      "link-hover": "100% 2px",
     },
     fontSize: {
       sm: [
