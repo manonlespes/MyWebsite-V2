@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Section from "../components/Section";
 import SEO from "../components/SEO";
 import { SimpleLink } from "../components/SimpleLink";
-import { MetaTag, SEOtypes } from "../components/types/ComponentsTypes";
+import { SEOtypes } from "../components/types/ComponentsTypes";
 import { podcast, speakingContent } from "../utils/content";
 
 const Speaking: React.FC = () => {
@@ -11,7 +11,6 @@ const Speaking: React.FC = () => {
     "Sharing is caring as we say, so I do as I preach. I will continue to talk about digital eco-design.";
 
   const meta: (
-    | MetaTag
     | { name: string; content: string }
     | { property: string; content: string }
   )[] = [

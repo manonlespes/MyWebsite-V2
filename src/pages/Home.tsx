@@ -3,7 +3,6 @@ import { TimeLine } from "../components/TimeLine";
 import {
   CardContentType,
   ImageType,
-  MetaTag,
   SEOtypes,
 } from "../components/types/ComponentsTypes";
 import { aboutContentCards } from "../utils/content";
@@ -19,7 +18,6 @@ const Home: React.FC = () => {
     "Welcome on my portfolio, where I am introducing myself and the different projects I've been working on so far!";
 
   const meta: (
-    | MetaTag
     | { name: string; content: string }
     | { property: string; content: string }
   )[] = [

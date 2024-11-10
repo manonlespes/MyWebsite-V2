@@ -2,11 +2,13 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 import { SEOtypes } from "./types/ComponentsTypes";
+import Logo from "../images/my-logo.webp";
 
 const SEO = ({ props }: { props: SEOtypes }) => {
   const {
     title,
     description,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     meta,
     lang = "en",
     siteName = true,
@@ -20,8 +22,7 @@ const SEO = ({ props }: { props: SEOtypes }) => {
     url: window.location.href,
     description: description,
     keywords: siteName,
-
-    logo: "../assets/my-logo.webp",
+    logo: Logo,
     siteMetadata: {
       title: siteName,
       siteName: "Manon Lespes' Portfolio",
@@ -30,6 +31,9 @@ const SEO = ({ props }: { props: SEOtypes }) => {
       siteUrl: window.location.host,
     },
   };
+
+  console.log(site.url);
+  console.log(site.siteMetadata.siteUrl);
 
   const metaDescription = description || site.siteMetadata.description;
 
@@ -83,11 +87,12 @@ const SEO = ({ props }: { props: SEOtypes }) => {
           name: `twitter:description`,
           content: ogDescription || metaDescription,
         },
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       ].concat(meta)}
       link={[
         {
           rel: "canonical",
-          href: `${site.siteMetadata.siteUrl}${
+          href: `https://${site.siteMetadata.siteUrl}${
             pathname === "/" ? "/" : pathname
           }`,
         },
@@ -99,8 +104,8 @@ const SEO = ({ props }: { props: SEOtypes }) => {
                         "@context":"",
                         "@type":"",
                         "name":"Manon Lespes Portfolio",
-                        "url":"https://manonlespes.com",
-                        "logo":"${site.siteMetadata.siteUrl}${site.logo}",
+                        "url":"https://manonlespes.com/",
+                        "logo":"https://${site.siteMetadata.siteUrl}/${site.logo}",
 
                     }
                 `}

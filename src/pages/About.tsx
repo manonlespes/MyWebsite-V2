@@ -7,11 +7,7 @@ import {
 } from "../components/icons/Icons";
 import { SimpleLink } from "../components/SimpleLink";
 import SEO from "../components/SEO";
-import {
-  ImageType,
-  MetaTag,
-  SEOtypes,
-} from "../components/types/ComponentsTypes";
+import { ImageType, SEOtypes } from "../components/types/ComponentsTypes";
 import Header from "../components/Header";
 import MePicture from "../images/about_me_pic.webp";
 import ImageLazy from "../components/ImageLazy";
@@ -21,7 +17,6 @@ const About: React.FC = () => {
     "Who I am? Check this out to learn a bit more about me.";
 
   const meta: (
-    | MetaTag
     | { name: string; content: string }
     | { property: string; content: string }
   )[] = [

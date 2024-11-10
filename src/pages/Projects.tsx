@@ -8,7 +8,6 @@ import { SimpleLink } from "../components/SimpleLink";
 import {
   ImageType,
   LinkType,
-  MetaTag,
   ProjectType,
   SEOtypes,
 } from "../components/types/ComponentsTypes";
@@ -19,7 +18,6 @@ const Project: React.FC = () => {
     "This is where you can find all my projects that are on my GitHub.";
 
   const meta: (
-    | MetaTag
     | { name: string; content: string }
     | { property: string; content: string }
   )[] = [

@@ -1,21 +1,15 @@
 import { ReactElement, ReactNode } from "react";
 
-export interface MetaTag {
+/* export interface MetaTag {
   name?: string;
   content?: string;
-  property?: string; // facultatif pour les propriétés OpenGraph par exemple
-}
-
+  property?: string; 
+} */
 export interface SEOtypes {
   title: string;
   description: string;
-  meta:
-    | (
-        | MetaTag
-        | { name: string; content: string }
-        | { property: string; content: string }
-      )[]
-    | any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  meta: any;
   lang?: string;
   siteName?: boolean;
   ogDescription: string;

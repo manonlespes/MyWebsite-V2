@@ -3,7 +3,7 @@ import { Button } from "../components/Button";
 import emailJs from "@emailjs/browser";
 
 import SEO from "../components/SEO";
-import { MetaTag, SEOtypes } from "../components/types/ComponentsTypes";
+import { SEOtypes } from "../components/types/ComponentsTypes";
 import Header from "../components/Header";
 import Section from "../components/Section";
 
@@ -12,7 +12,6 @@ const Contact: React.FC = () => {
     "Any questions or just wanna talk? Write me here!";
 
   const meta: (
-    | MetaTag
     | { name: string; content: string }
     | { property: string; content: string }
   )[] = [

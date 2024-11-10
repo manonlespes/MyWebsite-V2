@@ -1,13 +1,12 @@
 import { Button } from "../components/Button";
 import SEO from "../components/SEO";
-import { MetaTag, SEOtypes } from "../components/types/ComponentsTypes";
+import { SEOtypes } from "../components/types/ComponentsTypes";
 
 const NotFound: React.FC = () => {
   const descriptionContent: string =
     "Upsi daisy, something went wrong. We couldn't find what you were looking for.";
 
   const meta: (
-    | MetaTag
     | { name: string; content: string }
     | { property: string; content: string }
   )[] = [
