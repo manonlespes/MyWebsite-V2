@@ -9,11 +9,13 @@ export interface MetaTag {
 export interface SEOtypes {
   title: string;
   description: string;
-  meta: (
-    | MetaTag
-    | { name: string; content: string }
-    | { property: string; content: string }
-  )[];
+  meta:
+    | (
+        | MetaTag
+        | { name: string; content: string }
+        | { property: string; content: string }
+      )[]
+    | any;
   lang?: string;
   siteName?: boolean;
   ogDescription: string;
