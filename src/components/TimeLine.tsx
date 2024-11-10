@@ -30,7 +30,7 @@ export const TimeLine: React.FC = () => {
             </p>
             <p className="my-2 text-neutral-content">
               <SimpleLink
-                label="Spade"
+                label="Visit Spade"
                 src="https://spade.be"
                 ariaLabel="Visit Spade"
                 isExternalLink
@@ -89,7 +89,7 @@ export const TimeLine: React.FC = () => {
             </p>
             <p className="my-2 text-neutral-content mb-10">
               <SimpleLink
-                label="Green Tech Forum Brussels"
+                label="Visit Green Tech Forum Brussels"
                 src="https://www.greentech-forum-brussels.com/conferences/eco-design-websites-tools-standards-best-practices-incl-accessibility-data-privacy-actors-testimonials"
                 ariaLabel="Visit Green Tech Forum Brussels conference "
                 isExternalLink
@@ -111,8 +111,8 @@ export const TimeLine: React.FC = () => {
               Front-end Developer Intern, Space scrl in Brussels (Belgium)
             </div>
             <p className="mb-3 text-neutral-content text-sm">
-              Integrate new themes for the Spade's product and resolve tickets
-              for various projects.
+              Integrate new themes for the Spade&apos;s product and resolve
+              tickets for various projects.
             </p>
             <ul className="flex gap-3 flex-wrap list-none">
               {spadeInternBadges.map((badge: string, index: number) => {
@@ -146,7 +146,7 @@ export const TimeLine: React.FC = () => {
             </p>
             <p className="my-2 text-neutral-content">
               <SimpleLink
-                label="Interface3"
+                label="Visit Interface3"
                 src="https://interface3.be/fr"
                 ariaLabel="Visit Interface3"
                 isExternalLink

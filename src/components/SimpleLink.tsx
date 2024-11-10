@@ -15,7 +15,7 @@ export const SimpleLink = (props: LinkType) => {
       {isExternalLink ? (
         <a
           key={id}
-          className={`group text-sm link link-animation text-inherit ${className}`}
+          className={`group text-sm link link-animation text-inherit font-bold ${className}`}
           href={src}
           target="_blank"
           rel="noreferrer noopener"
@@ -29,9 +29,8 @@ export const SimpleLink = (props: LinkType) => {
       ) : (
         <a
           key={id}
-          className="inline-flex items-baseline group text-base link link-animation text-neutral-content "
+          className="inline-flex items-baseline group text-base link link-animation text-neutral-content font-bold"
           href={src}
-          aria-label={ariaLabel}
         >
           {label}
         </a>
