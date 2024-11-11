@@ -7,8 +7,13 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . --fix",
-    "preview": "vite preview"
+    "preview": "npm run build && vite preview"
   },
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 11",
+    "defaults"
+  ],
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "loadable-image": "^3.2.6",
