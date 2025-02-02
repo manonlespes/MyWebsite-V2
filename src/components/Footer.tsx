@@ -71,46 +71,53 @@ export const Footer: React.FC = () => {
           Contact
         </NavLink>
       </nav>
-      <nav>
-        <div className="flex gap-5">
-          <a
-            className="w-8 group hover:text-accent transition-all self-center ease-in-out focus:text-accent"
-            href="https://github.com/manonlespes"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <span className="sr-only">
-              Visit my GitHub - Opens in a new tab
-            </span>
-            <span title="GitHub" aria-hidden="true">
-              <GitHubIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
-            </span>
-          </a>
+      <div>
+        <ul className="flex gap-5">
+          <li className="w-8">
+            <a
+              className="w-fit group hover:text-accent transition-all self-center ease-in-out focus:text-accent"
+              href="https://github.com/manonlespes"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <span className="sr-only">
+                Visit my GitHub - Opens in a new tab
+              </span>
+              <span title="GitHub" aria-hidden="true">
+                <GitHubIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
+              </span>
+            </a>
+          </li>
 
-          <a
-            className="w-7 group hover:text-accent transition-all ease-in-out focus:text-accent"
-            href="https://be.linkedin.com/in/manon-lespes"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <span className="sr-only">
-              Visit my LinkedIn profile - Opens in a new tab
-            </span>
-            <span title="LinkedIn" aria-hidden="true">
-              <LinkedInIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
-            </span>
-          </a>
-          <a
-            className="w-7 group hover:text-accent transition-all ease-in-out self-center focus:text-accent"
-            href="mailto:manonlespes@hotmail.fr"
-          >
-            <span className="sr-only">Send me an email</span>
-            <span title="Email" aria-hidden>
-              <EnvelopeIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
-            </span>
-          </a>
-        </div>
-      </nav>
+          <li className="w-7">
+            <a
+              className="w-fit group hover:text-accent transition-all ease-in-out focus:text-accent"
+              href="https://be.linkedin.com/in/manon-lespes"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <span className="sr-only">
+                Visit my LinkedIn profile - Opens in a new tab
+              </span>
+              <span title="LinkedIn" aria-hidden="true">
+                <LinkedInIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
+              </span>
+            </a>
+          </li>
+
+          <li className="w-7">
+            <a
+              className="w-fit group hover:text-accent transition-all ease-in-out self-center focus:text-accent"
+              href="mailto:manonlespes@hotmail.fr"
+            >
+              <span className="sr-only">Send me an email</span>
+              <span title="Email" aria-hidden>
+                <EnvelopeIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
       <aside title="Go back in time">
         <a
           href="https://v1.manonlespes.com"

@@ -16,7 +16,7 @@ const Image = ({ inView, image }: { inView: boolean; image: ImageType }) => {
         <Grow in={status === "loaded"}>
           <img
             key={image?.key}
-            alt={image?.alt}
+            alt={image?.alt ? image.alt : ""}
             height={image?.height}
             width={image?.width}
             src={image?.src}

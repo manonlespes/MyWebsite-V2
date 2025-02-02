@@ -32,7 +32,7 @@ export const aboutContentCards: CardContentType[] = [
     text: "Before the pandemic, I was organising events and then I changed my career direction and jumped into the digital and IT world. I like coding, but also traveling, dancing and reading. But most of all, I am fond of my cat. I know, I sound like a cliché.",
     img: {
       key: uuid(),
-      alt: "Manon Lespes - in a train looking through the window.",
+      alt: "",
       src: Manon,
       height: "fit",
       width: "fit",
@@ -43,7 +43,7 @@ export const aboutContentCards: CardContentType[] = [
     text: " Chatshimi sometimes acts as my rubber-cat-debugging. When I'm working remotly, she's constantly by my side and even when she's taking a 10-hour power nap, she helps me debugg. Rest assured that the code is in safe and capable pawls and hands.",
     img: {
       key: uuid(),
-      alt: "Chatshimi, my lovely spleeping cat.",
+      alt: "",
       src: Chatshimi,
       height: "fit",
       width: "fit",
