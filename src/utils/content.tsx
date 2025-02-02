@@ -19,11 +19,12 @@ import { v4 as uuid } from "uuid";
 import Chatshimi from "../images/chatshimi.webp";
 import Manon from "../images/manon_lespes.webp";
 import ColorPicker from "../images/color_picker.webp";
-import FrontEnd from "../images/front_end_img.webp";
+//import FrontEnd from "../images/front_end_img.webp";
 import KeyBoard from "../images/background_img.webp";
 import Blog from "../images/blog.webp";
 import WarGame from "../images/war_game.webp";
 import Amelie from "../images/amelie_website.webp";
+import Tenzies from "../images/tenzies.webp";
 
 export const aboutContentCards: CardContentType[] = [
   {
@@ -51,6 +52,62 @@ export const aboutContentCards: CardContentType[] = [
 ];
 
 export const projectList: ProjectType[] = [
+  {
+    id: uuid(),
+    img: {
+      alt: "",
+      src: Amelie,
+    },
+    title: "Amelie's website",
+    description:
+      "I helped a friend to launch her website. I advice her on the theme, colors, content, plugins and pages structure. I am still doing the maintenance and updating plugins. It is hosted on o2switch.",
+    tags: ["WordPress", "CSS"],
+    links: [
+      {
+        id: uuid(),
+        label: "Visit the site",
+        isExternalLink: true,
+        src: "https://amelie-parolin.com/",
+      },
+    ],
+  },
+  {
+    id: uuid(),
+    img: {
+      alt: "",
+      src: WarGame,
+    },
+    title: "War Game",
+    description:
+      "I like playing card games! Do you like it as well? If so, clone my repo and have fun!",
+    tags: ["Javascript", "HTML5", "CSS", "Deck of Cards API"],
+    links: [
+      {
+        id: uuid(),
+        label: "Visit my GitHub repo",
+        isExternalLink: true,
+        src: "https://github.com/manonlespes/war-game",
+      },
+    ],
+  },
+  {
+    id: uuid(),
+    img: {
+      alt: "",
+      src: Tenzies,
+    },
+    title: "Tenzies Game",
+    description: "Roll until all dice are the same!",
+    tags: ["React", "TypeScript", "CSS"],
+    links: [
+      {
+        id: uuid(),
+        label: "Visit my GitHub repo",
+        isExternalLink: true,
+        src: "https://github.com/manonlespes/roll-dices-game",
+      },
+    ],
+  },
   {
     id: uuid(),
     img: {
@@ -89,73 +146,9 @@ export const projectList: ProjectType[] = [
       },
     ],
   },
-  {
-    id: uuid(),
-    img: {
-      alt: "",
-      src: Amelie,
-    },
-    title: "Amelie's website",
-    description:
-      "I helped a friend to launch her website. I advice her on the theme, colors, content, plugins and pages structure. I am still doing the maintenance and updating plugins. It is hosted on o2switch.",
-    tags: ["WordPress", "CSS"],
-    links: [
-      {
-        id: uuid(),
-        label: "Visit the site",
-        isExternalLink: true,
-        src: "https://amelie-parolin.com/",
-      },
-    ],
-  },
-  {
-    id: uuid(),
-    img: {
-      alt: "",
-      src: WarGame,
-    },
-    title: "War Game",
-    description:
-      "I like playing card! Do you like it as well? If so, have fun and clone my repo!",
-    tags: ["Javascript", "HTML5", "CSS", "Deck of Cards API"],
-    links: [
-      {
-        id: uuid(),
-        label: "Visit my GitHub repo",
-        isExternalLink: true,
-        src: "https://github.com/manonlespes/war-game",
-      },
-    ],
-  },
-  {
-    id: uuid(),
-    img: {
-      alt: "",
-      src: WarGame,
-    },
-    title: "Tenzies Game",
-    description: "Roll until all dice are the same!",
-    tags: ["React", "TypeScript", "CSS"],
-    links: [
-      {
-        id: uuid(),
-        label: "Visit my GitHub repo",
-        isExternalLink: true,
-        src: "https://github.com/manonlespes/roll-dices-game",
-      },
-    ],
-  },
 ];
 
 export const projectImageList: ImageType[] = [
-  {
-    key: uuid(),
-    alt: "",
-    height: "fit",
-    width: "fit",
-    className: "absolute inset-0 h-full w-full object-cover",
-    src: FrontEnd,
-  },
   {
     key: uuid(),
     alt: "",
@@ -179,6 +172,14 @@ export const projectImageList: ImageType[] = [
     width: "fit",
     className: "absolute inset-0 h-full w-full object-cover",
     src: Amelie,
+  },
+  {
+    key: uuid(),
+    alt: "",
+    height: "fit",
+    width: "fit",
+    className: "absolute inset-0 h-full w-full object-cover",
+    src: Tenzies,
   },
   {
     key: uuid(),
@@ -372,8 +373,19 @@ export const speakingContent: speakingContentType[] = [
 export const podcast: speakingContentType[] = [
   {
     id: uuid(),
+    title: "What is the Navigation Bar? (in French)",
+    subtitle: "Abécédaire de Spade - 17 December 2024",
+    desc: "Presentation and explanation of the navigation bar from a web developer point's of view.",
+    link: {
+      src: "https://www.spade.be/fr/articles/abecedaire-n-navigation/",
+      label: "Listen or read retranscription of the podcast",
+      isExternalLink: true,
+    },
+  },
+  {
+    id: uuid(),
     title: "Presentation of GR491 (in French)",
-    subtitle: "Abécédaire de Spade",
+    subtitle: "Abécédaire de Spade - 12 March 2024",
     desc: "Presentation of the Handbook of Sustainable Design of Digital Services, with a brief explanation of how it could be used in agencies wishing to apply an eco-design approach.",
     link: {
       src: "https://www.spade.be/fr/articles/abecedaire-g-le-gr491/",
