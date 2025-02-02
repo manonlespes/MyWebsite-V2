@@ -24,7 +24,6 @@ const SmallCard = ({ title, content, svg, id }: SmallCardType) => {
                       id={item.value}
                       src={item.link}
                       label={item.value}
-                      ariaLabel={item.value}
                       isExternalLink
                     />
                   </li>

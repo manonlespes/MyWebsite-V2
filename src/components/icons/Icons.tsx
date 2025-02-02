@@ -1,5 +1,4 @@
 export const LinkedInIcon = (props: { class: string }) => {
-  //TODO check acessibility
   return (
     <>
       {/*  Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc. */}

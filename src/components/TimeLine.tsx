@@ -32,7 +32,6 @@ export const TimeLine: React.FC = () => {
               <SimpleLink
                 label="Visit Spade"
                 src="https://spade.be"
-                ariaLabel="Visit Spade"
                 isExternalLink
               />
             </p>
@@ -91,7 +90,6 @@ export const TimeLine: React.FC = () => {
               <SimpleLink
                 label="Visit Green Tech Forum Brussels"
                 src="https://www.greentech-forum-brussels.com/conferences/eco-design-websites-tools-standards-best-practices-incl-accessibility-data-privacy-actors-testimonials"
-                ariaLabel="Visit Green Tech Forum Brussels conference "
                 isExternalLink
               />
             </p>
@@ -148,7 +146,6 @@ export const TimeLine: React.FC = () => {
               <SimpleLink
                 label="Visit Interface3"
                 src="https://interface3.be/fr"
-                ariaLabel="Visit Interface3"
                 isExternalLink
               />
             </p>
@@ -181,7 +178,6 @@ export const TimeLine: React.FC = () => {
               <SimpleLink
                 label="View full résumé"
                 src="/resume.pdf"
-                ariaLabel="View full résumé "
                 isExternalLink
               />
             </p>

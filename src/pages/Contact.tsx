@@ -83,11 +83,13 @@ const Contact: React.FC = () => {
             onSubmit={sendEmail}
           >
             <label className="input input-bordered flex items-center gap-2">
+              <span className="sr-only">Email</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
                 fill="currentColor"
                 className="h-4 w-4 opacity-70"
+                aria-hidden
               >
                 <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
                 <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
@@ -96,17 +98,19 @@ const Contact: React.FC = () => {
                 required
                 type="text"
                 className="grow text-sm md:text-base"
-                placeholder="Email"
+                placeholder="Email *"
                 name="email_address"
               />
             </label>
 
             <label className="input input-bordered flex items-center gap-2">
+              <span className="sr-only">Name</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
                 fill="currentColor"
                 className="h-4 w-4 opacity-70"
+                aria-hidden
               >
                 <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
               </svg>
@@ -114,27 +118,31 @@ const Contact: React.FC = () => {
                 required
                 type="text"
                 className="grow text-sm md:text-base"
-                placeholder="Name"
+                placeholder="Name *"
                 name="full_name"
               />
             </label>
 
             <label className="flex">
+              <span className="sr-only">Subject</span>
               <input
                 required
                 type="text"
-                placeholder="Subject"
+                placeholder="Subject *"
                 className="input grow input-bordered text-sm md:text-base"
                 name="subject"
               />
             </label>
 
-            <textarea
-              required
-              className="textarea textarea-bordered min-h-48 text-sm md:text-base"
-              placeholder="Your message here"
-              name="message"
-            ></textarea>
+            <label className="flex w-full">
+              <span className="sr-only">Your Message</span>
+              <textarea
+                required
+                className="textarea textarea-bordered min-h-48 text-sm md:text-base w-dvw"
+                placeholder="Your message here *"
+                name="message"
+              ></textarea>
+            </label>
 
             <Button className="w-32" label="Send" />
           </form>

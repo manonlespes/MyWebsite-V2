@@ -64,7 +64,6 @@ export interface LinkType {
   id?: string;
   label: string;
   src: string;
-  ariaLabel?: string;
   isExternalLink: boolean;
   className?: string;
 }

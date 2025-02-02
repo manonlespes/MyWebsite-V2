@@ -64,10 +64,9 @@ export const projectList: ProjectType[] = [
     links: [
       {
         id: uuid(),
-        label: "GitHub",
+        label: "Visit my GitHub repo",
         isExternalLink: true,
         src: "https://github.com/manonlespes/color-picker",
-        ariaLabel: "Go to repo",
       },
     ],
   },
@@ -84,10 +83,9 @@ export const projectList: ProjectType[] = [
     links: [
       {
         id: uuid(),
-        label: "GitHub",
+        label: "Visit my GitHub repo",
         isExternalLink: true,
         src: "https://github.com/manonlespes/small-blog",
-        ariaLabel: "Go to repo",
       },
     ],
   },
@@ -107,7 +105,6 @@ export const projectList: ProjectType[] = [
         label: "Visit the site",
         isExternalLink: true,
         src: "https://amelie-parolin.com/",
-        ariaLabel: "Visite Amelie's website",
       },
     ],
   },
@@ -124,10 +121,27 @@ export const projectList: ProjectType[] = [
     links: [
       {
         id: uuid(),
-        label: "GitHub",
+        label: "Visit my GitHub repo",
         isExternalLink: true,
         src: "https://github.com/manonlespes/war-game",
-        ariaLabel: "Go to repo",
+      },
+    ],
+  },
+  {
+    id: uuid(),
+    img: {
+      alt: "",
+      src: WarGame,
+    },
+    title: "Tenzies Game",
+    description: "Roll until all dice are the same!",
+    tags: ["React", "TypeScript", "CSS"],
+    links: [
+      {
+        id: uuid(),
+        label: "Visit my GitHub repo",
+        isExternalLink: true,
+        src: "https://github.com/manonlespes/roll-dices-game",
       },
     ],
   },
@@ -339,7 +353,6 @@ export const speakingContent: speakingContentType[] = [
     link: {
       src: "https://dcwe.be",
       label: "Visit Digital Change with Ethics",
-      ariaLabel: "Visit Digital Change with Ethics",
       isExternalLink: true,
     },
   },
@@ -351,7 +364,6 @@ export const speakingContent: speakingContentType[] = [
     link: {
       src: "https://www.greentech-forum-brussels.com/program/conferences",
       label: "Visit Green Tech Forum Programme",
-      ariaLabel: "Visit Green Tech Forum Programme",
       isExternalLink: true,
     },
   },
@@ -365,8 +377,7 @@ export const podcast: speakingContentType[] = [
     desc: "Presentation of the Handbook of Sustainable Design of Digital Services, with a brief explanation of how it could be used in agencies wishing to apply an eco-design approach.",
     link: {
       src: "https://www.spade.be/fr/articles/abecedaire-g-le-gr491/",
-      label: "Go to the podcast",
-      ariaLabel: "Listen the podcast or read the retranscription ",
+      label: "Listen or read retranscription of the podcast",
       isExternalLink: true,
     },
   },

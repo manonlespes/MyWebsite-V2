@@ -116,13 +116,9 @@ export const Navbar: React.FC = () => {
               </li>
             </ul>
           </div>
-          <Link
-            to="/"
-            className="btn btn-ghost block w-24 h-fit lg:px-0"
-            aria-label="Go back to Home Page"
-          >
+          <Link to="/" className="btn btn-ghost block w-24 h-fit lg:px-0">
             <img
-              alt="Manon Lespes' Portfolio"
+              alt="Manon Lespes' Portfolio - Home Page"
               src={Logo}
               className={`${
                 isShrunk ? "scale-75" : "scale-100"

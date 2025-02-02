@@ -2,14 +2,7 @@ import { NewWindowIcon } from "./icons/Icons";
 import { LinkType } from "./types/ComponentsTypes";
 
 export const SimpleLink = (props: LinkType) => {
-  const {
-    label,
-    src,
-    ariaLabel = "",
-    isExternalLink,
-    className = "",
-    id,
-  } = props;
+  const { label, src, isExternalLink, className = "", id } = props;
   return (
     <>
       {isExternalLink ? (
@@ -19,10 +12,10 @@ export const SimpleLink = (props: LinkType) => {
           href={src}
           target="_blank"
           rel="noreferrer noopener"
-          aria-label={ariaLabel + "(opens in a new tab)"}
         >
-          <span>
-            {label}
+          {label}
+          <span className="sr-only">- Opens in a new tab</span>
+          <span title="Opens in a new tab" aria-hidden="true">
             <NewWindowIcon className="h-4 w-4" />
           </span>
         </a>

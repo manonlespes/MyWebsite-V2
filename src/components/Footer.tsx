@@ -78,9 +78,13 @@ export const Footer: React.FC = () => {
             href="https://github.com/manonlespes"
             target="_blank"
             rel="noreferrer noopener"
-            aria-label="Visit my GitHub (opens in a new tab)"
           >
-            <GitHubIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
+            <span className="sr-only">
+              Visit my GitHub - Opens in a new tab
+            </span>
+            <span title="GitHub" aria-hidden="true">
+              <GitHubIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
+            </span>
           </a>
 
           <a
@@ -88,16 +92,22 @@ export const Footer: React.FC = () => {
             href="https://be.linkedin.com/in/manon-lespes"
             target="_blank"
             rel="noreferrer noopener"
-            aria-label="Visit my LinkedIn profile (opens in a new tab)"
           >
-            <LinkedInIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
+            <span className="sr-only">
+              Visit my LinkedIn profile - Opens in a new tab
+            </span>
+            <span title="LinkedIn" aria-hidden="true">
+              <LinkedInIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
+            </span>
           </a>
           <a
             className="w-7 group hover:text-accent transition-all ease-in-out self-center focus:text-accent"
             href="mailto:manonlespes@hotmail.fr"
-            aria-label="Send me an email"
           >
-            <EnvelopeIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
+            <span className="sr-only">Send me an email</span>
+            <span title="Email" aria-hidden>
+              <EnvelopeIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
+            </span>
           </a>
         </div>
       </nav>
@@ -106,9 +116,14 @@ export const Footer: React.FC = () => {
           href="https://v1.manonlespes.com"
           rel="noreferrer"
           className="overflow-hidden w-32 group"
-          aria-label="Visit my past not accessible portfolio (opens in new tabs)"
         >
-          <DeloreanIcon className="relative inline-block group-hover:animate-[drive_3s_linear_infinite] " />
+          <span className="sr-only">
+            Visit my previous portfolio - not accessible at all - Opens in a new
+            tab
+          </span>
+          <span title="Visit my previous portfolio" aria-hidden="true">
+            <DeloreanIcon className="relative inline-block group-hover:animate-[drive_3s_linear_infinite]" />
+          </span>
         </a>
         <p>
           Copyright © {new Date().getFullYear()} - All right reserved by Manon

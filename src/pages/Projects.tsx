@@ -71,7 +71,7 @@ const Project: React.FC = () => {
           {projectList.map((project: ProjectType) => {
             return (
               <LazyLoadComponent key={project.id}>
-                <div className="group flex flex-col justify-start items-start gap-2 w-fit sm:h-[19rem] duration-500 relative rounded-xl p-6 bg-neutral hover:-translate-y-2 hover:shadow-xl shadow-md">
+                <div className="group flex flex-col justify-start items-start gap-2 w-full sm:h-[19rem] duration-500 relative rounded-xl p-6 bg-neutral hover:-translate-y-2 hover:shadow-xl shadow-md">
                   <div>
                     <h3 className="card-title tracking-wide mb-2 text-neutral-content">
                       {project.title}
@@ -101,7 +101,6 @@ const Project: React.FC = () => {
                           className="text-neutral-content"
                           label={link.label}
                           src={link.src}
-                          ariaLabel={link.ariaLabel}
                           isExternalLink
                         />
                       );

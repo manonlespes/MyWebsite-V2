@@ -76,7 +76,6 @@ const Speaking: React.FC = () => {
                       <SimpleLink
                         label={content.link.label}
                         src={content.link.src}
-                        ariaLabel={content.link.ariaLabel}
                         isExternalLink={content.link.isExternalLink}
                       />
                     </p>
@@ -110,7 +109,6 @@ const Speaking: React.FC = () => {
                       <SimpleLink
                         label={content.link.label}
                         src={content.link.src}
-                        ariaLabel={content.link.ariaLabel}
                         isExternalLink={content.link.isExternalLink}
                       />
                     </p>

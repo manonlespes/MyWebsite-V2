@@ -44,7 +44,8 @@ const About: React.FC = () => {
 
   const image: ImageType = {
     src: MePicture,
-    className: "rounded-2xl bg-base-100 object-cover shadow-lg",
+    className:
+      "rounded-2xl bg-base-100 object-cover shadow-lg aspect-square object-top",
     width: "fit",
     height: "fit",
   };
@@ -92,7 +93,6 @@ const About: React.FC = () => {
                         className="mx-2 md:text-base"
                         label="Interface3"
                         isExternalLink
-                        ariaLabel="Interface3"
                         src="https://interface3.be/fr"
                       />
                       , a training center dedicated to empowering women in tech.
@@ -102,7 +102,6 @@ const About: React.FC = () => {
                         label="a digital and
                       communication agency"
                         isExternalLink
-                        ariaLabel="Visit Spade"
                         src="https://spade.be"
                       />
                       specialising in accessibility, and my dedication to
@@ -152,30 +151,30 @@ const About: React.FC = () => {
                   <ul role="list">
                     <li>
                       <a
-                        className="inline-flex items-center text-sm gap-5 group hover:text-accent transition-all self-center ease-in-out focus:text-accent"
+                        className="inline-flex items-center text-sm group hover:text-accent transition-all self-center ease-in-out focus:text-accent"
                         href="https://github.com/manonlespes"
                         target="_blank"
                         rel="noreferrer noopener"
-                        aria-label="Follow me on Github (opens in a new tab)"
                       >
-                        <GitHubIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out w-6" />
-                        <span>
-                          Follow me on Github
+                        <GitHubIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out w-6 mr-5" />
+                        Follow me on Github
+                        <span className="sr-only">- Opens in a new tab</span>
+                        <span title="Opens in a new tab" aria-hidden="true">
                           <NewWindowIcon className="h-3 w-3" />
                         </span>
                       </a>
                     </li>
                     <li className="mt-3">
                       <a
-                        className="inline-flex items-center text-sm gap-5 group hover:text-accent transition-all self-center ease-in-out focus:text-accent"
+                        className="inline-flex items-center text-sm group hover:text-accent transition-all self-center ease-in-out focus:text-accent"
                         href="https://be.linkedin.com/in/manon-lespes"
                         target="_blank"
                         rel="noreferrer noopener"
-                        aria-label="Follow me on LinkedIn (opens in a new tab)"
                       >
-                        <LinkedInIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out w-5" />
-                        <span>
-                          Follow me on LinkedIn
+                        <LinkedInIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out w-5 mr-5" />
+                        Follow me on LinkedIn
+                        <span className="sr-only">- Opens in a new tab</span>
+                        <span title="Opens in a new tab" aria-hidden="true">
                           <NewWindowIcon className="h-3 w-3" />
                         </span>
                       </a>
@@ -185,7 +184,6 @@ const About: React.FC = () => {
                       <Link
                         to={"/contact"}
                         className="inline-flex items-center text-sm gap-5 group hover:text-accent transition-all ease-in-out self-center focus:text-accent"
-                        aria-label="Drop me a line"
                       >
                         <EnvelopeIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out w-5" />
                         Drop me a line
