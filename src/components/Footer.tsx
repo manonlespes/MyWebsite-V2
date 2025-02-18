@@ -72,6 +72,7 @@ export const Footer: React.FC = () => {
         </NavLink>
       </nav>
       <div>
+        <div id="wcb" className="carbonbadge wcb-d"></div>
         <ul className="flex gap-5">
           <li className="w-8">
             <a
