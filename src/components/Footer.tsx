@@ -5,6 +5,7 @@ import {
   GitHubIcon,
   LinkedInIcon,
 } from "./icons/Icons";
+import { WebsiteCarbonBadge } from "react-websitecarbon-badge";
 
 export const Footer: React.FC = () => {
   return (
@@ -72,7 +73,6 @@ export const Footer: React.FC = () => {
         </NavLink>
       </nav>
       <div>
-        <div id="wcb" className="carbonbadge wcb-d"></div>
         <ul className="flex gap-5">
           <li className="w-8">
             <a
@@ -138,6 +138,11 @@ export const Footer: React.FC = () => {
           Lespes
         </p>
       </aside>
+      <WebsiteCarbonBadge
+        co2="0.15"
+        percentage="85"
+        url="https://manonlespes.com/"
+      />
     </footer>
   );
 };
