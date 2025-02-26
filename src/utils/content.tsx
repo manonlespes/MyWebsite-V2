@@ -19,12 +19,11 @@ import { v4 as uuid } from "uuid";
 import Chatshimi from "../images/chatshimi.webp";
 import Manon from "../images/manon_lespes.webp";
 import ColorPicker from "../images/color_picker.webp";
-//import FrontEnd from "../images/front_end_img.webp";
-import KeyBoard from "../images/background_img.webp";
 import Blog from "../images/blog.webp";
 import WarGame from "../images/war_game.webp";
 import Amelie from "../images/amelie_website.webp";
 import Tenzies from "../images/tenzies.webp";
+import EndGame from "../images/endgame.webp";
 
 export const aboutContentCards: CardContentType[] = [
   {
@@ -40,7 +39,7 @@ export const aboutContentCards: CardContentType[] = [
   },
   {
     title: "Chatshimi, the Spleeping Beauty",
-    text: " Chatshimi sometimes acts as my rubber-cat-debugging. When I'm working remotly, she's constantly by my side and even when she's taking a 10-hour power nap, she helps me debugg. Rest assured that the code is in safe and capable pawls and hands.",
+    text: "Chatshimi sometimes acts as my rubber-cat-debugging. When I'm working remotly, she's constantly by my side and even when she's taking a 10-hour power nap, she helps me debugg. Rest assured that the code is in safe and capable pawls and hands.",
     img: {
       key: uuid(),
       alt: "",
@@ -105,6 +104,25 @@ export const projectList: ProjectType[] = [
         label: "Visit my GitHub repo",
         isExternalLink: true,
         src: "https://github.com/manonlespes/roll-dices-game",
+      },
+    ],
+  },
+  {
+    id: uuid(),
+    img: {
+      alt: "",
+      src: EndGame,
+    },
+    title: "End Game",
+    description:
+      "Guess the word in under 8 attempts to keep the programming world safe from Assembly!",
+    tags: ["React", "TypeScript", "CSS"],
+    links: [
+      {
+        id: uuid(),
+        label: "Visit my GitHub repo",
+        isExternalLink: true,
+        src: "https://github.com/manonlespes/endgame",
       },
     ],
   },
@@ -195,7 +213,7 @@ export const projectImageList: ImageType[] = [
     height: "fit",
     width: "fit",
     className: "absolute inset-0 h-full w-full object-cover",
-    src: KeyBoard,
+    src: EndGame,
   },
 ];
 
