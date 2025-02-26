@@ -83,7 +83,7 @@ const config: Config = {
           primary: "#c62a40",
           "primary-content": "#f2f5f8",
           secondary: "#0e7a69",
-
+          "secondary-content": "black",
           accent: "#c62a40",
           "neutral-content": "#f2f5f8",
           info: "#22d3b8",
