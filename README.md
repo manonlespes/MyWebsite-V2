@@ -5,9 +5,9 @@
   manonlespes.com - v2
 </h1>
 <p align="center">
-  The second iteration of <a href="https://manonlespes.com" target="_blank">manonlespes.com</a> built with <a href="https://fr.react.dev/" target="_blank">React</a>, <a href="https://daisyui.com/" target="_blank">daisyUi, a Tailwind CSS Components librairy</a> and <a href="https://v3.tailwindcss.com/" target="_blank">Tailwind V3</a>. It is currently hosted on <a href="https://www.o2switch.fr/" target="_blank">O2switch</a>.
+  The second iteration of <a href="https://manonlespes.com" target="_blank">manonlespes.com</a> built with <a href="https://fr.react.dev/" target="_blank">React</a>, <a href="https://daisyui.com/" target="_blank">daisyUi</a> - a Tailwind CSS Components librairy and <a href="https://v3.tailwindcss.com/" target="_blank">Tailwind V3</a>. It is currently hosted on <a href="https://www.o2switch.fr/" target="_blank">O2switch</a>.
 </p>
 <p align="center">
-  Previous iterations:
-  <a href="https://github.com/manonlespes/MyWebsite-V1" target="_blank">v1</a>,
+  Previous iteration:
+  <a href="https://github.com/manonlespes/MyWebsite-V1" target="_blank">v1</a>
 </p>
