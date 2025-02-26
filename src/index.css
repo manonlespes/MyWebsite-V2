@@ -26,3 +26,15 @@
 .active.link {
   @apply no-underline relative bg-no-repeat bg-fromTo bg-gradient-to-l from-info to-info bg-link-footer-hover rounded-sm;
 }
+
+/* Website Carbon */
+/*** Tag */
+.sc-gEvEer.jhrIAR,
+.sc-fqkvVR.fYLitR {
+  @apply font-sans;
+}
+/*** Sentence */
+.sc-dcJsrY.OIcrw,
+.sc-dcJsrY.gEVZHV {
+  @apply text-[12px] font-sans text-secondary-content;
+}

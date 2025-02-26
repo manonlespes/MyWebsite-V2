@@ -6,8 +6,10 @@ import {
   LinkedInIcon,
 } from "./icons/Icons";
 import { WebsiteCarbonBadge } from "react-websitecarbon-badge";
+import { useChangeTheme } from "../hooks/useChangeTheme";
 
 export const Footer: React.FC = () => {
+  const { theme } = useChangeTheme();
   return (
     <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
       <nav className="grid sm:grid-flow-col gap-4">
@@ -142,6 +144,8 @@ export const Footer: React.FC = () => {
         co2="0.15"
         percentage="85"
         url="https://manonlespes.com/"
+        lang="en"
+        dark={theme?.isLight ? false : true}
       />
     </footer>
   );
