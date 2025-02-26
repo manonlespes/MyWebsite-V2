@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
               ? "pending text-sm"
               : isActive
               ? "active link text-sm"
-              : "link link-animation text-sm"
+              : "link-animation-footer text-sm"
           }
         >
           About
@@ -30,10 +30,10 @@ export const Footer: React.FC = () => {
               ? "pending text-sm"
               : isActive
               ? "active link text-sm"
-              : "link link-animation text-sm"
+              : "link-animation-footer text-sm"
           }
         >
-          Project
+          Projects
         </NavLink>
         <NavLink
           to="speaking"
@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
               ? "pending text-sm"
               : isActive
               ? "active link text-sm"
-              : "link link-animation text-sm"
+              : "link-animation-footer text-sm"
           }
         >
           Speaking
@@ -54,7 +54,7 @@ export const Footer: React.FC = () => {
               ? "pending text-sm"
               : isActive
               ? "active link text-sm"
-              : "link link-animation text-sm"
+              : "link-animation-footer text-sm"
           }
         >
           Uses
@@ -66,7 +66,7 @@ export const Footer: React.FC = () => {
               ? "pending text-sm"
               : isActive
               ? "active link text-sm"
-              : "link link-animation text-sm"
+              : "link-animation-footer text-sm"
           }
         >
           Contact

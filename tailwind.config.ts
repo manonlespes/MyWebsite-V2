@@ -7,8 +7,10 @@ const config: Config = {
       fromTo: "0 100%",
     },
     backgroundSize: {
-      link: "0px 2px",
-      "link-hover": "100% 2px",
+      link: "100% 2px",
+      "link-hover": "100% 100%",
+      "link-footer": "0px 2px",
+      "link-footer-hover": "100% 2px",
     },
     fontSize: {
       sm: [
@@ -81,6 +83,7 @@ const config: Config = {
           primary: "#c62a40",
           "primary-content": "#f2f5f8",
           secondary: "#0e7a69",
+
           accent: "#c62a40",
           "neutral-content": "#f2f5f8",
           info: "#22d3b8",

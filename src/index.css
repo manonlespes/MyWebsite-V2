@@ -16,9 +16,13 @@
 /* Links */
 
 .link-animation {
-  @apply no-underline relative ease-out duration-300 bg-link bg-no-repeat bg-fromTo bg-gradient-to-l from-info to-info focus:bg-link-hover hover:bg-link-hover rounded-sm;
+  @apply no-underline relative ease-out duration-300 bg-link bg-no-repeat bg-fromTo bg-gradient-to-l from-info to-info focus:bg-link-hover hover:bg-link-hover rounded-sm hover:text-black focus:text-black;
+}
+
+.link-animation-footer {
+  @apply no-underline relative ease-out duration-300 bg-link-footer bg-no-repeat bg-fromTo bg-gradient-to-l from-info to-info focus:bg-link-footer-hover hover:bg-link-footer-hover rounded-sm;
 }
 
 .active.link {
-  @apply no-underline relative bg-no-repeat bg-fromTo bg-gradient-to-l from-info to-info bg-link-hover rounded-sm;
+  @apply no-underline relative bg-no-repeat bg-fromTo bg-gradient-to-l from-info to-info bg-link-footer-hover rounded-sm;
 }
