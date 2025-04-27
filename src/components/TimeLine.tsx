@@ -14,6 +14,39 @@ export const TimeLine: React.FC = () => {
           <div className="timeline-middle text-info">
             <TimeLineIcon />
           </div>
+
+          <div className="timeline-end mb-10">
+            <time className="tracking-wider italic text-neutral-content">
+              March 2025 - currently
+            </time>
+            <div className="text-sm md:text-base font-black p-2 bg-base-200 w-fit rounded-md mt-1 mb-2">
+              Web and design accessibility deep training
+            </div>
+            <p className="mb-3 text-neutral-content text-sm">
+              In my spare time, I am training to gain a deeper understanding of
+              accessibility. I am supervised by{" "}
+              <SimpleLink
+                label="Sophie Ragas"
+                src="https://be.linkedin.com/in/sophieragas"
+                isExternalLink
+              />
+              , Web accessibility consultant within{" "}
+              <SimpleLink
+                label="Eleven Ways"
+                src="https://elevenways.be/fr"
+                isExternalLink
+              />
+              , and I am aiming for IAAP CPACC (Certified Professional in
+              Accessibility Core Competencies) certification by the end of the
+              year.
+            </p>
+          </div>
+          <hr />
+        </li>
+        <li>
+          <div className="timeline-middle text-info">
+            <TimeLineIcon />
+          </div>
           <div className="timeline-start mb-10">
             <time className="tracking-wider italic text-neutral-content block md:text-end">
               June 2022 - currently
