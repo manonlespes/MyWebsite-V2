@@ -1,126 +1,28 @@
 import { NavLink } from "react-router-dom";
-import {
-  DeloreanIcon,
-  EnvelopeIcon,
-  GitHubIcon,
-  LinkedInIcon,
-} from "./icons/Icons";
+import { DeloreanIcon } from "./icons/Icons";
 import { WebsiteCarbonBadge } from "react-websitecarbon-badge";
 import { useChangeTheme } from "../hooks/useChangeTheme";
+import { pageList, socialLinkFooterData } from "../utils/content";
+import { SocialLinkFooterType } from "./types/ComponentsTypes";
 
 export const Footer: React.FC = () => {
   const { theme } = useChangeTheme();
   return (
     <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
       <nav className="grid sm:grid-flow-col gap-4">
-        <NavLink
-          to="about"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending text-sm"
-              : isActive
-              ? "active link text-sm"
-              : "link-animation-footer text-sm"
-          }
-        >
-          About
-        </NavLink>
-        <NavLink
-          to="projects"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending text-sm"
-              : isActive
-              ? "active link text-sm"
-              : "link-animation-footer text-sm"
-          }
-        >
-          Projects
-        </NavLink>
-        <NavLink
-          to="speaking"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending text-sm"
-              : isActive
-              ? "active link text-sm"
-              : "link-animation-footer text-sm"
-          }
-        >
-          Speaking
-        </NavLink>
-        <NavLink
-          to="uses"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending text-sm"
-              : isActive
-              ? "active link text-sm"
-              : "link-animation-footer text-sm"
-          }
-        >
-          Uses
-        </NavLink>
-        <NavLink
-          to="contact"
-          className={({ isActive, isPending }) =>
-            isPending
-              ? "pending text-sm"
-              : isActive
-              ? "active link text-sm"
-              : "link-animation-footer text-sm"
-          }
-        >
-          Contact
-        </NavLink>
+        {pageList.map((page, index) => (
+          <NavElement key={index} page={page} />
+        ))}
       </nav>
-      <div>
-        <ul className="flex gap-5">
-          <li className="w-8">
-            <a
-              className="w-fit group hover:text-accent transition-all self-center ease-in-out focus:text-accent"
-              href="https://github.com/manonlespes"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <span className="sr-only">
-                Visit my GitHub - Opens in a new tab
-              </span>
-              <span title="GitHub" aria-hidden="true">
-                <GitHubIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
-              </span>
-            </a>
-          </li>
 
-          <li className="w-7">
-            <a
-              className="w-fit group hover:text-accent transition-all ease-in-out focus:text-accent"
-              href="https://be.linkedin.com/in/manon-lespes"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <span className="sr-only">
-                Visit my LinkedIn profile - Opens in a new tab
-              </span>
-              <span title="LinkedIn" aria-hidden="true">
-                <LinkedInIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
-              </span>
-            </a>
+      <ul className="flex gap-5 items-baseline">
+        {socialLinkFooterData.map((item, index) => (
+          <li key={index} className="w-8">
+            <SocialLink {...item} />
           </li>
+        ))}
+      </ul>
 
-          <li className="w-7">
-            <a
-              className="w-fit group hover:text-accent transition-all ease-in-out self-center focus:text-accent"
-              href="mailto:manonlespes@hotmail.fr"
-            >
-              <span className="sr-only">Send me an email</span>
-              <span title="Email" aria-hidden>
-                <EnvelopeIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
       <aside title="Go back in time">
         <a
           href="https://v1.manonlespes.com"
@@ -148,5 +50,44 @@ export const Footer: React.FC = () => {
         dark={theme?.isLight ? false : true}
       />
     </footer>
+  );
+};
+
+const NavElement = ({ page }: { page: string }) => {
+  const capitalizefirstletter = (word: string) => {
+    const element = word.charAt(0).toUpperCase() + word.slice(1);
+
+    return element;
+  };
+
+  return (
+    <NavLink
+      to={page}
+      className={({ isActive, isPending }) =>
+        isPending
+          ? "pending text-sm"
+          : isActive
+          ? "active link text-sm"
+          : "link-animation-footer text-sm"
+      }
+    >
+      {capitalizefirstletter(page)}
+    </NavLink>
+  );
+};
+
+const SocialLink = ({ url, text, title, icon }: SocialLinkFooterType) => {
+  return (
+    <a
+      className="w-11 group hover:text-accent transition-all ease-in-out focus:text-accent self-baseline"
+      href={url}
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      <span className="sr-only">{text}</span>
+      <span title={title} aria-hidden="true">
+        {icon}
+      </span>
+    </a>
   );
 };

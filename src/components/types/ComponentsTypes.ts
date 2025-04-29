@@ -96,3 +96,10 @@ export interface TimeLineElementType {
   position?: "end" | "start";
   isFirst?: boolean;
 }
+
+export interface SocialLinkFooterType {
+  url: string;
+  text: string;
+  title: string;
+  icon: JSX.Element;
+}

@@ -1,14 +1,15 @@
 import { SectionContentType } from "./types/ComponentsTypes";
 
-const Section = ({
-  title,
-  text,
-  children,
-  sectionBackground = "bg-base-200",
-  titleColor = "text-accent",
-  textColor = "text-base-content",
-  padding = "py-4 lg:p-8",
-}: SectionContentType) => {
+const Section = (props: SectionContentType) => {
+  const {
+    title,
+    text,
+    children,
+    sectionBackground = "bg-base-200",
+    titleColor = "text-accent",
+    textColor = "text-base-content",
+    padding = "py-4 lg:p-8",
+  } = props;
   return (
     <>
       <section className="px-3 py-5 md:px-5 md:py-10 lg:px-10 lg:py-18 2xl:px-36 2xl:py-20">
