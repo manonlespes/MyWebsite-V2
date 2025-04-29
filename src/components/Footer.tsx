@@ -1,9 +1,10 @@
-import { NavLink } from "react-router-dom";
 import { DeloreanIcon } from "./icons/Icons";
 import { WebsiteCarbonBadge } from "react-websitecarbon-badge";
 import { useChangeTheme } from "../hooks/useChangeTheme";
 import { pageList, socialLinkFooterData } from "../utils/content";
 import { SocialLinkFooterType } from "./types/ComponentsTypes";
+
+import { NavElement } from "./NavElement";
 
 export const Footer: React.FC = () => {
   const { theme } = useChangeTheme();
@@ -11,7 +12,7 @@ export const Footer: React.FC = () => {
     <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
       <nav className="grid sm:grid-flow-col gap-4">
         {pageList.map((page, index) => (
-          <NavElement key={index} page={page} />
+          <NavElement key={index} page={page} isFooter />
         ))}
       </nav>
 
@@ -50,29 +51,6 @@ export const Footer: React.FC = () => {
         dark={theme?.isLight ? false : true}
       />
     </footer>
-  );
-};
-
-const NavElement = ({ page }: { page: string }) => {
-  const capitalizefirstletter = (word: string) => {
-    const element = word.charAt(0).toUpperCase() + word.slice(1);
-
-    return element;
-  };
-
-  return (
-    <NavLink
-      to={page}
-      className={({ isActive, isPending }) =>
-        isPending
-          ? "pending text-sm"
-          : isActive
-          ? "active link text-sm"
-          : "link-animation-footer text-sm"
-      }
-    >
-      {capitalizefirstletter(page)}
-    </NavLink>
   );
 };
 

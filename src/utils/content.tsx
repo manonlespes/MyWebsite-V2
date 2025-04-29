@@ -38,6 +38,10 @@ import {
   SpadeWork,
 } from "./timelineContent";
 
+/* NAVBAR */
+
+export const pageListNavBar = ["about", "projects", "speaking", "uses"];
+
 /* HOME PAGE */
 
 export const aboutContentCards: CardContentType[] = [
