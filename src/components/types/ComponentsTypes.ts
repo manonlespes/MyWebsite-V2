@@ -1,10 +1,5 @@
 import { ReactElement, ReactNode } from "react";
 
-/* export interface MetaTag {
-  name?: string;
-  content?: string;
-  property?: string; 
-} */
 export interface SEOtypes {
   title: string;
   description: string;
@@ -85,4 +80,19 @@ export interface ProjectType {
   description: string;
   tags: string[];
   links: LinkType[];
+}
+
+export interface TimeLineDataType {
+  date: string;
+  title: string;
+  isFirst?: boolean;
+  position?: "end" | "start";
+  content: React.JSX.Element;
+}
+export interface TimeLineElementType {
+  date: string;
+  title: string;
+  children: ReactNode;
+  position?: "end" | "start";
+  isFirst?: boolean;
 }

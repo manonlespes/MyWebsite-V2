@@ -12,6 +12,7 @@ import {
   ProjectType,
   SmallCardType,
   speakingContentType,
+  TimeLineDataType,
 } from "../components/types/ComponentsTypes";
 
 import { v4 as uuid } from "uuid";
@@ -24,6 +25,17 @@ import WarGame from "../images/war_game.webp";
 import Amelie from "../images/amelie_website.webp";
 import Tenzies from "../images/tenzies.webp";
 import EndGame from "../images/endgame.webp";
+import {
+  AccessibilityTraining,
+  AnySurferTraining,
+  Curriculum,
+  GreenTechSpeech,
+  Interface3Training,
+  SpadeIntern,
+  SpadeWork,
+} from "./timelineContent";
+
+/* HOME PAGE */
 
 export const aboutContentCards: CardContentType[] = [
   {
@@ -49,6 +61,86 @@ export const aboutContentCards: CardContentType[] = [
     },
   },
 ];
+
+export const timelineData: TimeLineDataType[] = [
+  {
+    date: "March 2025 - currently",
+    title: "Web and design accessibility deep training",
+    isFirst: true,
+    content: <AccessibilityTraining />,
+  },
+  {
+    date: "June 2022 - currently",
+    title: " Front-end Developer, Spade scrl in Brussels (Belgium)",
+    position: "start",
+    content: <SpadeWork />,
+  },
+  {
+    date: "Sept 2024",
+    title: " Training Anysurfer, 2-day training",
+    content: <AnySurferTraining />,
+  },
+  {
+    date: "  June 19th, 2024",
+    title: "Speaker at the GreenTech Forum Brussels (Belgium)",
+    position: "start",
+    content: <GreenTechSpeech />,
+  },
+  {
+    date: " March 2022 - May 2022",
+    title: " Front-end Developer Intern, Space scrl in Brussels (Belgium)",
+    content: <SpadeIntern />,
+  },
+  {
+    date: "March 2021 - March 2022",
+    title: "Certificate - Front-end developer, Interface3 (Belgium)",
+    position: "start",
+    content: <Interface3Training />,
+  },
+  {
+    date: "Before March 2021",
+    title: " Different work experiences",
+    content: <Curriculum />,
+  },
+];
+
+export const spadebadges: string[] = [
+  "Vue.js",
+  "React",
+  "TypeScript",
+  "JavaScript",
+  "WordPress",
+  "HTML & CSS/SCSS",
+  "Node.js",
+  "PHP",
+];
+
+export const spadeInternBadges: string[] = [
+  "JavaScript",
+  "HTML & CSS/SCSS",
+  "WordPress",
+  "Twig",
+  "PHP",
+  "React",
+  "Node.js",
+];
+
+export const interfaceBadges: string[] = [
+  "JavaScript",
+  "HTML & CSS",
+  "WordPress",
+  "PHP / MySQL",
+  "JQuery",
+  "Bootstrap 4 & 5",
+  "Node.js / NoSQL",
+  "React",
+  "Photoshop",
+  "Illustrator",
+  "XD",
+  "Animate",
+];
+
+/* PROJECT PAGE */
 
 export const projectList: ProjectType[] = [
   {
@@ -217,6 +309,8 @@ export const projectImageList: ImageType[] = [
   },
 ];
 
+/* USES PAGE */
+
 export const toolList: SmallCardType[] = [
   {
     id: uuid(),
@@ -327,41 +421,7 @@ export const languageList: SmallCardType[] = [
   },
 ];
 
-export const spadebadges: string[] = [
-  "Vue.js",
-  "React",
-  "TypeScript",
-  "JavaScript",
-  "WordPress",
-  "HTML & CSS/SCSS",
-  "Node.js",
-  "PHP",
-];
-
-export const spadeInternBadges: string[] = [
-  "JavaScript",
-  "HTML & CSS/SCSS",
-  "WordPress",
-  "Twig",
-  "PHP",
-  "React",
-  "Node.js",
-];
-
-export const interfaceBadges: string[] = [
-  "JavaScript",
-  "HTML & CSS",
-  "WordPress",
-  "PHP / MySQL",
-  "JQuery",
-  "Bootstrap 4 & 5",
-  "Node.js / NoSQL",
-  "React",
-  "Photoshop",
-  "Illustrator",
-  "XD",
-  "Animate",
-];
+/* SPEAKING PAGE */
 
 export const speakingContent: speakingContentType[] = [
   {
