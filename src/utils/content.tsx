@@ -5,6 +5,9 @@ import {
   SpokenIcon,
   LaptopIcon,
   CssIcon,
+  GitHubIcon,
+  LinkedInIcon,
+  EnvelopeIcon,
 } from "../components/icons/Icons";
 import {
   CardContentType,
@@ -34,6 +37,10 @@ import {
   SpadeIntern,
   SpadeWork,
 } from "./timelineContent";
+
+/* NAVBAR */
+
+export const pageListNavBar = ["about", "projects", "speaking", "uses"];
 
 /* HOME PAGE */
 
@@ -470,5 +477,36 @@ export const podcast: speakingContentType[] = [
       label: "Listen or read retranscription of the podcast",
       isExternalLink: true,
     },
+  },
+];
+
+/* FOOTER */
+
+export const pageList = ["about", "projects", "speaking", "uses", "contact"];
+
+export const socialLinkFooterData = [
+  {
+    url: "https://github.com/manonlespes",
+    text: " Visit my GitHub - Opens in a new tab",
+    title: "GitHub",
+    icon: (
+      <GitHubIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
+    ),
+  },
+  {
+    url: "https://be.linkedin.com/in/manon-lespes",
+    text: "Visit my LinkedIn profile - Opens in a new tab",
+    title: "LinkedIn",
+    icon: (
+      <LinkedInIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
+    ),
+  },
+  {
+    url: "mailto:manonlespes@hotmail.fr",
+    text: "Send me an email",
+    title: "Email",
+    icon: (
+      <EnvelopeIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
+    ),
   },
 ];

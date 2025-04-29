@@ -1,8 +1,10 @@
 import { ToggleTheme } from "./ToggleTheme";
 import Logo from "../images/my-logo.webp";
 import { Button } from "./Button";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { pageListNavBar } from "../utils/content";
+import { NavElement } from "./NavElement";
 
 export const Navbar: React.FC = () => {
   const [isShrunk, setShrunk] = useState(false);
@@ -37,6 +39,7 @@ export const Navbar: React.FC = () => {
     <header className="sticky top-0 z-30">
       <nav className="navbar bg-base-100 bg-opacity-90 backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)] shadow-sm lg:px-6 xl:px-8 2xl:px-16">
         <div className="navbar-start">
+          {/* Menu mobile */}
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <span className="sr-only">Menu</span>
@@ -60,62 +63,13 @@ export const Navbar: React.FC = () => {
               tabIndex={1}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-4 shadow gap-4"
             >
-              <li>
-                <NavLink
-                  to="about"
-                  className={({ isActive, isPending }) =>
-                    isPending
-                      ? "pending text-sm"
-                      : isActive
-                      ? "active text-sm"
-                      : "text-sm"
-                  }
-                >
-                  About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="projects"
-                  className={({ isActive, isPending }) =>
-                    isPending
-                      ? "pending text-sm"
-                      : isActive
-                      ? "active text-sm"
-                      : "text-sm"
-                  }
-                >
-                  Projects
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="speaking"
-                  className={({ isActive, isPending }) =>
-                    isPending
-                      ? "pending text-sm"
-                      : isActive
-                      ? "active text-sm"
-                      : "text-sm"
-                  }
-                >
-                  Speaking
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="uses"
-                  className={({ isActive, isPending }) =>
-                    isPending
-                      ? "pending text-sm"
-                      : isActive
-                      ? "active text-sm"
-                      : "text-sm"
-                  }
-                >
-                  Uses
-                </NavLink>
-              </li>
+              {pageListNavBar.map((page, index) => {
+                return (
+                  <li key={index}>
+                    <NavElement page={page} />
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost block w-24 h-fit lg:px-0">
@@ -128,67 +82,19 @@ export const Navbar: React.FC = () => {
             />
           </Link>
         </div>
+        {/* Menu desktop */}
         <div className="navbar-center hidden lg:flex">
           <ul
             tabIndex={0}
             className="menu menu-horizontal px-1 gap-5 font-bold"
           >
-            <li className="">
-              <NavLink
-                to="about"
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? "pending text-sm"
-                    : isActive
-                    ? "active text-sm"
-                    : "text-sm"
-                }
-              >
-                About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="projects"
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? "pending text-sm"
-                    : isActive
-                    ? "active text-sm"
-                    : "text-sm"
-                }
-              >
-                Projects
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="speaking"
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? "pending text-sm"
-                    : isActive
-                    ? "active text-sm"
-                    : "text-sm"
-                }
-              >
-                Speaking
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="uses"
-                className={({ isActive, isPending }) =>
-                  isPending
-                    ? "pending text-sm"
-                    : isActive
-                    ? "active text-sm"
-                    : "text-sm"
-                }
-              >
-                Uses
-              </NavLink>
-            </li>
+            {pageListNavBar.map((page, index) => {
+              return (
+                <li key={index}>
+                  <NavElement page={page} />
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className="navbar-end gap-4">
