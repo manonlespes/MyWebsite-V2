@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
   const { theme } = useChangeTheme();
   return (
     <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
-      <nav className="grid sm:grid-flow-col gap-4">
+      <nav className="grid sm:grid-flow-col gap-5">
         {pageList.map((page, index) => (
           <NavElement key={index} page={page} isFooter />
         ))}
@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
 
       <ul className="flex gap-5 items-baseline">
         {socialLinkFooterData.map((item, index) => (
-          <li key={index} className="w-8">
+          <li key={index} className="w-12 p-1">
             <SocialLink {...item} />
           </li>
         ))}
@@ -57,7 +57,7 @@ export const Footer: React.FC = () => {
 const SocialLink = ({ url, text, title, icon }: SocialLinkFooterType) => {
   return (
     <a
-      className="w-11 group hover:text-accent transition-all ease-in-out focus:text-accent self-baseline"
+      className="group hover:text-accent transition-all ease-in-out focus:text-accent self-baseline"
       href={url}
       target="_blank"
       rel="noreferrer noopener"
