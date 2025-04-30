@@ -39,7 +39,7 @@ const Contact: React.FC = () => {
 
   const sectionContent = {
     title: "Drop me a line",
-    text: "Wanna say hello, well you are at the right place!",
+    text: "Wanna say hello? Well you are at the right place!",
   };
 
   const form = useRef<HTMLFormElement | null>(null);

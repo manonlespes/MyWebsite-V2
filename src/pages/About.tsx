@@ -109,15 +109,15 @@ const About: React.FC = () => {
                       full-time.
                     </p>
                     <p>
-                      Accessibility on the web is a cause close to my heart; the
-                      internet is a space for everyone, free from
-                      discrimination. Lately, I’ve also been drawn to digital
-                      eco-design principles, aiming to make technology more
-                      &quot;sustainable and responsible&quot;. Since the most
-                      eco-friendly solution is often the one that doesn’t exist,
-                      I make it a point to carefully assess the necessity of
-                      each feature, considering whether it’s truly essential or
-                      simply a &quot;nice-to-have.&quot; Over time, these
+                      Accessibility on the web is a cause close to my heart ;
+                      the internet is a space for everyone, it should be free
+                      from discrimination. Lately, I’ve also been drawn to
+                      digital eco-design principles, aiming to make technology
+                      more &quot;sustainable and responsible&quot;. Since the
+                      most eco-friendly solution is often the one that doesn’t
+                      exist, I make it a point to carefully assess the necessity
+                      of each feature, considering whether it’s truly essential
+                      or simply a &quot;nice-to-have.&quot; Over time, these
                       decisions can make a significant impact.
                     </p>
 
