@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
         ))}
       </ul>
 
-      <aside title="Go back in time">
+      <div title="Go back in time">
         <a
           href="https://v1.manonlespes.com"
           rel="noreferrer"
@@ -35,14 +35,14 @@ export const Footer: React.FC = () => {
             tab
           </span>
           <span title="Visit my previous portfolio" aria-hidden="true">
-            <DeloreanIcon className="relative inline-block group-hover:animate-[drive_3s_linear_infinite]" />
+            <DeloreanIcon className="relative inline-block group-hover:motion-reduce:animate-[drive_3s_linear_infinite]" />
           </span>
         </a>
         <p>
           Copyright © {new Date().getFullYear()} - All right reserved by Manon
           Lespes
         </p>
-      </aside>
+      </div>
       <WebsiteCarbonBadge
         co2="0.15"
         percentage="85"

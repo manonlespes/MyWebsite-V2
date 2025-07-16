@@ -490,7 +490,7 @@ export const socialLinkFooterData = [
     text: " Visit my GitHub - Opens in a new tab",
     title: "GitHub",
     icon: (
-      <GitHubIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
+      <GitHubIcon class="group-hover:motion-reduce:animate-bounce group-focus:animate-bounce group-ease-in-out" />
     ),
   },
   {
@@ -498,7 +498,7 @@ export const socialLinkFooterData = [
     text: "Visit my LinkedIn profile - Opens in a new tab",
     title: "LinkedIn",
     icon: (
-      <LinkedInIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
+      <LinkedInIcon class="group-hover:motion-reduce:animate-bounce group-focus:animate-bounce group-ease-in-out" />
     ),
   },
   {
@@ -506,7 +506,7 @@ export const socialLinkFooterData = [
     text: "Send me an email",
     title: "Email",
     icon: (
-      <EnvelopeIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out" />
+      <EnvelopeIcon class="group-hover:motion-reduce:animate-bounce group-focus:animate-bounce group-ease-in-out" />
     ),
   },
 ];

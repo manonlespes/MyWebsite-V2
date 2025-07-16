@@ -156,7 +156,7 @@ const About: React.FC = () => {
                         target="_blank"
                         rel="noreferrer noopener"
                       >
-                        <GitHubIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out w-6 mr-5" />
+                        <GitHubIcon class="group-hover:motion-reduce:animate-bounce group-focus:animate-bounce group-ease-in-out w-6 mr-5" />
                         Follow me on Github
                         <span className="sr-only">- Opens in a new tab</span>
                         <span title="Opens in a new tab" aria-hidden="true">
@@ -171,7 +171,7 @@ const About: React.FC = () => {
                         target="_blank"
                         rel="noreferrer noopener"
                       >
-                        <LinkedInIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out w-5 mr-5" />
+                        <LinkedInIcon class="group-hover:motion-reduce:animate-bounce group-focus:animate-bounce group-ease-in-out w-5 mr-5" />
                         Follow me on LinkedIn
                         <span className="sr-only">- Opens in a new tab</span>
                         <span title="Opens in a new tab" aria-hidden="true">
@@ -185,7 +185,7 @@ const About: React.FC = () => {
                         to={"/contact"}
                         className="inline-flex items-center text-sm gap-5 group hover:text-accent transition-all ease-in-out self-center focus:text-accent"
                       >
-                        <EnvelopeIcon class="group-hover:animate-bounce group-focus:animate-bounce group-ease-in-out w-5" />
+                        <EnvelopeIcon class="group-hover:motion-reduce:animate-bounce group-focus:animate-bounce group-ease-in-out w-5" />
                         Drop me a line
                       </Link>
                     </li>

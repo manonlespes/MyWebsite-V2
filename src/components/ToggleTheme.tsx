@@ -6,7 +6,7 @@ export const ToggleTheme = () => {
   return (
     <>
       <label
-        className="swap swap-rotate hover:text-accent transition-colors duration-300 ease-in-out hover:animate-pulse"
+        className="swap swap-rotate hover:text-accent transition-colors duration-300 ease-in-out hover:motion-reduce:animate-pulse"
         title="Change Color Theme"
       >
         <span className="sr-only">Change Color Theme</span>

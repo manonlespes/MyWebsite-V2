@@ -37,7 +37,10 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-30">
-      <nav className="navbar bg-base-100 bg-opacity-90 backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)] shadow-sm lg:px-6 xl:px-8 2xl:px-16">
+      <nav
+        aria-label="primary"
+        className="navbar bg-base-100 bg-opacity-90 backdrop-blur transition-shadow duration-100 [transform:translate3d(0,0,0)] shadow-sm lg:px-6 xl:px-8 2xl:px-16"
+      >
         <div className="navbar-start">
           {/* Menu mobile */}
           <div className="dropdown">
