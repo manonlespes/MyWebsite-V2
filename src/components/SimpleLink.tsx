@@ -24,6 +24,8 @@ export const SimpleLink = (props: LinkType) => {
           key={id}
           className="inline-flex items-baseline group text-base link link-animation text-neutral-content font-bold"
           href={src}
+          rel="noreferrer noopener"
+          target="_self"
         >
           {label}
         </a>
