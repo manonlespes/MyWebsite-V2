@@ -45,7 +45,7 @@ const About: React.FC = () => {
   const image: ImageType = {
     src: MePicture,
     className:
-      "rounded-2xl bg-base-100 object-cover shadow-lg aspect-square object-top",
+      "rounded-2xl bg-base-100 object-cover shadow-lg aspect-square object-top w-96",
     width: "fit",
     height: "fit",
   };
@@ -60,10 +60,11 @@ const About: React.FC = () => {
           <div className="relative px-4 sm:px-8 lg:px-12">
             <div className="mx-auto max-w-2xl lg:max-w-5xl">
               <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-                <div className="lg:pl-20">
-                  <div className="max-w-xs px-2.5 lg:max-w-none rotate-3 aspect-square w-96 ">
-                    <ImageLazy image={image} />
-                  </div>
+                <div className="pt-12 lg:pl-20">
+                  <ImageLazy
+                    image={image}
+                    className="max-w-xs px-2.5 lg:max-w-none rotate-3"
+                  />
                 </div>
                 <div className="lg:order-first lg:row-span-2">
                   <h2 className="mb-5 text-xl md:text-3xl lg:text-4xl font-bold font-movement bg-clip-text text-transparent bg-gradient-to-r from-accent to-info">
@@ -80,7 +81,8 @@ const About: React.FC = () => {
                       translation/interpretation and multicultural communication
                       (French, German and Spanish). After completing my studies,
                       I fell in love with a Belgian (who is now my husband) and
-                      I decided to settle here for a while.
+                      I decided to settle here for a while. After a decade in
+                      Belgium, I settle now to Spain, in Madrid.
                     </p>
 
                     <p>
@@ -122,12 +124,10 @@ const About: React.FC = () => {
                     </p>
 
                     <p>
-                      After a decade in Belgium, I feel it’s time for new
-                      adventures. And of course, wherever I go, my cat Chatshimi
-                      – the first love of my life and my little debugging
-                      sidekick – comes along! She’s traveled with me almost
-                      everywhere, and I don’t know what I’d do without her by my
-                      side.
+                      Wherever I go, my cat Chatshimi – the first love of my
+                      life and my little debugging sidekick – comes along! She’s
+                      traveled with me almost everywhere, and I don’t know what
+                      I’d do without her by my side.
                     </p>
 
                     <p>
@@ -148,7 +148,8 @@ const About: React.FC = () => {
                   </div>
                 </div>
                 <div className="lg:pl-20">
-                  <ul role="list">
+                  <ul className="flex flex-col gap-3">
+                    <li className="mb-3">Currently living in Madrid - Spain</li>
                     <li>
                       <a
                         className="inline-flex items-center text-sm group hover:text-accent transition-all self-center ease-in-out focus:text-accent"
@@ -164,7 +165,7 @@ const About: React.FC = () => {
                         </span>
                       </a>
                     </li>
-                    <li className="mt-3">
+                    <li>
                       <a
                         className="inline-flex items-center text-sm group hover:text-accent transition-all self-center ease-in-out focus:text-accent"
                         href="https://be.linkedin.com/in/manon-lespes"
@@ -180,7 +181,7 @@ const About: React.FC = () => {
                       </a>
                     </li>
 
-                    <li className="mt-8 border-t border-accent pt-8 flex">
+                    <li className="border-t border-accent pt-4 flex">
                       <Link
                         to={"/contact"}
                         className="inline-flex items-center text-sm gap-5 group hover:text-accent transition-all ease-in-out self-center focus:text-accent"
