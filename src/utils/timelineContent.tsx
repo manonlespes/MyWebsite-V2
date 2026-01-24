@@ -1,6 +1,24 @@
 import { SimpleLink } from "../components/SimpleLink";
 import { interfaceBadges, spadebadges, spadeInternBadges } from "./content";
 
+export const SpeakerConferences = () => (
+  <>
+    <p className="mb-3 text-neutral-content text-sm">
+      'Accessibility is the new default mode' : it is hight time to deconstruct
+      our ableism point of view in all sectors. Tips for developers and
+      designers in how building an accessible internet.
+    </p>
+    <p className="my-2 text-neutral-content mb-10">
+      <SimpleLink
+        label="See more about the two conferences"
+        className="text-sm"
+        src="/speaking"
+        isExternalLink={false}
+      />
+    </p>
+  </>
+);
+
 export const AccessibilityTraining = () => (
   <>
     <p className="mb-3 text-neutral-content text-sm">

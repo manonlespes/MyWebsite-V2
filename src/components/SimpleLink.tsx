@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { NewWindowIcon } from "./icons/Icons";
 import { LinkType } from "./types/ComponentsTypes";
 
@@ -20,15 +21,13 @@ export const SimpleLink = (props: LinkType) => {
           </span>
         </a>
       ) : (
-        <a
+        <Link
           key={id}
-          className="inline-flex items-baseline group text-base link link-animation text-neutral-content font-bold"
-          href={src}
-          rel="noreferrer noopener"
-          target="_self"
+          className={`inline-flex items-baseline group text-base link link-animation text-neutral-content font-bold ${className}`}
+          to={src}
         >
           {label}
-        </a>
+        </Link>
       )}
     </>
   );

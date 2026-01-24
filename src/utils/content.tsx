@@ -36,6 +36,7 @@ import {
   Interface3Training,
   SpadeIntern,
   SpadeWork,
+  SpeakerConferences,
 } from "./timelineContent";
 
 /* NAVBAR */
@@ -83,30 +84,38 @@ export const timelineData: TimeLineDataType[] = [
     content: <SpadeWork />,
   },
   {
+    date: "June 18th, 2025 adn 21st November, 2025",
+    title:
+      "Speaker at the GreenTech Forum Brussels and Digital Change with Ethics (Belgium)",
+    content: <SpeakerConferences />,
+  },
+  {
     date: "Sept 2024",
     title: " Training Anysurfer, 2-day training",
+    position: "start",
     content: <AnySurferTraining />,
   },
   {
     date: "  June 19th, 2024",
     title: "Speaker at the GreenTech Forum Brussels (Belgium)",
-    position: "start",
+
     content: <GreenTechSpeech />,
   },
   {
     date: " March 2022 - May 2022",
     title: " Front-end Developer Intern, Space scrl in Brussels (Belgium)",
+    position: "start",
     content: <SpadeIntern />,
   },
   {
     date: "March 2021 - March 2022",
     title: "Certificate - Front-end developer, Interface3 (Belgium)",
-    position: "start",
     content: <Interface3Training />,
   },
   {
     date: "Before March 2021",
     title: " Different work experiences",
+    position: "start",
     content: <Curriculum />,
   },
 ];
@@ -330,7 +339,6 @@ export const toolList: SmallCardType[] = [
         value: "Fonts designed by Womxn",
         link: "https://www.design-research.be/by-womxn/",
       },
-      { value: "Lighthouse" },
       {
         value: "Handbook of Sustainable Design of Digital Services",
         link: "https://gr491.isit-europe.org/en/",
@@ -372,12 +380,22 @@ export const toolList: SmallCardType[] = [
       { value: "Accessible Tree from the browsers' devtool" },
       { value: "Voice Over" },
       { value: "Contrast Checker" },
+      { value: "Lighthouse" },
+      { value: "Axe Accessibility Linter" },
+      { value: "Taba11y - tab order accessibility testing" },
+      {
+        value: "Paul J. Adma J. 's Bookmarklets",
+        link: "https://pauljadam.com/bookmarklets.html",
+      },
+      {
+        value: "WCAG in Plain English",
+        link: "https://aaardvarkaccessibility.com/wcag-plain-english/",
+      },
       {
         value: "AnySurfer Doc",
         link: "https://www.anysurfer.be/en/documentation",
       },
       { value: "Eleven Ways Doc", link: "https://elevenways.be/en/" },
-      { value: "Axe Accessibility Linter" },
     ],
     svg: <A11yIcon className="w-11 lg:w-14" />,
   },
@@ -396,7 +414,6 @@ export const languageList: SmallCardType[] = [
       { value: "JQuery" },
       { value: "Timber for WordPress" },
       { value: "Twig / PHP" },
-      { value: "SQL" },
     ],
     svg: <DevIcon className="w-11 lg:w-14" />,
   },
@@ -416,12 +433,12 @@ export const languageList: SmallCardType[] = [
     title: "Spoken Languages",
     content: [
       { value: "French (mother tongue)" },
-      { value: "English (B2)" },
+      { value: "English (Professional working proficiency)" },
       {
-        value: "German (B2)",
+        value: "Spanish (Limited working proficiency)",
       },
       {
-        value: "Spanish (B1)",
+        value: "German (Limited working proficiency)",
       },
     ],
     svg: <SpokenIcon className="w-11 lg:w-14" />,
@@ -431,6 +448,28 @@ export const languageList: SmallCardType[] = [
 /* SPEAKING PAGE */
 
 export const speakingContent: speakingContentType[] = [
+  {
+    id: uuid(),
+    title: "Speaker and Member of the Organising Committee (in French)",
+    subtitle: "Digital Change with Ethics - 21 November 2025",
+    desc: "As part of the organising committee for this second edition, I worked on the theme for the programme and was in charge of inviting and welcoming speakers. Moreover, this year I also gave a conference : 'Accessibility is the new default mode'. Alongside with a designer colleague, I presented the main challenges in the IT sector to achieve an accessible internet and gave some tips on how to thinks inclusion from the early beginning of a project.",
+    link: {
+      src: "https://dcwe.be",
+      label: "Visit Digital Change with Ethics",
+      isExternalLink: true,
+    },
+  },
+  {
+    id: uuid(),
+    title: "Speaker at Green Tech Forum Brussels (in English)",
+    subtitle: "Green Tech Forum Brussels - 18 June 2025",
+    desc: "'Accessibility is the new default mode': deconstruction of our ableism point of view, presentation of digital a11y and introduction to some tips to set accessibility as the default mode from the beginning of any project.",
+    link: {
+      src: "https://www.greentech-forum-brussels.com/2025/program",
+      label: "Visit Green Tech Forum Programme",
+      isExternalLink: true,
+    },
+  },
   {
     id: uuid(),
     title: "Speaker and Member of the Organising Committee (in French)",
@@ -502,7 +541,7 @@ export const socialLinkFooterData = [
     ),
   },
   {
-    url: "mailto:manonlespes@hotmail.fr",
+    url: "mailto:frontenddev@manonlespes.com",
     text: "Send me an email",
     title: "Email",
     icon: (
