@@ -84,7 +84,7 @@ export const timelineData: TimeLineDataType[] = [
     content: <SpadeWork />,
   },
   {
-    date: "June 18th, 2025 adn 21st November, 2025",
+    date: "June 18th, 2025 and 21st November, 2025",
     title:
       "Speaker at the GreenTech Forum Brussels and Digital Change with Ethics (Belgium)",
     content: <SpeakerConferences />,

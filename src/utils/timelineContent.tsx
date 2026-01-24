@@ -4,7 +4,7 @@ import { interfaceBadges, spadebadges, spadeInternBadges } from "./content";
 export const SpeakerConferences = () => (
   <>
     <p className="mb-3 text-neutral-content text-sm">
-      &apos;Accessibility is the new default mode&apos; : it is hight time to
+      &apos;Accessibility is the new default mode&apos; : it is high time to
       deconstruct our ableism point of view in all sectors. Tips for developers
       and designers in how building an accessible internet.
     </p>
