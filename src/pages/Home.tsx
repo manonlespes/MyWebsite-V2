@@ -42,7 +42,7 @@ const Home: React.FC = () => {
 
   const sectionIntro = {
     title: "Hello World",
-    text: "I've been diving in the world of IT for 3 years now, and I can't help but go further.",
+    text: "I've been diving in the world of IT for more than 3 years, and I can't help but go further.",
   };
 
   const sectionWork = {
