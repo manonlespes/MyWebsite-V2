@@ -98,7 +98,6 @@ export const timelineData: TimeLineDataType[] = [
   {
     date: "  June 19th, 2024",
     title: "Speaker at the GreenTech Forum Brussels (Belgium)",
-
     content: <GreenTechSpeech />,
   },
   {
