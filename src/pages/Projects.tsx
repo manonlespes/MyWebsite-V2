@@ -7,7 +7,6 @@ import SEO from "../components/SEO";
 import { SimpleLink } from "../components/SimpleLink";
 import {
   ImageType,
-  LinkType,
   ProjectType,
   SEOtypes,
 } from "../components/types/ComponentsTypes";
@@ -71,16 +70,20 @@ const Project: React.FC = () => {
           {projectList.map((project: ProjectType) => {
             return (
               <LazyLoadComponent key={project.id}>
-                <div className="group flex flex-col justify-start items-start gap-2 w-full sm:h-[19rem] duration-500 relative rounded-xl p-6 bg-neutral hover:-translate-y-2 hover:shadow-xl shadow-md">
-                  <div>
+                <div className="flex flex-col grow gap-2 relative">
+                  <div className=" w-full rounded-xl p-6 bg-neutral shadow-md h-full flex flex-col gap-3">
                     <h3 className="card-title tracking-wide mb-2 text-neutral-content">
-                      {project.title}
+                      <SimpleLink
+                        label={project.title}
+                        src={project.link.src}
+                        isExternalLink
+                      />
                     </h3>
                     <p className="text-neutral-content text-sm">
                       {project.description}
                     </p>
 
-                    <ul className="mt-2 flex gap-2 flex-wrap list-none">
+                    <ul className=" mt-auto flex gap-2 flex-wrap list-none">
                       {project.tags.map((tag: string, index: number) => {
                         return (
                           <li
@@ -92,19 +95,6 @@ const Project: React.FC = () => {
                         );
                       })}
                     </ul>
-                  </div>
-                  <div className="mt-auto flex gap-4">
-                    {project.links.map((link: LinkType) => {
-                      return (
-                        <SimpleLink
-                          key={link?.id}
-                          className="text-neutral-content"
-                          label={link.label}
-                          src={link.src}
-                          isExternalLink
-                        />
-                      );
-                    })}
                   </div>
                 </div>
               </LazyLoadComponent>

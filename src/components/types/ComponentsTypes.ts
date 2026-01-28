@@ -79,7 +79,7 @@ export interface ProjectType {
   title: string;
   description: string;
   tags: string[];
-  links: LinkType[];
+  link: LinkType;
 }
 
 export interface TimeLineDataType {

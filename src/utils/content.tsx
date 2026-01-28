@@ -168,14 +168,12 @@ export const projectList: ProjectType[] = [
     description:
       "I helped a friend to launch her website. I advice her on the theme, colors, content, plugins and pages structure. I am still doing the maintenance and updating plugins. It is hosted on o2switch.",
     tags: ["WordPress", "CSS"],
-    links: [
-      {
-        id: uuid(),
-        label: "Visit the site",
-        isExternalLink: true,
-        src: "https://amelie-parolin.com/",
-      },
-    ],
+    link: {
+      id: uuid(),
+      label: "Visit the site",
+      isExternalLink: true,
+      src: "https://amelie-parolin.com/",
+    },
   },
   {
     id: uuid(),
@@ -187,14 +185,12 @@ export const projectList: ProjectType[] = [
     description:
       "I like playing card games! Do you like it as well? If so, clone my repo and have fun!",
     tags: ["Javascript", "HTML5", "CSS", "Deck of Cards API"],
-    links: [
-      {
-        id: uuid(),
-        label: "Visit my GitHub repo",
-        isExternalLink: true,
-        src: "https://github.com/manonlespes/war-game",
-      },
-    ],
+    link: {
+      id: uuid(),
+      label: "Visit my GitHub repo",
+      isExternalLink: true,
+      src: "https://github.com/manonlespes/war-game",
+    },
   },
   {
     id: uuid(),
@@ -205,14 +201,12 @@ export const projectList: ProjectType[] = [
     title: "Tenzies Game",
     description: "Roll until all dice are the same!",
     tags: ["React", "TypeScript", "CSS"],
-    links: [
-      {
-        id: uuid(),
-        label: "Visit my GitHub repo",
-        isExternalLink: true,
-        src: "https://github.com/manonlespes/roll-dices-game",
-      },
-    ],
+    link: {
+      id: uuid(),
+      label: "Visit my GitHub repo",
+      isExternalLink: true,
+      src: "https://github.com/manonlespes/roll-dices-game",
+    },
   },
   {
     id: uuid(),
@@ -224,14 +218,12 @@ export const projectList: ProjectType[] = [
     description:
       "Guess the word in under 8 attempts to keep the programming world safe from Assembly!",
     tags: ["React", "TypeScript", "CSS"],
-    links: [
-      {
-        id: uuid(),
-        label: "Visit my GitHub repo",
-        isExternalLink: true,
-        src: "https://github.com/manonlespes/endgame",
-      },
-    ],
+    link: {
+      id: uuid(),
+      label: "Visit my GitHub repo",
+      isExternalLink: true,
+      src: "https://github.com/manonlespes/endgame",
+    },
   },
   {
     id: uuid(),
@@ -243,14 +235,12 @@ export const projectList: ProjectType[] = [
     description:
       "This is simple color picker with beautiful effects. Check this out!",
     tags: ["Javascript", "HTML5", "CSS", "Color API"],
-    links: [
-      {
-        id: uuid(),
-        label: "Visit my GitHub repo",
-        isExternalLink: true,
-        src: "https://github.com/manonlespes/color-picker",
-      },
-    ],
+    link: {
+      id: uuid(),
+      label: "Visit my GitHub repo",
+      isExternalLink: true,
+      src: "https://github.com/manonlespes/color-picker",
+    },
   },
   {
     id: uuid(),
@@ -262,14 +252,12 @@ export const projectList: ProjectType[] = [
     description:
       "A quick project to test APIs from Scrimba, a code learning platform.",
     tags: ["Javascript", "HTML5", "CSS", "Scrimba API"],
-    links: [
-      {
-        id: uuid(),
-        label: "Visit my GitHub repo",
-        isExternalLink: true,
-        src: "https://github.com/manonlespes/small-blog",
-      },
-    ],
+    link: {
+      id: uuid(),
+      label: "Visit my GitHub repo",
+      isExternalLink: true,
+      src: "https://github.com/manonlespes/small-blog",
+    },
   },
 ];
 
@@ -540,7 +528,7 @@ export const socialLinkFooterData = [
     ),
   },
   {
-    url: "mailto:frontenddev@manonlespes.com",
+    url: "mailto:frontdev@manonlespes.com",
     text: "Send me an email",
     title: "Email",
     icon: (
