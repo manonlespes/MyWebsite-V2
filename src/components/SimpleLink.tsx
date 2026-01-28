@@ -23,7 +23,7 @@ export const SimpleLink = (props: LinkType) => {
       ) : (
         <Link
           key={id}
-          className={`inline-flex items-baseline group text-base link link-animation text-neutral-content font-bold ${className}`}
+          className={`group text-inherit link link-animation text-neutral-content font-bold ${className}`}
           to={src}
         >
           {label}
